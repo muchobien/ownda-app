@@ -1,4 +1,3 @@
-import React from 'react';
 import type { FCC } from '@app/types';
 import { NavigationContainer } from '@react-navigation/native';
 import { RootNavigator } from './root';

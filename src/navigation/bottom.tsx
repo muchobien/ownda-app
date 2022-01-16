@@ -1,4 +1,3 @@
-import React from 'react';
 import { Home } from '@app/screens';
 import type { RootTabParamList } from '@app/types';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';

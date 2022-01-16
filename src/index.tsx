@@ -1,8 +1,7 @@
-import React from 'react';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { Navigation } from './navigation';
 import { useApp } from './hooks';
-import { FCC } from './types';
+import type { FCC } from './types';
 import { StatusBar } from './components';
 import { Provider } from 'urql';
 import { client } from './graphql';
