@@ -1,0 +1,10 @@
+{
+  "extends": "@muchobien/eslint-config-react-native/tsconfig.base",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@app": ["./src"],
+      "@app/*": ["./src/*"]
+    },
+  }
+}

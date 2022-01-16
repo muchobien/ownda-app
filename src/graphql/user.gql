@@ -1,0 +1,34 @@
+fragment AuthenticatedUser on User {
+  id
+  email
+  createdAt
+  updatedAt
+}
+
+fragment Auth on Authenticated {
+  user {
+    ...AuthenticatedUser
+  }
+  credentials {
+    tokenType
+    accessToken
+  }
+}
+
+query Me {
+  me {
+    ...AuthenticatedUser
+  }
+}
+
+mutation Login($input: AuthInput!) {
+  login(input: $input) {
+    ...Auth
+  }
+}
+
+mutation Register($input: AuthInput!) {
+  register(input: $input) {
+    ...Auth
+  }
+}
