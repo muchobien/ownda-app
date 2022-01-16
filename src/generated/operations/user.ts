@@ -12,9 +12,15 @@ export type AuthenticatedUserFragment = {
   updatedAt: string;
 };
 
+export type TokensFragment = {
+  tokenType: string;
+  accessToken: string;
+  refreshToken: string;
+};
+
 export type AuthFragment = {
   user: { id: string; email: string; createdAt: string; updatedAt: string };
-  credentials: { tokenType: string; accessToken: string };
+  credentials: { tokenType: string; accessToken: string; refreshToken: string };
 };
 
 export type MeQueryVariables = Types.Exact<{ [key: string]: never }>;
@@ -30,7 +36,11 @@ export type LoginMutationVariables = Types.Exact<{
 export type LoginMutation = {
   login: {
     user: { id: string; email: string; createdAt: string; updatedAt: string };
-    credentials: { tokenType: string; accessToken: string };
+    credentials: {
+      tokenType: string;
+      accessToken: string;
+      refreshToken: string;
+    };
   };
 };
 
@@ -41,7 +51,23 @@ export type RegisterMutationVariables = Types.Exact<{
 export type RegisterMutation = {
   register: {
     user: { id: string; email: string; createdAt: string; updatedAt: string };
-    credentials: { tokenType: string; accessToken: string };
+    credentials: {
+      tokenType: string;
+      accessToken: string;
+      refreshToken: string;
+    };
+  };
+};
+
+export type RefreshTokenMutationVariables = Types.Exact<{
+  token: Types.Scalars['String'];
+}>;
+
+export type RefreshTokenMutation = {
+  refreshToken: {
+    tokenType: string;
+    accessToken: string;
+    refreshToken: string;
   };
 };
 
@@ -53,17 +79,24 @@ export const AuthenticatedUserFragmentDoc = gql`
     updatedAt
   }
 `;
+export const TokensFragmentDoc = gql`
+  fragment Tokens on Credential {
+    tokenType
+    accessToken
+    refreshToken
+  }
+`;
 export const AuthFragmentDoc = gql`
   fragment Auth on Authenticated {
     user {
       ...AuthenticatedUser
     }
     credentials {
-      tokenType
-      accessToken
+      ...Tokens
     }
   }
   ${AuthenticatedUserFragmentDoc}
+  ${TokensFragmentDoc}
 `;
 export const MeDocument = gql`
   query Me {
@@ -103,5 +136,19 @@ export const RegisterDocument = gql`
 export function useRegisterMutation() {
   return Urql.useMutation<RegisterMutation, RegisterMutationVariables>(
     RegisterDocument,
+  );
+}
+export const RefreshTokenDocument = gql`
+  mutation RefreshToken($token: String!) {
+    refreshToken(token: $token) {
+      ...Tokens
+    }
+  }
+  ${TokensFragmentDoc}
+`;
+
+export function useRefreshTokenMutation() {
+  return Urql.useMutation<RefreshTokenMutation, RefreshTokenMutationVariables>(
+    RefreshTokenDocument,
   );
 }

@@ -4,14 +4,18 @@ fragment AuthenticatedUser on User {
   createdAt
   updatedAt
 }
+fragment Tokens on Credential {
+  tokenType
+  accessToken
+  refreshToken
+}
 
 fragment Auth on Authenticated {
   user {
     ...AuthenticatedUser
   }
   credentials {
-    tokenType
-    accessToken
+    ...Tokens
   }
 }
 
@@ -30,5 +34,11 @@ mutation Login($input: AuthInput!) {
 mutation Register($input: AuthInput!) {
   register(input: $input) {
     ...Auth
+  }
+}
+
+mutation RefreshToken($token: String!) {
+  refreshToken(token: $token) {
+    ...Tokens
   }
 }

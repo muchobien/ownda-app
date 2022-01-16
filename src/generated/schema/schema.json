@@ -254,6 +254,17 @@
             "args": []
           },
           {
+            "name": "refreshToken",
+            "type": {
+              "kind": "NON_NULL",
+              "ofType": {
+                "kind": "SCALAR",
+                "name": "Any"
+              }
+            },
+            "args": []
+          },
+          {
             "name": "tokenType",
             "type": {
               "kind": "NON_NULL",
@@ -350,6 +361,29 @@
             "args": [
               {
                 "name": "input",
+                "type": {
+                  "kind": "NON_NULL",
+                  "ofType": {
+                    "kind": "SCALAR",
+                    "name": "Any"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "name": "refreshToken",
+            "type": {
+              "kind": "NON_NULL",
+              "ofType": {
+                "kind": "OBJECT",
+                "name": "Credential",
+                "ofType": null
+              }
+            },
+            "args": [
+              {
+                "name": "token",
                 "type": {
                   "kind": "NON_NULL",
                   "ofType": {

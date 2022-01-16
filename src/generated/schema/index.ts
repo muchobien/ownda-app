@@ -86,6 +86,7 @@ export type CategoryInput = {
 
 export type Credential = {
   accessToken: Scalars['String'];
+  refreshToken: Scalars['String'];
   tokenType: Scalars['String'];
 };
 
@@ -99,6 +100,7 @@ export type Mutation = {
   createCategory: Scalars['Boolean'];
   createTransaction: Scalars['Boolean'];
   login: Authenticated;
+  refreshToken: Credential;
   register: Authenticated;
 };
 
@@ -116,6 +118,10 @@ export type MutationCreateTransactionArgs = {
 
 export type MutationLoginArgs = {
   input: AuthInput;
+};
+
+export type MutationRefreshTokenArgs = {
+  token: Scalars['String'];
 };
 
 export type MutationRegisterArgs = {

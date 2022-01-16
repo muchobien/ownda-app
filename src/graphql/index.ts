@@ -9,6 +9,11 @@ import {
 
 import { authExchange } from '@urql/exchange-auth';
 import { storage } from '@app/utils/storage';
+import {
+  RefreshTokenDocument,
+  RefreshTokenMutation,
+  RefreshTokenMutationVariables,
+} from '@app/generated/operations/user';
 
 type AuthState = {
   accessToken: string;
@@ -58,7 +63,6 @@ export const client = createClient({
 
       willAuthError: ({ authState }) => {
         if (!authState) return true;
-        // e.g. check for expiration, existence of auth etc
         return false;
       },
 
@@ -66,9 +70,19 @@ export const client = createClient({
         return error.graphQLErrors.some(e => e.extensions?.code === '401');
       },
 
-      getAuth: async ({ authState }) => {
+      getAuth: async ({ authState, mutate }) => {
         if (!authState) {
           return storage.getObject<AuthState>('@auth') ?? null;
+        }
+
+        const { data } = await mutate<
+          RefreshTokenMutation,
+          RefreshTokenMutationVariables
+        >(RefreshTokenDocument);
+
+        if (data?.refreshToken) {
+          storage.setObject('@auth', data.refreshToken);
+          return data.refreshToken;
         }
 
         storage.delete('@auth');
