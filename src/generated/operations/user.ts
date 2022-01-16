@@ -5,28 +5,28 @@ import type * as Types from '../schema/index';
 import { gql } from 'urql';
 import * as Urql from 'urql';
 export type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>;
-export type AuthenticatedUserFragment = {
-  id: string;
-  email: string;
-  createdAt: string;
-  updatedAt: string;
-};
+export type AuthenticatedUserFragment = Pick<
+  Types.User,
+  'id' | 'email' | 'createdAt' | 'updatedAt'
+>;
 
-export type TokensFragment = {
-  tokenType: string;
-  accessToken: string;
-  refreshToken: string;
-};
+export type TokensFragment = Pick<
+  Types.Credential,
+  'tokenType' | 'accessToken' | 'refreshToken'
+>;
 
 export type AuthFragment = {
-  user: { id: string; email: string; createdAt: string; updatedAt: string };
-  credentials: { tokenType: string; accessToken: string; refreshToken: string };
+  user: Pick<Types.User, 'id' | 'email' | 'createdAt' | 'updatedAt'>;
+  credentials: Pick<
+    Types.Credential,
+    'tokenType' | 'accessToken' | 'refreshToken'
+  >;
 };
 
 export type MeQueryVariables = Types.Exact<{ [key: string]: never }>;
 
 export type MeQuery = {
-  me: { id: string; email: string; createdAt: string; updatedAt: string };
+  me: Pick<Types.User, 'id' | 'email' | 'createdAt' | 'updatedAt'>;
 };
 
 export type LoginMutationVariables = Types.Exact<{
@@ -35,12 +35,11 @@ export type LoginMutationVariables = Types.Exact<{
 
 export type LoginMutation = {
   login: {
-    user: { id: string; email: string; createdAt: string; updatedAt: string };
-    credentials: {
-      tokenType: string;
-      accessToken: string;
-      refreshToken: string;
-    };
+    user: Pick<Types.User, 'id' | 'email' | 'createdAt' | 'updatedAt'>;
+    credentials: Pick<
+      Types.Credential,
+      'tokenType' | 'accessToken' | 'refreshToken'
+    >;
   };
 };
 
@@ -50,12 +49,11 @@ export type RegisterMutationVariables = Types.Exact<{
 
 export type RegisterMutation = {
   register: {
-    user: { id: string; email: string; createdAt: string; updatedAt: string };
-    credentials: {
-      tokenType: string;
-      accessToken: string;
-      refreshToken: string;
-    };
+    user: Pick<Types.User, 'id' | 'email' | 'createdAt' | 'updatedAt'>;
+    credentials: Pick<
+      Types.Credential,
+      'tokenType' | 'accessToken' | 'refreshToken'
+    >;
   };
 };
 
@@ -64,11 +62,10 @@ export type RefreshTokenMutationVariables = Types.Exact<{
 }>;
 
 export type RefreshTokenMutation = {
-  refreshToken: {
-    tokenType: string;
-    accessToken: string;
-    refreshToken: string;
-  };
+  refreshToken: Pick<
+    Types.Credential,
+    'tokenType' | 'accessToken' | 'refreshToken'
+  >;
 };
 
 export const AuthenticatedUserFragmentDoc = gql`

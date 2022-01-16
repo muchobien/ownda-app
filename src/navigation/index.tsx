@@ -1,5 +1,5 @@
 import React from 'react';
-import { FCC } from '@app/types';
+import type { FCC } from '@app/types';
 import { NavigationContainer } from '@react-navigation/native';
 import { RootNavigator } from './root';
 import { navigationTheme } from '@app/theme';

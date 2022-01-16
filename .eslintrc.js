@@ -6,5 +6,6 @@ module.exports = {
   },
   rules: {
     'react-native/no-color-literals': 'off',
+    '@typescript-eslint/consistent-type-imports': 'error',
   },
 };

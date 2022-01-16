@@ -1,5 +1,5 @@
 import React from 'react';
-import { Tab } from '@app/types';
+import type { Tab } from '@app/types';
 import { Text } from 'react-native';
 import { SafeView } from '@app/components';
 
