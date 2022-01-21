@@ -9,11 +9,7 @@ import {
 
 import { authExchange } from '@urql/exchange-auth';
 import { storage } from '@app/utils/storage';
-import type {
-  RefreshTokenMutation,
-  RefreshTokenMutationVariables,
-} from '@app/generated/operations/user';
-import { RefreshTokenDocument } from '@app/generated/operations/user';
+import { RefreshTokenDocument } from '@app/generated/graphql';
 
 type AuthState = {
   accessToken: string;
@@ -75,10 +71,7 @@ export const client = createClient({
           return storage.getObject<AuthState>('@auth') ?? null;
         }
 
-        const { data } = await mutate<
-          RefreshTokenMutation,
-          RefreshTokenMutationVariables
-        >(RefreshTokenDocument);
+        const { data } = await mutate(RefreshTokenDocument);
 
         if (data?.refreshToken) {
           storage.setObject('@auth', data.refreshToken);

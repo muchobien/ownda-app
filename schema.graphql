@@ -1,0 +1,140 @@
+type Account {
+  color: String!
+  createdAt: DateTime!
+  id: UUID!
+  name: String!
+  order: Int!
+  transactions: [Transaction!]!
+  updatedAt: DateTime!
+}
+
+input AccountInput {
+  color: String!
+  name: String!
+  order: Int!
+}
+
+input AuthInput {
+  email: String!
+  hash: String!
+  provider: ProviderEnum!
+}
+
+type Authenticated {
+  credentials: Credential!
+  user: User!
+}
+
+type Category {
+  children: [Category!]!
+  color: String!
+  createdAt: DateTime!
+  id: UUID!
+  name: String!
+  order: Int!
+  parent: Category
+  parentId: UUID
+  updatedAt: DateTime!
+}
+
+input CategoryInput {
+  color: String!
+  name: String!
+  order: Int!
+  parentId: UUID
+}
+
+type Credential {
+  accessToken: String!
+  refreshToken: String!
+  tokenType: String!
+}
+
+input DateFilter {
+  begin: DateTime!
+  end: DateTime!
+}
+
+"""
+Implement the DateTime<FixedOffset> scalar
+
+The input/output is a string in RFC3339 format.
+"""
+scalar DateTime
+
+scalar Decimal
+
+type Mutation {
+  createAccount(input: AccountInput!): Boolean!
+  createCategory(input: CategoryInput!): Boolean!
+  createTransaction(input: TransactionInput!): Boolean!
+  login(input: AuthInput!): Authenticated!
+  refreshToken(token: String!): Credential!
+  register(input: AuthInput!): Authenticated!
+}
+
+enum ProviderEnum {
+  APPLE
+  GOOGLE
+  LOCAL
+}
+
+type Query {
+  account(id: UUID!): Account!
+  accounts: [Account!]!
+  categories: [Category!]!
+  category(id: UUID!): Category!
+  me: User!
+  transaction(id: UUID!): Transaction!
+  transactions(filter: TransactionFilter!): [Transaction!]!
+}
+
+type Transaction {
+  amount: Decimal!
+  category: Category!
+  categoryId: UUID!
+  createdAt: DateTime!
+  id: UUID!
+  name: String!
+  type: TransactionTypeEnum!
+  updatedAt: DateTime!
+}
+
+input TransactionFilter {
+  accountId: UUID!
+  date: DateFilter
+}
+
+input TransactionInput {
+  accountId: UUID!
+  amount: Decimal!
+  categoryId: UUID!
+  name: String!
+  type: TransactionTypeEnum!
+}
+
+enum TransactionTypeEnum {
+  EXPENSE
+  INCOME
+  TRANSFER
+}
+
+"""
+A UUID is a unique 128-bit number, stored as 16 octets. UUIDs are parsed as Strings
+within GraphQL. UUIDs are used to assign unique identifiers to entities without requiring a central
+allocating authority.
+
+# References
+
+* [Wikipedia: Universally Unique Identifier](http://en.wikipedia.org/wiki/Universally_unique_identifier)
+* [RFC4122: A Universally Unique IDentifier (UUID) URN Namespace](http://tools.ietf.org/html/rfc4122)
+"""
+scalar UUID
+
+type User {
+  accounts: [Account!]!
+  createdAt: DateTime!
+  email: String!
+  id: UUID!
+  updatedAt: DateTime!
+}

@@ -1,12 +1,12 @@
 import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { Navigation } from './navigation';
 import { useApp } from './hooks';
-import type { FCC } from './types';
+import type { PFC } from './types';
 import { StatusBar } from './components';
 import { Provider } from 'urql';
 import { client } from './graphql';
 
-export const App: FCC = () => {
+export const App: PFC = () => {
   const { ready, handleReady } = useApp();
 
   if (!ready) {
