@@ -5,10 +5,11 @@ import { navigationTheme } from '@app/theme';
 
 type Props = {
   onReady: () => void;
+  authenticated: boolean;
 };
 
-export const Navigation: PFC<Props> = ({ onReady }) => (
+export const Navigation: PFC<Props> = ({ onReady, authenticated }) => (
   <NavigationContainer onReady={onReady} theme={navigationTheme}>
-    <RootNavigator />
+    <RootNavigator authenticated={authenticated} />
   </NavigationContainer>
 );

@@ -1,27 +1,20 @@
 import { MMKV } from 'react-native-mmkv';
 
-export const enum Key {
-  Auth = '@auth',
-}
-
-type StorageKey = `${Key}`;
+export type StorageKey = `@${string}`;
 
 class Storage extends MMKV {
   constructor() {
     super();
   }
 
-  getObject<T extends Record<string, unknown>>(key: StorageKey): T | undefined {
+  getObject<T>(key: StorageKey): T | undefined {
     const value = this.getString(key);
     if (!value) return;
 
     return JSON.parse(value);
   }
 
-  setObject<T extends Record<string, unknown>>(
-    key: StorageKey,
-    value: T,
-  ): void {
+  setObject<T>(key: StorageKey, value: T): void {
     this.set(key, JSON.stringify(value));
   }
 

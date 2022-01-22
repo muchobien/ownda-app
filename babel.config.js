@@ -5,6 +5,7 @@ module.exports = {
       { useTransformReactJSXExperimental: true },
     ],
   ],
+  ignore: [/node_modules\/@urq/],
   plugins: [
     'react-native-reanimated/plugin',
     [

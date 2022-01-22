@@ -4,10 +4,13 @@ import { useApp } from './hooks';
 import type { PFC } from './types';
 import { StatusBar } from './components';
 import { Provider } from 'urql';
-import { client } from './graphql';
+import { LogBox } from 'react-native';
+
+// FIXME: https://github.com/software-mansion/react-native-gesture-handler/issues/1770
+LogBox.ignoreLogs(['RNGestureHandlerModule']);
 
 export const App: PFC = () => {
-  const { ready, handleReady } = useApp();
+  const { ready, handleReady, authenticated, client } = useApp();
 
   if (!ready) {
     return null;
@@ -17,7 +20,7 @@ export const App: PFC = () => {
     <SafeAreaProvider>
       <StatusBar />
       <Provider value={client}>
-        <Navigation onReady={handleReady} />
+        <Navigation authenticated={authenticated} onReady={handleReady} />
       </Provider>
     </SafeAreaProvider>
   );

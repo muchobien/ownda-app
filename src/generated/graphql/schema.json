@@ -18,7 +18,8 @@
               "kind": "NON_NULL",
               "ofType": {
                 "kind": "SCALAR",
-                "name": "Any"
+                "name": "String",
+                "ofType": null
               }
             },
             "args": []
@@ -29,7 +30,8 @@
               "kind": "NON_NULL",
               "ofType": {
                 "kind": "SCALAR",
-                "name": "Any"
+                "name": "DateTime",
+                "ofType": null
               }
             },
             "args": []
@@ -40,7 +42,8 @@
               "kind": "NON_NULL",
               "ofType": {
                 "kind": "SCALAR",
-                "name": "Any"
+                "name": "UUID",
+                "ofType": null
               }
             },
             "args": []
@@ -51,7 +54,8 @@
               "kind": "NON_NULL",
               "ofType": {
                 "kind": "SCALAR",
-                "name": "Any"
+                "name": "String",
+                "ofType": null
               }
             },
             "args": []
@@ -62,7 +66,8 @@
               "kind": "NON_NULL",
               "ofType": {
                 "kind": "SCALAR",
-                "name": "Any"
+                "name": "Int",
+                "ofType": null
               }
             },
             "args": []
@@ -91,7 +96,8 @@
               "kind": "NON_NULL",
               "ofType": {
                 "kind": "SCALAR",
-                "name": "Any"
+                "name": "DateTime",
+                "ofType": null
               }
             },
             "args": []
@@ -131,6 +137,10 @@
         "interfaces": []
       },
       {
+        "kind": "SCALAR",
+        "name": "Boolean"
+      },
+      {
         "kind": "OBJECT",
         "name": "Category",
         "fields": [
@@ -158,7 +168,8 @@
               "kind": "NON_NULL",
               "ofType": {
                 "kind": "SCALAR",
-                "name": "Any"
+                "name": "String",
+                "ofType": null
               }
             },
             "args": []
@@ -169,7 +180,8 @@
               "kind": "NON_NULL",
               "ofType": {
                 "kind": "SCALAR",
-                "name": "Any"
+                "name": "DateTime",
+                "ofType": null
               }
             },
             "args": []
@@ -180,7 +192,8 @@
               "kind": "NON_NULL",
               "ofType": {
                 "kind": "SCALAR",
-                "name": "Any"
+                "name": "UUID",
+                "ofType": null
               }
             },
             "args": []
@@ -191,7 +204,8 @@
               "kind": "NON_NULL",
               "ofType": {
                 "kind": "SCALAR",
-                "name": "Any"
+                "name": "String",
+                "ofType": null
               }
             },
             "args": []
@@ -202,7 +216,8 @@
               "kind": "NON_NULL",
               "ofType": {
                 "kind": "SCALAR",
-                "name": "Any"
+                "name": "Int",
+                "ofType": null
               }
             },
             "args": []
@@ -220,7 +235,8 @@
             "name": "parentId",
             "type": {
               "kind": "SCALAR",
-              "name": "Any"
+              "name": "UUID",
+              "ofType": null
             },
             "args": []
           },
@@ -230,7 +246,8 @@
               "kind": "NON_NULL",
               "ofType": {
                 "kind": "SCALAR",
-                "name": "Any"
+                "name": "DateTime",
+                "ofType": null
               }
             },
             "args": []
@@ -248,7 +265,8 @@
               "kind": "NON_NULL",
               "ofType": {
                 "kind": "SCALAR",
-                "name": "Any"
+                "name": "String",
+                "ofType": null
               }
             },
             "args": []
@@ -259,7 +277,8 @@
               "kind": "NON_NULL",
               "ofType": {
                 "kind": "SCALAR",
-                "name": "Any"
+                "name": "String",
+                "ofType": null
               }
             },
             "args": []
@@ -270,13 +289,26 @@
               "kind": "NON_NULL",
               "ofType": {
                 "kind": "SCALAR",
-                "name": "Any"
+                "name": "String",
+                "ofType": null
               }
             },
             "args": []
           }
         ],
         "interfaces": []
+      },
+      {
+        "kind": "SCALAR",
+        "name": "DateTime"
+      },
+      {
+        "kind": "SCALAR",
+        "name": "Decimal"
+      },
+      {
+        "kind": "SCALAR",
+        "name": "Int"
       },
       {
         "kind": "OBJECT",
@@ -288,7 +320,8 @@
               "kind": "NON_NULL",
               "ofType": {
                 "kind": "SCALAR",
-                "name": "Any"
+                "name": "Boolean",
+                "ofType": null
               }
             },
             "args": [
@@ -310,7 +343,8 @@
               "kind": "NON_NULL",
               "ofType": {
                 "kind": "SCALAR",
-                "name": "Any"
+                "name": "Boolean",
+                "ofType": null
               }
             },
             "args": [
@@ -332,7 +366,8 @@
               "kind": "NON_NULL",
               "ofType": {
                 "kind": "SCALAR",
-                "name": "Any"
+                "name": "Boolean",
+                "ofType": null
               }
             },
             "args": [
@@ -388,7 +423,8 @@
                   "kind": "NON_NULL",
                   "ofType": {
                     "kind": "SCALAR",
-                    "name": "Any"
+                    "name": "String",
+                    "ofType": null
                   }
                 }
               }
@@ -441,7 +477,8 @@
                   "kind": "NON_NULL",
                   "ofType": {
                     "kind": "SCALAR",
-                    "name": "Any"
+                    "name": "UUID",
+                    "ofType": null
                   }
                 }
               }
@@ -500,7 +537,8 @@
                   "kind": "NON_NULL",
                   "ofType": {
                     "kind": "SCALAR",
-                    "name": "Any"
+                    "name": "UUID",
+                    "ofType": null
                   }
                 }
               }
@@ -535,7 +573,8 @@
                   "kind": "NON_NULL",
                   "ofType": {
                     "kind": "SCALAR",
-                    "name": "Any"
+                    "name": "UUID",
+                    "ofType": null
                   }
                 }
               }
@@ -574,6 +613,10 @@
         "interfaces": []
       },
       {
+        "kind": "SCALAR",
+        "name": "String"
+      },
+      {
         "kind": "OBJECT",
         "name": "Transaction",
         "fields": [
@@ -583,7 +626,8 @@
               "kind": "NON_NULL",
               "ofType": {
                 "kind": "SCALAR",
-                "name": "Any"
+                "name": "Decimal",
+                "ofType": null
               }
             },
             "args": []
@@ -606,7 +650,8 @@
               "kind": "NON_NULL",
               "ofType": {
                 "kind": "SCALAR",
-                "name": "Any"
+                "name": "UUID",
+                "ofType": null
               }
             },
             "args": []
@@ -617,7 +662,8 @@
               "kind": "NON_NULL",
               "ofType": {
                 "kind": "SCALAR",
-                "name": "Any"
+                "name": "DateTime",
+                "ofType": null
               }
             },
             "args": []
@@ -628,7 +674,8 @@
               "kind": "NON_NULL",
               "ofType": {
                 "kind": "SCALAR",
-                "name": "Any"
+                "name": "UUID",
+                "ofType": null
               }
             },
             "args": []
@@ -639,7 +686,8 @@
               "kind": "NON_NULL",
               "ofType": {
                 "kind": "SCALAR",
-                "name": "Any"
+                "name": "String",
+                "ofType": null
               }
             },
             "args": []
@@ -661,13 +709,18 @@
               "kind": "NON_NULL",
               "ofType": {
                 "kind": "SCALAR",
-                "name": "Any"
+                "name": "DateTime",
+                "ofType": null
               }
             },
             "args": []
           }
         ],
         "interfaces": []
+      },
+      {
+        "kind": "SCALAR",
+        "name": "UUID"
       },
       {
         "kind": "OBJECT",
@@ -697,7 +750,8 @@
               "kind": "NON_NULL",
               "ofType": {
                 "kind": "SCALAR",
-                "name": "Any"
+                "name": "DateTime",
+                "ofType": null
               }
             },
             "args": []
@@ -708,7 +762,8 @@
               "kind": "NON_NULL",
               "ofType": {
                 "kind": "SCALAR",
-                "name": "Any"
+                "name": "String",
+                "ofType": null
               }
             },
             "args": []
@@ -719,7 +774,8 @@
               "kind": "NON_NULL",
               "ofType": {
                 "kind": "SCALAR",
-                "name": "Any"
+                "name": "UUID",
+                "ofType": null
               }
             },
             "args": []
@@ -730,7 +786,8 @@
               "kind": "NON_NULL",
               "ofType": {
                 "kind": "SCALAR",
-                "name": "Any"
+                "name": "DateTime",
+                "ofType": null
               }
             },
             "args": []

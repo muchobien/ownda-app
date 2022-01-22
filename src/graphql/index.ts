@@ -1,15 +1,17 @@
 import {
   createClient,
   dedupExchange,
-  cacheExchange,
   fetchExchange,
   errorExchange,
   makeOperation,
 } from 'urql';
-
 import { authExchange } from '@urql/exchange-auth';
 import { storage } from '@app/utils/storage';
+// import type { GraphCacheConfig } from '@app/generated/graphql';
 import { RefreshTokenDocument } from '@app/generated/graphql';
+// import { offlineExchange } from '@urql/exchange-graphcache';
+// import { makeUrqlStorage } from '@app/utils/makeUrqlStorage';
+// import schema from '@app/generated/graphql/schema.json';
 
 type AuthState = {
   accessToken: string;
@@ -21,7 +23,11 @@ export const client = createClient({
   url: 'http://100.90.159.107:8000/graphql',
   exchanges: [
     dedupExchange,
-    cacheExchange,
+    // offlineExchange<GraphCacheConfig>({
+    //   // @ts-expect-error: TODO: fix this
+    //   schema,
+    //   storage: makeUrqlStorage(),
+    // }),
     errorExchange({
       onError: error => {
         const isAuthError = error.graphQLErrors.some(

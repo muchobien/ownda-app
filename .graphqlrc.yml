@@ -35,5 +35,7 @@ extensions:
           - typed-document-node
           - typescript-urql-graphcache
       src/generated/graphql/schema.json:
+        config:
+          includeScalars: true
         plugins:
           - urql-introspection
