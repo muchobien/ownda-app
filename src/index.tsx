@@ -10,7 +10,7 @@ import { LogBox } from 'react-native';
 LogBox.ignoreLogs(['RNGestureHandlerModule']);
 
 export const App: PFC = () => {
-  const { ready, handleReady, authenticated, client } = useApp();
+  const { authenticated, client, handleReady, navigationRef, ready } = useApp();
 
   if (!ready) {
     return null;
@@ -20,7 +20,11 @@ export const App: PFC = () => {
     <SafeAreaProvider>
       <StatusBar />
       <Provider value={client}>
-        <Navigation authenticated={authenticated} onReady={handleReady} />
+        <Navigation
+          ref={navigationRef}
+          authenticated={authenticated}
+          onReady={handleReady}
+        />
       </Provider>
     </SafeAreaProvider>
   );
