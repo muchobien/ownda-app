@@ -1,10 +1,11 @@
+import type { MMKVConfiguration } from 'react-native-mmkv';
 import { MMKV } from 'react-native-mmkv';
 
 export type StorageKey = `@${string}`;
 
 class Storage extends MMKV {
-  constructor() {
-    super();
+  constructor(config?: MMKVConfiguration) {
+    super(config);
   }
 
   getObject<T>(key: StorageKey): T | undefined {
