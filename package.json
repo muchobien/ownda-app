@@ -21,7 +21,7 @@
   "dependencies": {
     "@emotion/native": "11.0.0",
     "@emotion/react": "11.7.1",
-    "@react-native-community/netinfo": "7.1.7",
+    "@react-native-community/netinfo": "7.1.9",
     "@react-navigation/bottom-tabs": "6.0.9",
     "@react-navigation/devtools": "6.0.4",
     "@react-navigation/native": "6.0.6",
