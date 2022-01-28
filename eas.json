@@ -6,16 +6,32 @@
     "development": {
       "distribution": "internal",
       "android": {
-        "gradleCommand": ":app:assembleDebug"
+        "gradleCommand": ":app:assembleDevelopmentDebug"
       },
       "ios": {
+        "scheme": "ownda-dev",
         "buildConfiguration": "Debug"
       }
     },
     "preview": {
-      "distribution": "internal"
+      "distribution": "internal",
+      "android": {
+        "gradleCommand": ":app:assemblePreviewRelease"
+      },
+      "ios": {
+        "scheme": "ownda-preview",
+        "buildConfiguration": "Release"
+      }
     },
-    "production": {}
+    "production": {
+      "android": {
+        "gradleCommand": ":app:bundleProductionRelease"
+      },
+      "ios": {
+        "scheme": "ownda",
+        "buildConfiguration": "Release"
+      }
+    }
   },
   "submit": {
     "production": {}
