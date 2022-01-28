@@ -13,4 +13,8 @@ export const navigationTheme: NavigationTheme = {
   },
 };
 
-export { colors };
+export const theme = {
+  colors,
+};
+
+export type AppTheme = typeof theme;

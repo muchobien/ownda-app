@@ -1,3 +1,5 @@
 <resources>
     <color name="bootsplash_background">#FF111114</color>
+    <color name="ivy">#6B4DFF</color>
+    <color name="ivy_light">#8067ff</color>
 </resources>

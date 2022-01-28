@@ -44,6 +44,7 @@ static void InitializeFlipper(UIApplication *application) {
   UIViewController *rootViewController = [self.reactDelegate createRootViewController];
   rootViewController.view = rootView;
   self.window.rootViewController = rootViewController;
+  self.window.tintColor = [UIColor colorWithRed: 0.42 green: 0.30 blue: 1.00 alpha: 1.00];
   [self.window makeKeyAndVisible];
   [super application:application didFinishLaunchingWithOptions:launchOptions];
 

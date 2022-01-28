@@ -11,6 +11,9 @@
 
         <!-- Navigation bar will stay translucent on Android < 8.1 -->
         <item name="android:windowTranslucentNavigation">true</item>
+
+        <item name="android:colorControlActivated">@color/ivy</item>
+        <item name="android:textColorHighlight">@color/ivy_light</item>
     </style>
 
     <style name="BootTheme" parent="Theme.SplashScreen">
@@ -19,7 +22,7 @@
         <item name="postSplashScreenTheme">@style/AppTheme</item>
 
         <!-- Status bar initial style: true = dark-content, false = light-content -->
-        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowLightStatusBar">false</item>
 
         <!-- Navigation bar will stay translucent on Android < 8.1 -->
         <item name="android:windowTranslucentNavigation">true</item>

@@ -1,11 +1,14 @@
 import type { Screen } from '@app/types';
-import { Text } from 'react-native';
-import { SafeView } from '@app/components';
+
+import { EmailInput, PasswordInput, Title, Submit, Container } from './styles';
 
 export const Login: Screen<'Login'> = () => {
   return (
-    <SafeView>
-      <Text>Home</Text>
-    </SafeView>
+    <Container>
+      <Title>Login</Title>
+      <EmailInput label="Email" />
+      <PasswordInput label="Password" />
+      <Submit title="Submit" />
+    </Container>
   );
 };
