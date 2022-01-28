@@ -11,9 +11,9 @@ export type ButtonProps = {
 
 export const Button = memo<ButtonProps>(
   ({ title, variant = 'primary', onPress, style }) => (
-    <Container style={style}>
+    <Container variant={variant} style={style}>
       <Pressable onPress={onPress}>
-        <Inner variant={variant} accessible accessibilityRole="button">
+        <Inner accessible accessibilityRole="button">
           <Title>{title}</Title>
         </Inner>
       </Pressable>

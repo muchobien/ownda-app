@@ -1,5 +1,4 @@
 import type { Screen } from '@app/types';
-
 import { EmailInput, PasswordInput, Title, Submit, Container } from './styles';
 
 export const Login: Screen<'Login'> = () => {
