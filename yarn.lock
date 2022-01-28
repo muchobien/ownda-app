@@ -4400,10 +4400,10 @@ expo-keep-awake@~10.0.1:
   resolved "https://registry.yarnpkg.com/expo-keep-awake/-/expo-keep-awake-10.0.1.tgz#9f1176216c41eee20843c8232acfdca2bc32d334"
   integrity sha512-kcBtoDGkm3RRe6BpKDvR7gof/ErajEia38u92pRvNRctdh+p8AFO7GQuiipyg3iMfhcCFVTCIV7h3tuA0g/yDw==
 
-expo-linear-gradient@11.0.0:
-  version "11.0.0"
-  resolved "https://registry.yarnpkg.com/expo-linear-gradient/-/expo-linear-gradient-11.0.0.tgz#88605aad93ee73c32110e83e89ef17bb13c330b5"
-  integrity sha512-OVzmsz5y+NxX4XvtQhKAQCdakVaAwFB0ajYlcT50zl1MKU33LrBa8hxSe3qo8CCGSZSfjdfzGvyZ1cf12BXI9Q==
+expo-linear-gradient@11.0.1:
+  version "11.0.1"
+  resolved "https://registry.yarnpkg.com/expo-linear-gradient/-/expo-linear-gradient-11.0.1.tgz#e385025aa76efa810d25b22fa518b3071f7de37a"
+  integrity sha512-HHAuUK4geuye2/bemfZRsjONkpb2H55NNGEb1aidLHyiohaAzla2+VleUO+fkSUJRA005eeXo3TEHFVyfXQx6g==
 
 expo-modules-autolinking@0.5.5:
   version "0.5.5"
@@ -7682,10 +7682,10 @@ react-native-codegen@^0.0.8:
     jscodeshift "^0.11.0"
     nullthrows "^1.1.1"
 
-react-native-flipper@0.130.0:
-  version "0.130.0"
-  resolved "https://registry.yarnpkg.com/react-native-flipper/-/react-native-flipper-0.130.0.tgz#91e907257000af514c4173c8f7b748943c08cf5c"
-  integrity sha512-F6UzGTRSy24tEFroQGxSfm6+7qL3LuV8RYG3O/91vGzUKX+IBZdRdEJWeuELk/6WBtFAUuWEE7mlIWe0ZwwrQQ==
+react-native-flipper@0.131.0:
+  version "0.131.0"
+  resolved "https://registry.yarnpkg.com/react-native-flipper/-/react-native-flipper-0.131.0.tgz#681596cd469668b8114430d4901a62641d43e0b2"
+  integrity sha512-7qbdWz1YcfRPhTo3sO+Evf/N7h6ZLEBMiKxG5YthNpoi6mwD5WiLvSP7fU33OSMmVNR7q0OFFItpm2gyAggkJg==
 
 react-native-gesture-handler@2.2.0:
   version "2.2.0"
@@ -7703,10 +7703,10 @@ react-native-mmkv-flipper-plugin@0.0.1:
   resolved "https://registry.yarnpkg.com/react-native-mmkv-flipper-plugin/-/react-native-mmkv-flipper-plugin-0.0.1.tgz#a7a5edff2245f36c400303a3d21eedc9620330d4"
   integrity sha512-DfCHSBPBATKkAsAmC6p+cUxN+H6DARVaXrLrDljYiYATs0Zk9vybiZfYxnN/pMtJRM7aRp2N+dbIMxoIuvzi2A==
 
-react-native-mmkv@2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/react-native-mmkv/-/react-native-mmkv-2.0.0.tgz#761e6362bbfe0e81f923b3febae0225413dee228"
-  integrity sha512-Dhy3HrwpWdA7r4vNclKLaD/PgdpsLz0mTzvnNUqbQss1yh3D2ThgFVn8rVKToXHyipxs+Y5eDMLMGGDQyIOV2Q==
+react-native-mmkv@2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/react-native-mmkv/-/react-native-mmkv-2.0.1.tgz#99cdb49e378d9dd23d62097220cbb79590109dbb"
+  integrity sha512-4DSUt47zGEvOaFKhv6OiAmK8yYDOi5Jlp5iYs4BRQkHme+DsUMAZWpZzhqxPlP5IghY2Hub4EB7GkKPs3LkPZA==
 
 react-native-reanimated@2.3.1:
   version "2.3.1"
