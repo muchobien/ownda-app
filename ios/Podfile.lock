@@ -8,6 +8,8 @@ PODS:
     - ExpoModulesCore
   - EXFileSystem (13.2.1):
     - ExpoModulesCore
+  - EXFont (10.0.4):
+    - ExpoModulesCore
   - Expo (44.0.5):
     - ExpoModulesCore
   - ExpoLinearGradient (11.0.1):
@@ -427,6 +429,7 @@ DEPENDENCIES:
   - EXConstants (from `../node_modules/expo-constants/ios`)
   - EXErrorRecovery (from `../node_modules/expo-error-recovery/ios`)
   - EXFileSystem (from `../node_modules/expo-file-system/ios`)
+  - EXFont (from `../node_modules/expo-font/ios`)
   - Expo (from `../node_modules/expo/ios`)
   - ExpoLinearGradient (from `../node_modules/expo-linear-gradient/ios`)
   - ExpoModulesCore (from `../node_modules/expo-modules-core/ios`)
@@ -526,6 +529,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/expo-error-recovery/ios"
   EXFileSystem:
     :path: "../node_modules/expo-file-system/ios"
+  EXFont:
+    :path: "../node_modules/expo-font/ios"
   Expo:
     :path: "../node_modules/expo/ios"
   ExpoLinearGradient:
@@ -614,6 +619,7 @@ SPEC CHECKSUMS:
   EXConstants: 6966f4fa7a22770dd240a66d029819ff94c748c9
   EXErrorRecovery: deea88a01d38f8b1c1181b4e1d179b0ba0e4bb5b
   EXFileSystem: bbfe3441f1f7f64942d8df2aa4264b6c7a27807c
+  EXFont: 1fb13af43dc517c01c0ff21a6e32f9f9bf2ea602
   Expo: 337c72b7e9314e93023af79c875930db8e008275
   ExpoLinearGradient: 0058179826730a9c0b3299b483091a36958658cc
   ExpoModulesCore: 64abda7af7cf659d2fa092934e29c6f4ea7e849f

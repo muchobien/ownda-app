@@ -6,6 +6,7 @@ const variants = {
     css`
       color: ${theme.colors.white};
       font-size: 32px;
+      font-family: Inter_700Bold;
     `,
   h2: (theme: Theme) =>
     css`
@@ -37,6 +38,8 @@ const variants = {
   button: (theme: Theme) =>
     css`
       color: ${theme.colors.white};
+      font-size: 16px;
+      font-family: Inter_600SemiBold;
     `,
   overline: (theme: Theme) =>
     css`
@@ -50,6 +53,7 @@ const variants = {
     css`
       color: ${theme.colors.white};
       font-size: 10px;
+      font-family: Inter_600SemiBold;
     `,
 };
 
