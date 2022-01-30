@@ -1,7 +1,8 @@
 import type { MMKVConfiguration } from 'react-native-mmkv';
 import { MMKV } from 'react-native-mmkv';
 
-export type StorageKey = `@${string}`;
+type Key = 'graphcache-data' | 'graphcache-metadata' | 'auth' | 'logged';
+export type StorageKey = `@${Key}`;
 
 class Storage extends MMKV {
   constructor(config?: MMKVConfiguration) {

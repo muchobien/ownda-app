@@ -40,7 +40,8 @@ export const useApp = () => {
         Inter_800ExtraBold,
         Inter_900Black,
       });
-      await client.query(MeDocument).toPromise();
+      const { error } = await client.query(MeDocument).toPromise();
+      storage.set('@logged', !error);
     } catch {
       // noop
     } finally {

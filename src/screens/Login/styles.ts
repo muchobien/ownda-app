@@ -3,11 +3,11 @@ import styled from '@emotion/native';
 
 export const EmailInput = styled(Input)`
   margin-bottom: 40px;
-` as typeof Input;
+` as unknown as typeof Input;
 
 export const PasswordInput = styled(Input)`
   margin-bottom: 40px;
-` as typeof Input;
+` as unknown as typeof Input;
 
 export const Title = styled(Text)`
   margin-top: 16px;

@@ -1,5 +1,5 @@
 import { ProviderEnum } from '@app/generated/graphql';
-import { useLogin } from '@app/graphql/hooks/me';
+import { useLogin } from '@app/hooks/me';
 import { useInputRefs } from '@app/hooks';
 import type { ConnectProps } from '@app/types';
 import { PlainObject } from '@app/utils/object';

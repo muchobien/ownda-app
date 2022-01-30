@@ -31,6 +31,7 @@
     "@urql/exchange-auth": "0.1.7",
     "@urql/exchange-graphcache": "4.3.6",
     "expo": "44.0.5",
+    "expo-blur": "11.0.0",
     "expo-file-system": "13.2.1",
     "expo-font": "10.0.4",
     "expo-linear-gradient": "11.0.1",
@@ -49,9 +50,12 @@
     "urql": "2.0.6"
   },
   "devDependencies": {
+    "@arkweid/lefthook": "0.7.7",
     "@babel/core": "7.16.12",
     "@babel/plugin-transform-react-jsx": "7.16.7",
     "@babel/runtime": "7.16.7",
+    "@commitlint/cli": "16.1.0",
+    "@commitlint/config-conventional": "16.0.0",
     "@graphql-codegen/add": "3.1.1",
     "@graphql-codegen/cli": "2.4.0",
     "@graphql-codegen/schema-ast": "2.4.1",

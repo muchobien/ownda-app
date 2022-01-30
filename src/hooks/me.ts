@@ -22,10 +22,13 @@ export const useLogin = () => {
 
   const login = useCallback(
     async (input: AuthInput) => {
-      const { data } = await mutate({ input });
+      const { data, error } = await mutate({ input });
+      if (error) return { error };
       if (data) {
+        storage.set('@logged', true);
         storage.setObject('@auth', data.login.credentials);
       }
+      return {};
     },
     [mutate],
   );
@@ -42,4 +45,13 @@ export const useRegister = () => {
   );
 
   return { register, fetching };
+};
+
+export const useLogout = () => {
+  const logout = useCallback(() => {
+    storage.delete('@auth');
+    storage.delete('@logged');
+  }, []);
+
+  return { logout };
 };
