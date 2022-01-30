@@ -28,10 +28,10 @@ export const makeUrqlStorage = ({
     new Date().valueOf() / (1000 * 60 * 60 * 24),
   );
 
-  const allData: Record<string | number, unknown> = {};
+  let allData: Record<string | number, unknown> = {};
 
   return {
-    readData: async () => {
+    readData: () => {
       if (!Object.keys(allData).length) {
         const parsed = storage.getObject<SerializedEntries>(dataKey) ?? {};
         Object.assign(allData, parsed);
@@ -50,9 +50,8 @@ export const makeUrqlStorage = ({
         storage.setObject(dataKey, allData);
       }
 
-      return Object.assign(
-        {},
-        ...Object.keys(allData).map(key => allData[key]),
+      return Promise.resolve(
+        Object.assign({}, ...Object.keys(allData).map(key => allData[key])),
       );
     },
 
@@ -96,7 +95,9 @@ export const makeUrqlStorage = ({
     },
 
     clear: () => {
-      storage.clearAll();
+      allData = {};
+      storage.delete('@graphcache-data');
+      storage.delete('@graphcache-metadata');
     },
   };
 };

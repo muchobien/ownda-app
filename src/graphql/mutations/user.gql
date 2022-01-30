@@ -1,0 +1,17 @@
+mutation Login($input: AuthInput!) {
+  login(input: $input) {
+    ...Auth
+  }
+}
+
+mutation Register($input: AuthInput!) {
+  register(input: $input) {
+    ...Auth
+  }
+}
+
+mutation RefreshToken($token: String!) {
+  refreshToken(token: $token) {
+    ...Tokens
+  }
+}

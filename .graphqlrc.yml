@@ -1,5 +1,5 @@
 overwrite: true
-schema: 'http://100.90.159.107:8000/graphql'
+schema: ${ENDPOINT}
 documents: 'src/**/*.gql'
 extensions:
   codegen:
@@ -17,9 +17,7 @@ extensions:
       constEnums: true
       strictScalars: true
       nonOptionalTypename: true
-      preResolveTypes: false
       dedupeOperationSuffix: true
-      flattenGeneratedTypes: true 
     generates:
       schema.graphql:
         plugins:

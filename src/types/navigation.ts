@@ -35,10 +35,19 @@ export type RootTabScreenProps<Screen extends keyof RootTabParamList> =
     NativeStackScreenProps<RootStackParamList>
   >;
 
-export type Screen<S extends keyof RootStackParamList> = FunctionComponent<
-  RootStackScreenProps<S>
->;
+export type Screen<
+  S extends keyof RootStackParamList | keyof RootTabParamList,
+> = S extends keyof RootStackParamList
+  ? FunctionComponent<RootStackScreenProps<S>>
+  : S extends keyof RootTabParamList
+  ? FunctionComponent<RootTabScreenProps<S>>
+  : never;
 
-export type Tab<S extends keyof RootTabParamList> = FunctionComponent<
-  RootTabScreenProps<S>
->;
+export type ConnectProps<
+  S extends keyof RootStackParamList | keyof RootTabParamList,
+  P extends Record<string, unknown> = Record<string, unknown>,
+> = S extends keyof RootStackParamList
+  ? RootStackScreenProps<S> & P
+  : S extends keyof RootTabParamList
+  ? RootTabScreenProps<S> & P
+  : never;

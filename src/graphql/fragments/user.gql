@@ -1,0 +1,20 @@
+fragment AuthenticatedUser on User {
+  id
+  email
+  createdAt
+  updatedAt
+}
+fragment Tokens on Credential {
+  tokenType
+  accessToken
+  refreshToken
+}
+
+fragment Auth on Authenticated {
+  user {
+    ...AuthenticatedUser
+  }
+  credentials {
+    ...Tokens
+  }
+}

@@ -214,29 +214,59 @@ export type User = {
   updatedAt: Scalars['DateTime'];
 };
 
-export type MeQueryVariables = Exact<{ [key: string]: never }>;
+export type AuthenticatedUserFragment = {
+  __typename: 'User';
+  id: string;
+  email: string;
+  createdAt: string;
+  updatedAt: string;
+};
 
-export type MeQuery = { __typename: 'Query' } & {
-  me: { __typename: 'User' } & Pick<
-    User,
-    'id' | 'email' | 'createdAt' | 'updatedAt'
-  >;
+export type TokensFragment = {
+  __typename: 'Credential';
+  tokenType: string;
+  accessToken: string;
+  refreshToken: string;
+};
+
+export type AuthFragment = {
+  __typename: 'Authenticated';
+  user: {
+    __typename: 'User';
+    id: string;
+    email: string;
+    createdAt: string;
+    updatedAt: string;
+  };
+  credentials: {
+    __typename: 'Credential';
+    tokenType: string;
+    accessToken: string;
+    refreshToken: string;
+  };
 };
 
 export type LoginMutationVariables = Exact<{
   input: AuthInput;
 }>;
 
-export type LoginMutation = { __typename: 'Mutation' } & {
-  login: { __typename: 'Authenticated' } & {
-    user: { __typename: 'User' } & Pick<
-      User,
-      'id' | 'email' | 'createdAt' | 'updatedAt'
-    >;
-    credentials: { __typename: 'Credential' } & Pick<
-      Credential,
-      'tokenType' | 'accessToken' | 'refreshToken'
-    >;
+export type LoginMutation = {
+  __typename: 'Mutation';
+  login: {
+    __typename: 'Authenticated';
+    user: {
+      __typename: 'User';
+      id: string;
+      email: string;
+      createdAt: string;
+      updatedAt: string;
+    };
+    credentials: {
+      __typename: 'Credential';
+      tokenType: string;
+      accessToken: string;
+      refreshToken: string;
+    };
   };
 };
 
@@ -244,16 +274,23 @@ export type RegisterMutationVariables = Exact<{
   input: AuthInput;
 }>;
 
-export type RegisterMutation = { __typename: 'Mutation' } & {
-  register: { __typename: 'Authenticated' } & {
-    user: { __typename: 'User' } & Pick<
-      User,
-      'id' | 'email' | 'createdAt' | 'updatedAt'
-    >;
-    credentials: { __typename: 'Credential' } & Pick<
-      Credential,
-      'tokenType' | 'accessToken' | 'refreshToken'
-    >;
+export type RegisterMutation = {
+  __typename: 'Mutation';
+  register: {
+    __typename: 'Authenticated';
+    user: {
+      __typename: 'User';
+      id: string;
+      email: string;
+      createdAt: string;
+      updatedAt: string;
+    };
+    credentials: {
+      __typename: 'Credential';
+      tokenType: string;
+      accessToken: string;
+      refreshToken: string;
+    };
   };
 };
 
@@ -261,41 +298,118 @@ export type RefreshTokenMutationVariables = Exact<{
   token: Scalars['String'];
 }>;
 
-export type RefreshTokenMutation = { __typename: 'Mutation' } & {
-  refreshToken: { __typename: 'Credential' } & Pick<
-    Credential,
-    'tokenType' | 'accessToken' | 'refreshToken'
-  >;
+export type RefreshTokenMutation = {
+  __typename: 'Mutation';
+  refreshToken: {
+    __typename: 'Credential';
+    tokenType: string;
+    accessToken: string;
+    refreshToken: string;
+  };
 };
 
-export const MeDocument = {
+export type MeQueryVariables = Exact<{ [key: string]: never }>;
+
+export type MeQuery = {
+  __typename: 'Query';
+  me: {
+    __typename: 'User';
+    id: string;
+    email: string;
+    createdAt: string;
+    updatedAt: string;
+  };
+};
+
+export const AuthenticatedUserFragmentDoc = {
   kind: 'Document',
   definitions: [
     {
-      kind: 'OperationDefinition',
-      operation: 'query',
-      name: { kind: 'Name', value: 'Me' },
+      kind: 'FragmentDefinition',
+      name: { kind: 'Name', value: 'AuthenticatedUser' },
+      typeCondition: {
+        kind: 'NamedType',
+        name: { kind: 'Name', value: 'User' },
+      },
+      selectionSet: {
+        kind: 'SelectionSet',
+        selections: [
+          { kind: 'Field', name: { kind: 'Name', value: 'id' } },
+          { kind: 'Field', name: { kind: 'Name', value: 'email' } },
+          { kind: 'Field', name: { kind: 'Name', value: 'createdAt' } },
+          { kind: 'Field', name: { kind: 'Name', value: 'updatedAt' } },
+        ],
+      },
+    },
+  ],
+} as unknown as DocumentNode<AuthenticatedUserFragment, unknown>;
+export const TokensFragmentDoc = {
+  kind: 'Document',
+  definitions: [
+    {
+      kind: 'FragmentDefinition',
+      name: { kind: 'Name', value: 'Tokens' },
+      typeCondition: {
+        kind: 'NamedType',
+        name: { kind: 'Name', value: 'Credential' },
+      },
+      selectionSet: {
+        kind: 'SelectionSet',
+        selections: [
+          { kind: 'Field', name: { kind: 'Name', value: 'tokenType' } },
+          { kind: 'Field', name: { kind: 'Name', value: 'accessToken' } },
+          { kind: 'Field', name: { kind: 'Name', value: 'refreshToken' } },
+        ],
+      },
+    },
+  ],
+} as unknown as DocumentNode<TokensFragment, unknown>;
+export const AuthFragmentDoc = {
+  kind: 'Document',
+  definitions: [
+    {
+      kind: 'FragmentDefinition',
+      name: { kind: 'Name', value: 'Auth' },
+      typeCondition: {
+        kind: 'NamedType',
+        name: { kind: 'Name', value: 'Authenticated' },
+      },
       selectionSet: {
         kind: 'SelectionSet',
         selections: [
           {
             kind: 'Field',
-            name: { kind: 'Name', value: 'me' },
+            name: { kind: 'Name', value: 'user' },
             selectionSet: {
               kind: 'SelectionSet',
               selections: [
-                { kind: 'Field', name: { kind: 'Name', value: 'id' } },
-                { kind: 'Field', name: { kind: 'Name', value: 'email' } },
-                { kind: 'Field', name: { kind: 'Name', value: 'createdAt' } },
-                { kind: 'Field', name: { kind: 'Name', value: 'updatedAt' } },
+                {
+                  kind: 'FragmentSpread',
+                  name: { kind: 'Name', value: 'AuthenticatedUser' },
+                },
+              ],
+            },
+          },
+          {
+            kind: 'Field',
+            name: { kind: 'Name', value: 'credentials' },
+            selectionSet: {
+              kind: 'SelectionSet',
+              selections: [
+                {
+                  kind: 'FragmentSpread',
+                  name: { kind: 'Name', value: 'Tokens' },
+                },
               ],
             },
           },
         ],
       },
     },
+    ...AuthenticatedUserFragmentDoc.definitions,
+    ...TokensFragmentDoc.definitions,
   ],
-} as unknown as DocumentNode<MeQuery, MeQueryVariables>;
+} as unknown as DocumentNode<AuthFragment, unknown>;
 export const LoginDocument = {
   kind: 'Document',
   definitions: [
@@ -339,44 +453,8 @@ export const LoginDocument = {
               kind: 'SelectionSet',
               selections: [
                 {
-                  kind: 'Field',
-                  name: { kind: 'Name', value: 'user' },
-                  selectionSet: {
-                    kind: 'SelectionSet',
-                    selections: [
-                      { kind: 'Field', name: { kind: 'Name', value: 'id' } },
-                      { kind: 'Field', name: { kind: 'Name', value: 'email' } },
-                      {
-                        kind: 'Field',
-                        name: { kind: 'Name', value: 'createdAt' },
-                      },
-                      {
-                        kind: 'Field',
-                        name: { kind: 'Name', value: 'updatedAt' },
-                      },
-                    ],
-                  },
-                },
-                {
-                  kind: 'Field',
-                  name: { kind: 'Name', value: 'credentials' },
-                  selectionSet: {
-                    kind: 'SelectionSet',
-                    selections: [
-                      {
-                        kind: 'Field',
-                        name: { kind: 'Name', value: 'tokenType' },
-                      },
-                      {
-                        kind: 'Field',
-                        name: { kind: 'Name', value: 'accessToken' },
-                      },
-                      {
-                        kind: 'Field',
-                        name: { kind: 'Name', value: 'refreshToken' },
-                      },
-                    ],
-                  },
+                  kind: 'FragmentSpread',
+                  name: { kind: 'Name', value: 'Auth' },
                 },
               ],
             },
@@ -384,6 +462,7 @@ export const LoginDocument = {
         ],
       },
     },
+    ...AuthFragmentDoc.definitions,
   ],
 } as unknown as DocumentNode<LoginMutation, LoginMutationVariables>;
 export const RegisterDocument = {
@@ -429,44 +508,8 @@ export const RegisterDocument = {
               kind: 'SelectionSet',
               selections: [
                 {
-                  kind: 'Field',
-                  name: { kind: 'Name', value: 'user' },
-                  selectionSet: {
-                    kind: 'SelectionSet',
-                    selections: [
-                      { kind: 'Field', name: { kind: 'Name', value: 'id' } },
-                      { kind: 'Field', name: { kind: 'Name', value: 'email' } },
-                      {
-                        kind: 'Field',
-                        name: { kind: 'Name', value: 'createdAt' },
-                      },
-                      {
-                        kind: 'Field',
-                        name: { kind: 'Name', value: 'updatedAt' },
-                      },
-                    ],
-                  },
-                },
-                {
-                  kind: 'Field',
-                  name: { kind: 'Name', value: 'credentials' },
-                  selectionSet: {
-                    kind: 'SelectionSet',
-                    selections: [
-                      {
-                        kind: 'Field',
-                        name: { kind: 'Name', value: 'tokenType' },
-                      },
-                      {
-                        kind: 'Field',
-                        name: { kind: 'Name', value: 'accessToken' },
-                      },
-                      {
-                        kind: 'Field',
-                        name: { kind: 'Name', value: 'refreshToken' },
-                      },
-                    ],
-                  },
+                  kind: 'FragmentSpread',
+                  name: { kind: 'Name', value: 'Auth' },
                 },
               ],
             },
@@ -474,6 +517,7 @@ export const RegisterDocument = {
         ],
       },
     },
+    ...AuthFragmentDoc.definitions,
   ],
 } as unknown as DocumentNode<RegisterMutation, RegisterMutationVariables>;
 export const RefreshTokenDocument = {
@@ -518,11 +562,9 @@ export const RefreshTokenDocument = {
             selectionSet: {
               kind: 'SelectionSet',
               selections: [
-                { kind: 'Field', name: { kind: 'Name', value: 'tokenType' } },
-                { kind: 'Field', name: { kind: 'Name', value: 'accessToken' } },
                 {
-                  kind: 'Field',
-                  name: { kind: 'Name', value: 'refreshToken' },
+                  kind: 'FragmentSpread',
+                  name: { kind: 'Name', value: 'Tokens' },
                 },
               ],
             },
@@ -530,11 +572,41 @@ export const RefreshTokenDocument = {
         ],
       },
     },
+    ...TokensFragmentDoc.definitions,
   ],
 } as unknown as DocumentNode<
   RefreshTokenMutation,
   RefreshTokenMutationVariables
 >;
+export const MeDocument = {
+  kind: 'Document',
+  definitions: [
+    {
+      kind: 'OperationDefinition',
+      operation: 'query',
+      name: { kind: 'Name', value: 'Me' },
+      selectionSet: {
+        kind: 'SelectionSet',
+        selections: [
+          {
+            kind: 'Field',
+            name: { kind: 'Name', value: 'me' },
+            selectionSet: {
+              kind: 'SelectionSet',
+              selections: [
+                {
+                  kind: 'FragmentSpread',
+                  name: { kind: 'Name', value: 'AuthenticatedUser' },
+                },
+              ],
+            },
+          },
+        ],
+      },
+    },
+    ...AuthenticatedUserFragmentDoc.definitions,
+  ],
+} as unknown as DocumentNode<MeQuery, MeQueryVariables>;
 export type WithTypename<T extends { __typename?: any }> = {
   [K in Exclude<keyof T, '__typename'>]?: T[K];
 } & { __typename: NonNullable<T['__typename']> };

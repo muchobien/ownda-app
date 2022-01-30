@@ -7,11 +7,12 @@ import {
 } from 'urql';
 import { authExchange } from '@urql/exchange-auth';
 import { storage } from '@app/utils/storage';
-// import type { GraphCacheConfig } from '@app/generated/graphql';
+import type { GraphCacheConfig } from '@app/generated/graphql';
 import { RefreshTokenDocument } from '@app/generated/graphql';
-// import { offlineExchange } from '@urql/exchange-graphcache';
-// import { makeUrqlStorage } from '@app/utils/makeUrqlStorage';
-// import schema from '@app/generated/graphql/schema.json';
+import { offlineExchange } from '@urql/exchange-graphcache';
+import { makeUrqlStorage } from '@app/utils/makeUrqlStorage';
+import schema from '@app/generated/graphql/schema.json';
+import { ENDPOINT } from '@env';
 
 type AuthState = {
   accessToken: string;
@@ -20,14 +21,23 @@ type AuthState = {
 };
 
 export const client = createClient({
-  url: 'http://100.90.159.107:8000/graphql',
+  url: ENDPOINT,
   exchanges: [
     dedupExchange,
-    // offlineExchange<GraphCacheConfig>({
-    //   // @ts-expect-error: TODO: fix this
-    //   schema,
-    //   storage: makeUrqlStorage(),
-    // }),
+    offlineExchange<GraphCacheConfig>({
+      // @ts-expect-error: TODO: fix this
+      schema,
+      storage: makeUrqlStorage(),
+      updates: {
+        Mutation: {
+          login: (result, _args, cache, _info) => {
+            if (result.login.user) {
+              cache.link('Query', 'me', result.login.user);
+            }
+          },
+        },
+      },
+    }),
     errorExchange({
       onError: error => {
         const isAuthError = error.graphQLErrors.some(
