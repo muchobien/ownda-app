@@ -9,7 +9,9 @@
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "codegen": "graphql-codegen",
     "gradlew": "scripts/gradlew",
-    "pod": "scripts/pod"
+    "pod": "scripts/pod",
+    "eas-build-pre-install": "bash -c \"[ ! -z \\\"$EAS_BUILD_NPM_CACHE_URL\\\" ] && sed -i -e \\\"s#https://registry.yarnpkg.com#$EAS_BUILD_NPM_CACHE_URL#g\\\" yarn.lock\" || true",
+    "eas-build-post-install": "scripts/eas-build-post-install"
   },
   "expo": {
     "autolinking": {

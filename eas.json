@@ -5,6 +5,10 @@
   "build": {
     "development": {
       "distribution": "internal",
+      "credentialsSource": "remote",
+      "env": {
+        "NODE_ENV": "development"
+      },
       "android": {
         "gradleCommand": ":app:assembleDevelopmentDebug"
       },
@@ -15,6 +19,10 @@
     },
     "preview": {
       "distribution": "internal",
+      "credentialsSource": "remote",
+      "env": {
+        "NODE_ENV": "preview"
+      },
       "android": {
         "gradleCommand": ":app:assemblePreviewRelease"
       },
@@ -24,6 +32,11 @@
       }
     },
     "production": {
+      "distribution": "store",
+      "credentialsSource": "remote",
+      "env": {
+        "NODE_ENV": "production"
+      },
       "android": {
         "gradleCommand": ":app:bundleProductionRelease"
       },
