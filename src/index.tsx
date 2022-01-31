@@ -7,10 +7,10 @@ import { Provider } from 'urql';
 import { LogBox } from 'react-native';
 
 // FIXME: https://github.com/software-mansion/react-native-gesture-handler/issues/1770
-LogBox.ignoreLogs(['RNGestureHandlerModule']);
+LogBox.ignoreLogs(['RNGestureHandlerModule', '[react-native-gesture-handler]']);
 
 export const App: PFC = () => {
-  const { authenticated, client, handleReady, navigationRef, ready } = useApp();
+  const { client, handleReady, navigationRef, ready } = useApp();
 
   if (!ready) {
     return null;
@@ -20,11 +20,7 @@ export const App: PFC = () => {
     <SafeAreaProvider>
       <StatusBar />
       <Provider value={client}>
-        <Navigation
-          ref={navigationRef}
-          authenticated={authenticated}
-          onReady={handleReady}
-        />
+        <Navigation ref={navigationRef} onReady={handleReady} />
       </Provider>
     </SafeAreaProvider>
   );

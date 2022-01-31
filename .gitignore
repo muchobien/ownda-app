@@ -24,6 +24,7 @@ DerivedData
 # Android/IntelliJ
 #
 build/
+*.apk
 .idea
 .gradle
 local.properties
@@ -62,3 +63,4 @@ buck-out/
 
 # ruby
 vendor/
+.env

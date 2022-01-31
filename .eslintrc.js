@@ -21,5 +21,7 @@ module.exports = {
         argsIgnorePattern: '^_',
       },
     ],
+    'import/no-unresolved': ['error', { ignore: ['@env$'] }],
+    'object-shorthand': ['error', 'always'],
   },
 };

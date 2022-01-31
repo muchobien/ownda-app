@@ -1,0 +1,16 @@
+commit-msg:
+  commands:
+    commitlint:
+      run: yarn commitlint -e
+
+pre-commit:
+  parallel: true
+  commands:
+    tsc:
+      glob: '*.{js,jsx,ts,tsx}'
+      exclude: '*.config.js'
+      run: yarn tsc --noEmit {staged_files}
+    eslint:
+      glob: '*.{js,jsx,ts,tsx}'
+      exclude: '*.config.js'
+      run: yarn eslint {staged_files}

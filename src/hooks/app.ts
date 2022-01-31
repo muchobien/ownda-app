@@ -21,7 +21,6 @@ import {
 
 export const useApp = () => {
   const [ready, setReady] = useState(false);
-  const [authenticated, setAuthenticated] = useState(false);
   const navigationRef = useNavigationContainerRef();
 
   const handleReady = useCallback(() => {
@@ -41,8 +40,8 @@ export const useApp = () => {
         Inter_800ExtraBold,
         Inter_900Black,
       });
-      const { data } = await client.query(MeDocument).toPromise();
-      setAuthenticated(!!data?.me);
+      const { error } = await client.query(MeDocument).toPromise();
+      storage.set('@logged', !error);
     } catch {
       // noop
     } finally {
@@ -58,7 +57,6 @@ export const useApp = () => {
   }, [setUp]);
 
   return {
-    authenticated,
     client,
     handleReady,
     navigationRef,

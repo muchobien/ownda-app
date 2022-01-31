@@ -130,6 +130,22 @@ android {
 
     compileSdkVersion rootProject.ext.compileSdkVersion
 
+    flavorDimensions "env"
+    productFlavors {
+        production {
+            dimension "env"
+            applicationId 'dev.muchobien.ownda'
+        }
+        development {
+            dimension "env"
+            applicationId 'dev.muchobien.ownda.dev'
+        }
+        preview {
+            dimension "env"
+            applicationId 'dev.muchobien.ownda.preview'
+        }
+    }
+
     defaultConfig {
         applicationId "dev.muchobien.ownda"
         minSdkVersion rootProject.ext.minSdkVersion

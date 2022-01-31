@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-               BuildableName = "ownda.app"
-               BlueprintName = "ownda"
+               BlueprintIdentifier = "4906935827A466920056D776"
+               BuildableName = "ownda-dev.app"
+               BlueprintName = "ownda-dev"
                ReferencedContainer = "container:ownda.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -28,20 +28,10 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
-         <TestableReference
-            skipped = "NO">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "00E356ED1AD99517003FC87E"
-               BuildableName = "owndaTests.xctest"
-               BlueprintName = "owndaTests"
-               ReferencedContainer = "container:ownda.xcodeproj">
-            </BuildableReference>
-         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction
-      buildConfiguration = "Release"
+      buildConfiguration = "Debug"
       selectedDebuggerIdentifier = "Xcode.DebuggerFoundation.Debugger.LLDB"
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       launchStyle = "0"
@@ -54,9 +44,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "ownda.app"
-            BlueprintName = "ownda"
+            BlueprintIdentifier = "4906935827A466920056D776"
+            BuildableName = "ownda-dev.app"
+            BlueprintName = "ownda-dev"
             ReferencedContainer = "container:ownda.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -71,9 +61,9 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "13B07F861A680F5B00A75B9A"
-            BuildableName = "ownda.app"
-            BlueprintName = "ownda"
+            BlueprintIdentifier = "4906935827A466920056D776"
+            BuildableName = "ownda-dev.app"
+            BlueprintName = "ownda-dev"
             ReferencedContainer = "container:ownda.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>

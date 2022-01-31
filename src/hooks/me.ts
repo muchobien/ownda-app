@@ -1,33 +1,37 @@
 import type { AuthInput } from '@app/generated/graphql';
 import {
   RegisterDocument,
-  type MeQuery,
   MeDocument,
   LoginDocument,
 } from '@app/generated/graphql';
+import { storage } from '@app/utils/storage';
 import { useCallback } from 'react';
 import { useMutation, useQuery } from 'urql';
 
 export const useMe = () => {
   const [{ data, fetching }] = useQuery({ query: MeDocument });
 
-  if (!fetching) {
-    return {
-      fetching,
-      me: (data as MeQuery).me,
-    };
-  }
-
   return {
+    me: data?.me,
     fetching,
-    me: undefined,
   };
 };
 
 export const useLogin = () => {
   const [{ fetching }, mutate] = useMutation(LoginDocument);
 
-  const login = useCallback((input: AuthInput) => mutate({ input }), [mutate]);
+  const login = useCallback(
+    async (input: AuthInput) => {
+      const { data, error } = await mutate({ input });
+      if (error) return { error };
+      if (data) {
+        storage.set('@logged', true);
+        storage.setObject('@auth', data.login.credentials);
+      }
+      return {};
+    },
+    [mutate],
+  );
 
   return { login, fetching };
 };
@@ -41,4 +45,13 @@ export const useRegister = () => {
   );
 
   return { register, fetching };
+};
+
+export const useLogout = () => {
+  const logout = useCallback(() => {
+    storage.delete('@auth');
+    storage.delete('@logged');
+  }, []);
+
+  return { logout };
 };
