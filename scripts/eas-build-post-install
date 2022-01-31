@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 
-if  [ "$NODE_ENV" = "production" ]; then
-    echo $PRODUCTION_ENV | tr ";" "\n" > .env.production
-elif [ "$NODE_ENV" = "development" ]; then
-    echo $DEVELOPMENT_ENV | tr ";" "\n" > .env.development
-elif [ "$NODE_ENV" = "preview" ]; then
-    echo $PREVIEW_ENV | tr ";" "\n" > .env.preview
+if  [ "$APP_ENV" = "production" ]; then
+    echo $PRODUCTION_ENV | tr ";" "\n" > .env
+elif [ "$APP_ENV" = "development" ]; then
+    echo $DEVELOPMENT_ENV | tr ";" "\n" > .env
+elif [ "$APP_ENV" = "preview" ]; then
+    echo $PREVIEW_ENV | tr ";" "\n" > .env
 fi
