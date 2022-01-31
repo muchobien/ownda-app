@@ -10,9 +10,21 @@
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		14E4BC896CDDC85888BE79FA /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 68CBC4E556E70C9D04251565 /* ExpoModulesProvider.swift */; };
-		6172F2D35A4C3AA820D92908 /* libPods-ownda.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6423831EA8574132BED9D8CC /* libPods-ownda.a */; };
+		4906934827A461BA0056D776 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
+		4906934927A461BA0056D776 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		4906934E27A461BA0056D776 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		4906934F27A461BA0056D776 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		4906935C27A466920056D776 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
+		4906935D27A466920056D776 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
+		4906936227A466920056D776 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		4906936327A466920056D776 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		4BC88D19AC33119B2AE0F276 /* libPods-common-ownda-dev.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29B16D74101C39D9694C4EE4 /* libPods-common-ownda-dev.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		9107E921D2D2E29E2E78C303 /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2852DDC203E93FC72777A965 /* ExpoModulesProvider.swift */; };
+		B98C812FC6117E4C7609DCE1 /* libPods-common-ownda-preview.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CEFFA6631144DB92524696C /* libPods-common-ownda-preview.a */; };
+		DA992BFB068D4FF00948FF07 /* libPods-common-ownda.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE5E88C85A19123D2586A716 /* libPods-common-ownda.a */; };
+		DB09F47FC5822A4BB5B51C51 /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4D05C521C608D0E5BC782B6 /* ExpoModulesProvider.swift */; };
+		E6E75856B814CD5E9291DB2B /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2FC318D4C08A122C28577400 /* ExpoModulesProvider.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,12 +34,22 @@
 		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = ownda/Images.xcassets; sourceTree = "<group>"; };
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = ownda/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = ownda/main.m; sourceTree = "<group>"; };
-		6423831EA8574132BED9D8CC /* libPods-ownda.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ownda.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		68CBC4E556E70C9D04251565 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-ownda/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
+		2852DDC203E93FC72777A965 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-common-ownda/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
+		29B16D74101C39D9694C4EE4 /* libPods-common-ownda-dev.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-common-ownda-dev.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CEFFA6631144DB92524696C /* libPods-common-ownda-preview.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-common-ownda-preview.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2FC318D4C08A122C28577400 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-common-ownda-dev/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
+		4906935627A461BA0056D776 /* ownda-preview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ownda-preview.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4906936A27A466920056D776 /* ownda-dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ownda-dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		523683F8075C3041EAF6B262 /* Pods-common-ownda-preview.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-common-ownda-preview.release.xcconfig"; path = "Target Support Files/Pods-common-ownda-preview/Pods-common-ownda-preview.release.xcconfig"; sourceTree = "<group>"; };
+		59018DC9514E967CC8E24BD1 /* Pods-common-ownda.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-common-ownda.release.xcconfig"; path = "Target Support Files/Pods-common-ownda/Pods-common-ownda.release.xcconfig"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ownda/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		C0A881CF5CF3F2B244570E2A /* Pods-ownda.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ownda.debug.xcconfig"; path = "Target Support Files/Pods-ownda/Pods-ownda.debug.xcconfig"; sourceTree = "<group>"; };
-		D00AAFFCFCFDA5787532823F /* Pods-ownda.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ownda.release.xcconfig"; path = "Target Support Files/Pods-ownda/Pods-ownda.release.xcconfig"; sourceTree = "<group>"; };
+		B17508E20B94260C8AD6DA8E /* Pods-common-ownda-preview.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-common-ownda-preview.debug.xcconfig"; path = "Target Support Files/Pods-common-ownda-preview/Pods-common-ownda-preview.debug.xcconfig"; sourceTree = "<group>"; };
+		B4D05C521C608D0E5BC782B6 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-common-ownda-preview/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
+		BE5E88C85A19123D2586A716 /* libPods-common-ownda.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-common-ownda.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EAFA6AD101B1FC2E711B39A6 /* Pods-common-ownda-dev.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-common-ownda-dev.debug.xcconfig"; path = "Target Support Files/Pods-common-ownda-dev/Pods-common-ownda-dev.debug.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		F09A8D1FCBC522FD8B39714E /* Pods-common-ownda.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-common-ownda.debug.xcconfig"; path = "Target Support Files/Pods-common-ownda/Pods-common-ownda.debug.xcconfig"; sourceTree = "<group>"; };
+		F291DD44BE868984C8BA881C /* Pods-common-ownda-dev.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-common-ownda-dev.release.xcconfig"; path = "Target Support Files/Pods-common-ownda-dev/Pods-common-ownda-dev.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,7 +57,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6172F2D35A4C3AA820D92908 /* libPods-ownda.a in Frameworks */,
+				DA992BFB068D4FF00948FF07 /* libPods-common-ownda.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4906934B27A461BA0056D776 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B98C812FC6117E4C7609DCE1 /* libPods-common-ownda-preview.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4906935F27A466920056D776 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4BC88D19AC33119B2AE0F276 /* libPods-common-ownda-dev.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,7 +97,9 @@
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				6423831EA8574132BED9D8CC /* libPods-ownda.a */,
+				BE5E88C85A19123D2586A716 /* libPods-common-ownda.a */,
+				29B16D74101C39D9694C4EE4 /* libPods-common-ownda-dev.a */,
+				2CEFFA6631144DB92524696C /* libPods-common-ownda-preview.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -68,6 +108,8 @@
 			isa = PBXGroup;
 			children = (
 				D3D1DE2F03A575F0E6213D36 /* ownda */,
+				98EB157E6FC5869E7D982E30 /* ownda-dev */,
+				F0AAFEB4699CDBEB4C4CB020 /* ownda-preview */,
 			);
 			name = ExpoModulesProviders;
 			sourceTree = "<group>";
@@ -98,14 +140,24 @@
 			isa = PBXGroup;
 			children = (
 				13B07F961A680F5B00A75B9A /* ownda.app */,
+				4906935627A461BA0056D776 /* ownda-preview.app */,
+				4906936A27A466920056D776 /* ownda-dev.app */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		98EB157E6FC5869E7D982E30 /* ownda-dev */ = {
+			isa = PBXGroup;
+			children = (
+				2FC318D4C08A122C28577400 /* ExpoModulesProvider.swift */,
+			);
+			name = "ownda-dev";
 			sourceTree = "<group>";
 		};
 		D3D1DE2F03A575F0E6213D36 /* ownda */ = {
 			isa = PBXGroup;
 			children = (
-				68CBC4E556E70C9D04251565 /* ExpoModulesProvider.swift */,
+				2852DDC203E93FC72777A965 /* ExpoModulesProvider.swift */,
 			);
 			name = ownda;
 			sourceTree = "<group>";
@@ -113,10 +165,22 @@
 		E233CBF5F47BEE60B243DCF8 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				C0A881CF5CF3F2B244570E2A /* Pods-ownda.debug.xcconfig */,
-				D00AAFFCFCFDA5787532823F /* Pods-ownda.release.xcconfig */,
+				F09A8D1FCBC522FD8B39714E /* Pods-common-ownda.debug.xcconfig */,
+				59018DC9514E967CC8E24BD1 /* Pods-common-ownda.release.xcconfig */,
+				EAFA6AD101B1FC2E711B39A6 /* Pods-common-ownda-dev.debug.xcconfig */,
+				F291DD44BE868984C8BA881C /* Pods-common-ownda-dev.release.xcconfig */,
+				B17508E20B94260C8AD6DA8E /* Pods-common-ownda-preview.debug.xcconfig */,
+				523683F8075C3041EAF6B262 /* Pods-common-ownda-preview.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		F0AAFEB4699CDBEB4C4CB020 /* ownda-preview */ = {
+			isa = PBXGroup;
+			children = (
+				B4D05C521C608D0E5BC782B6 /* ExpoModulesProvider.swift */,
+			);
+			name = "ownda-preview";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -144,6 +208,50 @@
 			productReference = 13B07F961A680F5B00A75B9A /* ownda.app */;
 			productType = "com.apple.product-type.application";
 		};
+		4906934427A461BA0056D776 /* ownda-preview */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4906935327A461BA0056D776 /* Build configuration list for PBXNativeTarget "ownda-preview" */;
+			buildPhases = (
+				4906934527A461BA0056D776 /* [CP] Check Pods Manifest.lock */,
+				4906934627A461BA0056D776 /* Start Packager */,
+				4906934727A461BA0056D776 /* Sources */,
+				4906934B27A461BA0056D776 /* Frameworks */,
+				4906934D27A461BA0056D776 /* Resources */,
+				4906935027A461BA0056D776 /* Bundle React Native code and images */,
+				4906935127A461BA0056D776 /* [CP] Embed Pods Frameworks */,
+				4906935227A461BA0056D776 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ownda-preview";
+			productName = ownda;
+			productReference = 4906935627A461BA0056D776 /* ownda-preview.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4906935827A466920056D776 /* ownda-dev */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4906936727A466920056D776 /* Build configuration list for PBXNativeTarget "ownda-dev" */;
+			buildPhases = (
+				4906935927A466920056D776 /* [CP] Check Pods Manifest.lock */,
+				4906935A27A466920056D776 /* Start Packager */,
+				4906935B27A466920056D776 /* Sources */,
+				4906935F27A466920056D776 /* Frameworks */,
+				4906936127A466920056D776 /* Resources */,
+				4906936427A466920056D776 /* Bundle React Native code and images */,
+				4906936527A466920056D776 /* [CP] Embed Pods Frameworks */,
+				4906936627A466920056D776 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "ownda-dev";
+			productName = ownda;
+			productReference = 4906936A27A466920056D776 /* ownda-dev.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -155,6 +263,8 @@
 					13B07F861A680F5B00A75B9A = {
 						LastSwiftMigration = 1120;
 					};
+					4906934427A461BA0056D776 = {};
+                    4906935827A466920056D776 = {};
 				};
 			};
 			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "ownda" */;
@@ -171,6 +281,8 @@
 			projectRoot = "";
 			targets = (
 				13B07F861A680F5B00A75B9A /* ownda */,
+				4906934427A461BA0056D776 /* ownda-preview */,
+				4906935827A466920056D776 /* ownda-dev */,
 			);
 		};
 /* End PBXProject section */
@@ -182,6 +294,24 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4906934D27A461BA0056D776 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4906934E27A461BA0056D776 /* LaunchScreen.storyboard in Resources */,
+				4906934F27A461BA0056D776 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4906936127A466920056D776 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4906936227A466920056D776 /* LaunchScreen.storyboard in Resources */,
+				4906936327A466920056D776 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,11 +347,189 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-ownda-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-common-ownda-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4906934527A461BA0056D776 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-common-ownda-preview-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4906934627A461BA0056D776 /* Start Packager */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Start Packager";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export RCT_METRO_PORT=\"${RCT_METRO_PORT:=8081}\"\necho \"export RCT_METRO_PORT=${RCT_METRO_PORT}\" > \"${SRCROOT}/../node_modules/react-native/scripts/.packager.env\"\nif [ -z \"${RCT_NO_LAUNCH_PACKAGER+xxx}\" ] ; then\n  if nc -w 5 -z localhost ${RCT_METRO_PORT} ; then\n    if ! curl -s \"http://localhost:${RCT_METRO_PORT}/status\" | grep -q \"packager-status:running\" ; then\n      echo \"Port ${RCT_METRO_PORT} already in use, packager is either not running or not running correctly\"\n      exit 2\n    fi\n  else\n    open \"$SRCROOT/../node_modules/react-native/scripts/launchPackager.command\" || echo \"Can't start packager automatically\"\n  fi\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4906935027A461BA0056D776 /* Bundle React Native code and images */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Bundle React Native code and images";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nexport NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
+		};
+		4906935127A461BA0056D776 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-common-ownda-preview/Pods-common-ownda-preview-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-common-ownda-preview/Pods-common-ownda-preview-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-common-ownda-preview/Pods-common-ownda-preview-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4906935227A461BA0056D776 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-common-ownda-preview/Pods-common-ownda-preview-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-common-ownda-preview/Pods-common-ownda-preview-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-common-ownda-preview/Pods-common-ownda-preview-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4906935927A466920056D776 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-common-ownda-dev-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4906935A27A466920056D776 /* Start Packager */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Start Packager";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export RCT_METRO_PORT=\"${RCT_METRO_PORT:=8081}\"\necho \"export RCT_METRO_PORT=${RCT_METRO_PORT}\" > \"${SRCROOT}/../node_modules/react-native/scripts/.packager.env\"\nif [ -z \"${RCT_NO_LAUNCH_PACKAGER+xxx}\" ] ; then\n  if nc -w 5 -z localhost ${RCT_METRO_PORT} ; then\n    if ! curl -s \"http://localhost:${RCT_METRO_PORT}/status\" | grep -q \"packager-status:running\" ; then\n      echo \"Port ${RCT_METRO_PORT} already in use, packager is either not running or not running correctly\"\n      exit 2\n    fi\n  else\n    open \"$SRCROOT/../node_modules/react-native/scripts/launchPackager.command\" || echo \"Can't start packager automatically\"\n  fi\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		4906936427A466920056D776 /* Bundle React Native code and images */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Bundle React Native code and images";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nexport NODE_BINARY=node\n../node_modules/react-native/scripts/react-native-xcode.sh\n";
+		};
+		4906936527A466920056D776 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-common-ownda-dev/Pods-common-ownda-dev-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-common-ownda-dev/Pods-common-ownda-dev-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-common-ownda-dev/Pods-common-ownda-dev-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4906936627A466920056D776 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-common-ownda-dev/Pods-common-ownda-dev-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-common-ownda-dev/Pods-common-ownda-dev-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-common-ownda-dev/Pods-common-ownda-dev-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		ADC9DDC32298B72B3CF5DC8E /* [CP] Copy Pods Resources */ = {
@@ -230,15 +538,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ownda/Pods-ownda-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-common-ownda/Pods-common-ownda-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ownda/Pods-ownda-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-common-ownda/Pods-common-ownda-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ownda/Pods-ownda-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-common-ownda/Pods-common-ownda-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		C8AC78B0264D0F9F6F6D630E /* [CP] Embed Pods Frameworks */ = {
@@ -247,15 +555,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ownda/Pods-ownda-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-common-ownda/Pods-common-ownda-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-ownda/Pods-ownda-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-common-ownda/Pods-common-ownda-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ownda/Pods-ownda-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-common-ownda/Pods-common-ownda-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -286,7 +594,27 @@
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
-				14E4BC896CDDC85888BE79FA /* ExpoModulesProvider.swift in Sources */,
+				9107E921D2D2E29E2E78C303 /* ExpoModulesProvider.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4906934727A461BA0056D776 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4906934827A461BA0056D776 /* AppDelegate.m in Sources */,
+				4906934927A461BA0056D776 /* main.m in Sources */,
+				DB09F47FC5822A4BB5B51C51 /* ExpoModulesProvider.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4906935B27A466920056D776 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4906935C27A466920056D776 /* AppDelegate.m in Sources */,
+				4906935D27A466920056D776 /* main.m in Sources */,
+				E6E75856B814CD5E9291DB2B /* ExpoModulesProvider.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -295,11 +623,13 @@
 /* Begin XCBuildConfiguration section */
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C0A881CF5CF3F2B244570E2A /* Pods-ownda.debug.xcconfig */;
+			baseConfigurationReference = F09A8D1FCBC522FD8B39714E /* Pods-common-ownda.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = "";
+				DISIPLAY_NAME = ownda;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = ownda/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -321,11 +651,13 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D00AAFFCFCFDA5787532823F /* Pods-ownda.release.xcconfig */;
+			baseConfigurationReference = 59018DC9514E967CC8E24BD1 /* Pods-common-ownda.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = "";
+				DISIPLAY_NAME = ownda;
 				INFOPLIST_FILE = ownda/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -338,6 +670,114 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = dev.muchobien.ownda;
 				PRODUCT_NAME = ownda;
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		4906935427A461BA0056D776 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B17508E20B94260C8AD6DA8E /* Pods-common-ownda-preview.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = "";
+				DISIPLAY_NAME = "ownda (preview)";
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = ownda/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.muchobien.ownda-preview";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		4906935527A461BA0056D776 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 523683F8075C3041EAF6B262 /* Pods-common-ownda-preview.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = "";
+				DISIPLAY_NAME = "ownda (preview)";
+				INFOPLIST_FILE = ownda/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.muchobien.ownda-preview";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Release;
+		};
+		4906936827A466920056D776 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = EAFA6AD101B1FC2E711B39A6 /* Pods-common-ownda-dev.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = "";
+				DISIPLAY_NAME = "ownda (dev)";
+				ENABLE_BITCODE = NO;
+				INFOPLIST_FILE = ownda/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.muchobien.ownda-dev";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				VERSIONING_SYSTEM = "apple-generic";
+			};
+			name = Debug;
+		};
+		4906936927A466920056D776 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F291DD44BE868984C8BA881C /* Pods-common-ownda-dev.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CURRENT_PROJECT_VERSION = 2;
+				DEVELOPMENT_TEAM = "";
+				DISIPLAY_NAME = "ownda (dev)";
+				INFOPLIST_FILE = ownda/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"-ObjC",
+					"-lc++",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "dev.muchobien.ownda-dev";
+				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -475,6 +915,24 @@
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
 				13B07F951A680F5B00A75B9A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4906935327A461BA0056D776 /* Build configuration list for PBXNativeTarget "ownda-preview" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4906935427A461BA0056D776 /* Debug */,
+				4906935527A461BA0056D776 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4906936727A466920056D776 /* Build configuration list for PBXNativeTarget "ownda-dev" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4906936827A466920056D776 /* Debug */,
+				4906936927A466920056D776 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
