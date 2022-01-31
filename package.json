@@ -26,7 +26,7 @@
     "@react-native-community/netinfo": "7.1.9",
     "@react-navigation/bottom-tabs": "6.0.9",
     "@react-navigation/devtools": "6.0.4",
-    "@react-navigation/native": "6.0.6",
+    "@react-navigation/native": "6.0.7",
     "@react-navigation/native-stack": "6.2.5",
     "@urql/exchange-auth": "0.1.7",
     "@urql/exchange-graphcache": "4.3.6",
