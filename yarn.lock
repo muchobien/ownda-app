@@ -2267,10 +2267,10 @@
     query-string "^7.0.0"
     react-is "^16.13.0"
 
-"@react-navigation/devtools@6.0.4":
-  version "6.0.4"
-  resolved "https://registry.yarnpkg.com/@react-navigation/devtools/-/devtools-6.0.4.tgz#6b67cc958e9b1857ce0bb8c795c7886894bf33a6"
-  integrity sha512-YFSQRyv1LSwW1jQxLsploHUwifplu7CMODC21+0kb4x5gJjlwLteG1r9MW6JluGnQBUw2WdSM2NUL1o4uIOEzQ==
+"@react-navigation/devtools@6.0.5":
+  version "6.0.5"
+  resolved "https://registry.yarnpkg.com/@react-navigation/devtools/-/devtools-6.0.5.tgz#c285427f5d2a223a8288b5efaf4af8b94ea36672"
+  integrity sha512-pweo6hw2mYLwAXbG5pFdJl8awk8KuIRmYsmnYtUZ7+2ZvpNyrnDkY/QZhnjp+aCHK+ESn6/3MtXy2H8eAQzd2w==
   dependencies:
     deep-equal "^2.0.5"
     nanoid "^3.1.23"
