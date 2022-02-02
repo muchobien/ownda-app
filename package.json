@@ -40,7 +40,7 @@
     "graphql": "16.3.0",
     "react": "17.0.2",
     "react-hook-form": "7.25.3",
-    "react-native": "0.67.1",
+    "react-native": "0.67.2",
     "react-native-bootsplash": "4.1.0",
     "react-native-dotenv": "3.3.1",
     "react-native-gesture-handler": "2.2.0",
