@@ -8,6 +8,7 @@ export interface InnerIconProps
     ViewProps,
     Pick<SvgProps, 'viewBox' | 'preserveAspectRatio' | 'title'>,
     ThemeProps {
+  filled?: boolean;
   size?: number;
   color?: keyof ThemeProps['theme']['colors'];
 }

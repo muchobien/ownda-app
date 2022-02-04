@@ -44,6 +44,8 @@ const variants = {
   overline: (theme: Theme) =>
     css`
       color: ${theme.colors.white};
+      font-size: 12px;
+      font-family: Inter_500Medium;
     `,
   small: (theme: Theme) =>
     css`

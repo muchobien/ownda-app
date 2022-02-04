@@ -1,25 +1,30 @@
+import { TabBar } from '@app/components';
 import { Home, Settings } from '@app/screens';
 import type { RootTabParamList } from '@app/types';
-import type { BottomTabNavigationOptions } from '@react-navigation/bottom-tabs';
+import type {
+  BottomTabBarProps,
+  BottomTabNavigationOptions,
+} from '@react-navigation/bottom-tabs';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { BlurView } from 'expo-blur';
-import { StyleSheet } from 'react-native';
+import { useCallback } from 'react';
 
 const BottomTab = createBottomTabNavigator<RootTabParamList>();
 
 const defaultScreenOptions: BottomTabNavigationOptions = {
   headerShown: false,
-  tabBarStyle: { position: 'absolute' },
-  tabBarBackground: () => (
-    <BlurView tint="dark" intensity={22} style={StyleSheet.absoluteFill} />
-  ),
 };
 
 export const BottomTabNavigator = () => {
+  const tabBar = useCallback(
+    (props: BottomTabBarProps) => <TabBar {...props} />,
+    [],
+  );
+
   return (
     <BottomTab.Navigator
       initialRouteName="Home"
       screenOptions={defaultScreenOptions}
+      tabBar={tabBar}
     >
       <BottomTab.Screen name="Home" component={Home} />
       <BottomTab.Screen name="Settings" component={Settings} />

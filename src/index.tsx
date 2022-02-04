@@ -2,7 +2,6 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 import { Navigation } from './navigation';
 import { useApp } from './hooks';
 import type { PFC } from './types';
-import { StatusBar } from './components';
 import { Provider } from 'urql';
 import { LogBox } from 'react-native';
 
@@ -18,7 +17,6 @@ export const App: PFC = () => {
 
   return (
     <SafeAreaProvider>
-      <StatusBar />
       <Provider value={client}>
         <Navigation ref={navigationRef} onReady={handleReady} />
       </Provider>

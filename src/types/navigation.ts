@@ -29,6 +29,8 @@ export type RootTabParamList = {
   Settings: undefined;
 };
 
+export type TabScreenName = keyof RootTabParamList;
+
 export type RootTabScreenProps<Screen extends keyof RootTabParamList> =
   CompositeScreenProps<
     BottomTabScreenProps<RootTabParamList, Screen>,
