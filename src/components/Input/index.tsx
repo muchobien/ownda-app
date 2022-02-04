@@ -24,7 +24,7 @@ function InnerInput<T extends FieldValues = FieldValues>(
     onSubmitEditing,
     returnKeyType,
     secureTextEntry,
-    visible,
+    secure,
     handleIconPress,
   } = useLogic(props);
 
@@ -40,13 +40,13 @@ function InnerInput<T extends FieldValues = FieldValues>(
           onBlur={onBlur}
           onSubmitEditing={onSubmitEditing}
           returnKeyType={returnKeyType}
-          secureTextEntry={visible}
+          secureTextEntry={secure}
           autoComplete={autoComplete}
           autoCapitalize="none"
         />
         {secureTextEntry ? (
           <Pressable enabled={secureTextEntry} onPress={handleIconPress}>
-            <Icon name={visible ? 'eyeSlash' : 'eye'} />
+            <Icon name={secure ? 'eyeSlash' : 'eye'} />
           </Pressable>
         ) : null}
       </InnerContainer>

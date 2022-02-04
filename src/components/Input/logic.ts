@@ -35,7 +35,8 @@ export const useLogic = <T extends FieldValues = FieldValues>({
   const {
     field: { onBlur, onChange, value },
   } = useController(props);
-  const [visible, setVisible] = useState(false);
+  const secureTextEntry = type === 'password';
+  const [secure, setSecure] = useState(secureTextEntry);
 
   const returnKeyType = useMemo<ReturnKeyTypeOptions>(
     () => (nextInputRef ? 'next' : 'done'),
@@ -52,7 +53,7 @@ export const useLogic = <T extends FieldValues = FieldValues>({
   const onSubmitEditing = callAll(_focusNextInput, props.onSubmitEditing);
 
   const handleIconPress = useCallback(() => {
-    setVisible(prev => !prev);
+    setSecure(prev => !prev);
   }, []);
 
   return {
@@ -61,8 +62,8 @@ export const useLogic = <T extends FieldValues = FieldValues>({
     onSubmitEditing,
     returnKeyType,
     value,
-    visible,
+    secure,
     handleIconPress,
-    secureTextEntry: type === 'password',
+    secureTextEntry,
   };
 };
