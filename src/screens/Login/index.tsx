@@ -3,7 +3,7 @@ import { useConnect } from './connect';
 import { EmailInput, PasswordInput, Title, Submit, Container } from './styles';
 
 export const Login: Screen<'Login'> = props => {
-  const { control, refs, onSubmit } = useConnect(props);
+  const { control, refs, onSubmit, isSubmitting } = useConnect(props);
   return (
     <Container>
       <Title>Login</Title>
@@ -22,7 +22,7 @@ export const Login: Screen<'Login'> = props => {
         label="Password"
         autoComplete="password"
       />
-      <Submit title="Submit" onPress={onSubmit} />
+      <Submit title="Submit" onPress={onSubmit} loading={isSubmitting} />
     </Container>
   );
 };

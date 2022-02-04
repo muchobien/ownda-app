@@ -16,7 +16,11 @@ type Form = typeof defaultValues;
 
 export const useConnect = (_: ConnectProps<'Login'>) => {
   const refs = useInputRefs(PlainObject.keys(defaultValues));
-  const { control, handleSubmit } = useForm<Form>({
+  const {
+    control,
+    handleSubmit,
+    formState: { isSubmitting },
+  } = useForm<Form>({
     defaultValues,
   });
 
@@ -34,5 +38,5 @@ export const useConnect = (_: ConnectProps<'Login'>) => {
     [handleSubmit, submitHandler],
   );
 
-  return { control, refs, onSubmit };
+  return { control, refs, onSubmit, isSubmitting };
 };
