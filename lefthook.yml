@@ -9,7 +9,7 @@ pre-commit:
     tsc:
       glob: '*.{js,jsx,ts,tsx}'
       exclude: '*.config.js'
-      run: yarn tsc --noEmit {staged_files}
+      run: yarn tsc --noEmit
     eslint:
       glob: '*.{js,jsx,ts,tsx}'
       exclude: '*.config.js'

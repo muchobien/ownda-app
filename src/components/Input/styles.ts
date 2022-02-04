@@ -1,5 +1,7 @@
 import styled from '@emotion/native';
 import { Text } from '@app/components/Text';
+import { BorderlessButton } from 'react-native-gesture-handler';
+import { Icon as IconComponent } from '../Icon';
 
 export const Container = styled.View`
   background-color: ${({ theme }) => theme.colors.surface};
@@ -9,6 +11,7 @@ export const Container = styled.View`
 export const InnerContainer = styled.View`
   padding: 8px 16px;
   padding-bottom: 10px;
+  flex-direction: row;
 `;
 
 export const TextInputNative = styled.TextInput`
@@ -16,6 +19,7 @@ export const TextInputNative = styled.TextInput`
   font-size: 14px;
   padding-vertical: 0;
   font-family: Inter_400Regular;
+  flex: 1;
 `;
 
 export const Label = styled(Text)`
@@ -25,4 +29,14 @@ export const Label = styled(Text)`
 
 Label.defaultProps = {
   variant: 'label',
+};
+
+export const Pressable = styled(BorderlessButton)`
+  margin-left: 16px;
+`;
+
+export const Icon = styled(IconComponent)``;
+
+Icon.defaultProps = {
+  size: 16,
 };

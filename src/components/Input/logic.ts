@@ -1,6 +1,6 @@
 import { callAll } from '@app/utils/func';
 import type { RefObject } from 'react';
-import { useCallback, useMemo } from 'react';
+import { useState, useCallback, useMemo } from 'react';
 import type { FieldValues, UseControllerProps } from 'react-hook-form';
 import { useController } from 'react-hook-form';
 import type {
@@ -19,6 +19,7 @@ export interface InputProps<T extends FieldValues = FieldValues>
   label: string;
   inputStyle?: StyleProp<ViewStyle>;
   nextInputRef?: RefObject<TextInput>;
+  type?: 'text' | 'number' | 'email' | 'password';
 }
 
 type LogicProps<T extends FieldValues = FieldValues> = Omit<
@@ -28,11 +29,13 @@ type LogicProps<T extends FieldValues = FieldValues> = Omit<
 
 export const useLogic = <T extends FieldValues = FieldValues>({
   nextInputRef,
+  type = 'text',
   ...props
 }: LogicProps<T>) => {
   const {
     field: { onBlur, onChange, value },
   } = useController(props);
+  const [visible, setVisible] = useState(false);
 
   const returnKeyType = useMemo<ReturnKeyTypeOptions>(
     () => (nextInputRef ? 'next' : 'done'),
@@ -48,11 +51,18 @@ export const useLogic = <T extends FieldValues = FieldValues>({
 
   const onSubmitEditing = callAll(_focusNextInput, props.onSubmitEditing);
 
+  const handleIconPress = useCallback(() => {
+    setVisible(prev => !prev);
+  }, []);
+
   return {
     onBlur,
     onChange,
     onSubmitEditing,
     returnKeyType,
     value,
+    visible,
+    handleIconPress,
+    secureTextEntry: type === 'password',
   };
 };

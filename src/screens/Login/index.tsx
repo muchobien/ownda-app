@@ -8,16 +8,19 @@ export const Login: Screen<'Login'> = props => {
     <Container>
       <Title>Login</Title>
       <EmailInput
-        name="email"
         control={control}
+        name="email"
         label="Email"
+        autoComplete="email"
         nextInputRef={refs.password}
       />
       <PasswordInput
         ref={refs.password}
-        name="password"
         control={control}
+        name="password"
+        type="password"
         label="Password"
+        autoComplete="password"
       />
       <Submit title="Submit" onPress={onSubmit} />
     </Container>
