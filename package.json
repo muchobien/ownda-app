@@ -65,7 +65,7 @@
     "@graphql-codegen/typed-document-node": "2.2.3",
     "@graphql-codegen/typescript": "2.4.2",
     "@graphql-codegen/typescript-operations": "2.2.4",
-    "@graphql-codegen/typescript-urql-graphcache": "2.2.3",
+    "@graphql-codegen/typescript-urql-graphcache": "2.2.4",
     "@graphql-codegen/urql-introspection": "2.1.1",
     "@muchobien/eslint-config-react-native": "0.0.4",
     "@types/react-native": "0.66.15",
