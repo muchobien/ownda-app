@@ -51,10 +51,6 @@ export const useConnect = () => {
           { date: string; data: HomeTransaction[] }
         >(([date, data]) => ({ date, data })),
         R.toPairs,
-        input => {
-          // console.log({ input: JSON.stringify(input, null, 2) });
-          return input;
-        },
         R.groupBy<HomeTransaction>(({ createdAt }) =>
           dayjs(createdAt).format('YYYY-MM-DD'),
         ),
