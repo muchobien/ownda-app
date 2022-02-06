@@ -11,7 +11,7 @@ export const Card = styled.View({
   flex: 1,
   borderRadius: 16,
   overflow: 'hidden',
-  marginHorizontal: 16,
+  marginHorizontal: 18,
 });
 
 export const Blur = styled(BlurView)<{ color: string }>(({ color }) => ({
