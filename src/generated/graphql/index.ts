@@ -308,6 +308,26 @@ export type RefreshTokenMutation = {
   };
 };
 
+export type AccountsQueryVariables = Exact<{ [key: string]: never }>;
+
+export type AccountsQuery = {
+  __typename: 'Query';
+  accounts: Array<{
+    __typename: 'Account';
+    id: string;
+    name: string;
+    color: string;
+    transactions: Array<{
+      __typename: 'Transaction';
+      id: string;
+      name: string;
+      amount: string;
+      type: TransactionTypeEnum;
+      createdAt: string;
+    }>;
+  }>;
+};
+
 export type MeQueryVariables = Exact<{ [key: string]: never }>;
 
 export type MeQuery = {
@@ -578,6 +598,53 @@ export const RefreshTokenDocument = {
   RefreshTokenMutation,
   RefreshTokenMutationVariables
 >;
+export const AccountsDocument = {
+  kind: 'Document',
+  definitions: [
+    {
+      kind: 'OperationDefinition',
+      operation: 'query',
+      name: { kind: 'Name', value: 'Accounts' },
+      selectionSet: {
+        kind: 'SelectionSet',
+        selections: [
+          {
+            kind: 'Field',
+            name: { kind: 'Name', value: 'accounts' },
+            selectionSet: {
+              kind: 'SelectionSet',
+              selections: [
+                { kind: 'Field', name: { kind: 'Name', value: 'id' } },
+                { kind: 'Field', name: { kind: 'Name', value: 'name' } },
+                { kind: 'Field', name: { kind: 'Name', value: 'color' } },
+                {
+                  kind: 'Field',
+                  name: { kind: 'Name', value: 'transactions' },
+                  selectionSet: {
+                    kind: 'SelectionSet',
+                    selections: [
+                      { kind: 'Field', name: { kind: 'Name', value: 'id' } },
+                      { kind: 'Field', name: { kind: 'Name', value: 'name' } },
+                      {
+                        kind: 'Field',
+                        name: { kind: 'Name', value: 'amount' },
+                      },
+                      { kind: 'Field', name: { kind: 'Name', value: 'type' } },
+                      {
+                        kind: 'Field',
+                        name: { kind: 'Name', value: 'createdAt' },
+                      },
+                    ],
+                  },
+                },
+              ],
+            },
+          },
+        ],
+      },
+    },
+  ],
+} as unknown as DocumentNode<AccountsQuery, AccountsQueryVariables>;
 export const MeDocument = {
   kind: 'Document',
   definitions: [

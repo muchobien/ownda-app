@@ -1,4 +1,5 @@
 import { TabBar } from '@app/components';
+import { TabBarHeightProvider } from '@app/providers';
 import { Home, Settings } from '@app/screens';
 import type { RootTabParamList } from '@app/types';
 import type {
@@ -21,13 +22,15 @@ export const BottomTabNavigator = () => {
   );
 
   return (
-    <BottomTab.Navigator
-      initialRouteName="Home"
-      screenOptions={defaultScreenOptions}
-      tabBar={tabBar}
-    >
-      <BottomTab.Screen name="Home" component={Home} />
-      <BottomTab.Screen name="Settings" component={Settings} />
-    </BottomTab.Navigator>
+    <TabBarHeightProvider>
+      <BottomTab.Navigator
+        initialRouteName="Home"
+        screenOptions={defaultScreenOptions}
+        tabBar={tabBar}
+      >
+        <BottomTab.Screen name="Home" component={Home} />
+        <BottomTab.Screen name="Settings" component={Settings} />
+      </BottomTab.Navigator>
+    </TabBarHeightProvider>
   );
 };

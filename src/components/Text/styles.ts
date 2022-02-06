@@ -15,6 +15,8 @@ const variants = {
   h3: (theme: Theme) =>
     css`
       color: ${theme.colors.white};
+      font-size: 24px;
+      font-family: Inter_600SemiBold;
     `,
   h4: (theme: Theme) =>
     css`
@@ -56,6 +58,13 @@ const variants = {
       color: ${theme.colors.white};
       font-size: 10px;
       font-family: Inter_600SemiBold;
+    `,
+  number: (theme: Theme) =>
+    css`
+      color: ${theme.colors.white};
+      font-size: 20px;
+      font-family: Inter_500Medium;
+      font-variant: tabular-nums;
     `,
 };
 

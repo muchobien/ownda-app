@@ -9,6 +9,7 @@ import { useMMKVBoolean } from 'react-native-mmkv';
 import { storage } from '@app/utils/storage';
 import { StatusBar } from '@app/components';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
+import '@app/utils/date';
 
 export const Navigation = forwardRef<
   NavigationContainerRef<RootStackParamList>,
