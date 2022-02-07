@@ -385,11 +385,11 @@ PODS:
     - React-jsi (= 0.67.2)
     - React-logger (= 0.67.2)
     - React-perflogger (= 0.67.2)
-  - RNBootSplash (4.1.0):
+  - RNBootSplash (4.1.2):
     - React-Core
   - RNGestureHandler (2.2.0):
     - React-Core
-  - RNReanimated (2.3.1):
+  - RNReanimated (2.4.0):
     - DoubleConversion
     - FBLazyVector
     - FBReactNativeSpec
@@ -681,9 +681,9 @@ SPEC CHECKSUMS:
   React-RCTVibration: 99c7f67fba7a5ade46e98e870c6ff2444484f995
   React-runtimeexecutor: 2450b43df7ffe8e805a0b3dcb2abd4282f1f1836
   ReactCommon: d98c6c96b567f9b3a15f9fd4cc302c1eda8e3cf2
-  RNBootSplash: 605c94f76180e3f8e5832bcafbe52ff5194a51d0
+  RNBootSplash: a4d2c545e1f5d54c12f75d4763b7014758d24287
   RNGestureHandler: bf572f552ea324acd5b5464b8d30755b2d8c1de6
-  RNReanimated: 1326679461fa5d2399d54c18ca1432ba3e816b9e
+  RNReanimated: 17e828d603c7ed3c25d332c0cdbb037838dc53a9
   RNScreens: d6da2b9e29cf523832c2542f47bf1287318b1868
   RNSVG: 4ecc2e8f38b6ebe7889909570c26f3abe8059767
   SocketRocket: fccef3f9c5cedea1353a9ef6ada904fde10d6608
