@@ -623,12 +623,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F09A8D1FCBC522FD8B39714E /* Pods-common-ownda.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = Dolar;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = ownda/ownda.entitlements;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = "";
-				DISIPLAY_NAME = ownda;
+				DISIPLAY_NAME = Ownda;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = ownda/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -652,12 +652,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 59018DC9514E967CC8E24BD1 /* Pods-common-ownda.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = Dolar;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = ownda/ownda.entitlements;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = "";
-				DISIPLAY_NAME = ownda;
+				DISIPLAY_NAME = Ownda;
 				INFOPLIST_FILE = ownda/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -679,12 +679,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = B17508E20B94260C8AD6DA8E /* Pods-common-ownda-preview.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = DolarView;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = ownda/ownda.entitlements;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = "";
-				DISIPLAY_NAME = "ownda (preview)";
+				DISIPLAY_NAME = Ownda;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = ownda/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -708,12 +708,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 523683F8075C3041EAF6B262 /* Pods-common-ownda-preview.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = DolarView;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = ownda/ownda.entitlements;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = "";
-				DISIPLAY_NAME = "ownda (preview)";
+				DISIPLAY_NAME = Ownda;
 				INFOPLIST_FILE = ownda/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -735,12 +735,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = EAFA6AD101B1FC2E711B39A6 /* Pods-common-ownda-dev.debug.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = DolarDev;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = ownda/ownda.entitlements;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = "";
-				DISIPLAY_NAME = "ownda (dev)";
+				DISIPLAY_NAME = Ownda;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = ownda/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -764,12 +765,13 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F291DD44BE868984C8BA881C /* Pods-common-ownda-dev.release.xcconfig */;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = DolarDev;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = ownda/ownda.entitlements;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = "";
-				DISIPLAY_NAME = "ownda (dev)";
+				DISIPLAY_NAME = Ownda;
 				INFOPLIST_FILE = ownda/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
