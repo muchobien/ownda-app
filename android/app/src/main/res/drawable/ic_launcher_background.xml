@@ -7,9 +7,6 @@
   <group android:scaleX="0.10546875"
       android:scaleY="0.10546875">
     <path
-        android:pathData="M0,0h1024v1024h-1024z"
-        android:fillColor="#071215"/>
-    <path
         android:pathData="M0,0h1024v1024h-1024z">
       <aapt:attr name="android:fillColor">
         <gradient 
@@ -17,7 +14,7 @@
             android:centerX="0"
             android:centerY="0"
             android:type="radial">
-          <item android:offset="0" android:color="#FF353535"/>
+          <item android:offset="0" android:color="#FF606162"/>
           <item android:offset="0.489583" android:color="#FF202020"/>
           <item android:offset="1" android:color="#FF010101"/>
         </gradient>
