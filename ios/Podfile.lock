@@ -316,7 +316,7 @@ PODS:
   - react-native-mmkv (2.0.1):
     - MMKV
     - React-Core
-  - react-native-netinfo (7.1.9):
+  - react-native-netinfo (7.1.10):
     - React-Core
   - react-native-safe-area-context (3.3.2):
     - React-Core
@@ -389,7 +389,7 @@ PODS:
     - React-Core
   - RNGestureHandler (2.2.0):
     - React-Core
-  - RNReanimated (2.4.0):
+  - RNReanimated (2.4.1):
     - DoubleConversion
     - FBLazyVector
     - FBReactNativeSpec
@@ -667,7 +667,7 @@ SPEC CHECKSUMS:
   React-logger: 23de8ea0f44fa00ee77e96060273225607fd4d78
   react-native-flipper: 8d0ada062fbc2c7460cc0d343aded6fc3f9c90dc
   react-native-mmkv: bb1b8057949b5318bca2c0f6ba832051b713403c
-  react-native-netinfo: 87e5bfaf21ea5c6c110941290aa481dd8e849f98
+  react-native-netinfo: ffce84d796bcfd55c76512d66029f4e0d704bf4f
   react-native-safe-area-context: 584dc04881deb49474363f3be89e4ca0e854c057
   React-perflogger: 3c9bb7372493e49036f07a82c44c8cf65cbe88db
   React-RCTActionSheet: 052606483045a408693aa7e864410b4a052f541a
@@ -683,7 +683,7 @@ SPEC CHECKSUMS:
   ReactCommon: d98c6c96b567f9b3a15f9fd4cc302c1eda8e3cf2
   RNBootSplash: a4d2c545e1f5d54c12f75d4763b7014758d24287
   RNGestureHandler: bf572f552ea324acd5b5464b8d30755b2d8c1de6
-  RNReanimated: 17e828d603c7ed3c25d332c0cdbb037838dc53a9
+  RNReanimated: 32c91e28f5780937b8efc07ddde1bab8d373fe0b
   RNScreens: d6da2b9e29cf523832c2542f47bf1287318b1868
   RNSVG: 4ecc2e8f38b6ebe7889909570c26f3abe8059767
   SocketRocket: fccef3f9c5cedea1353a9ef6ada904fde10d6608
