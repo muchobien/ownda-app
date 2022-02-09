@@ -64,3 +64,7 @@ buck-out/
 # ruby
 vendor/
 .env
+
+# eas
+credentials
+credentials.json

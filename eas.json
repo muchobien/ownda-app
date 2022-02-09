@@ -5,7 +5,7 @@
   "build": {
     "development": {
       "distribution": "internal",
-      "credentialsSource": "remote",
+      "credentialsSource": "local",
       "env": {
         "APP_ENV": "development"
       },
@@ -32,7 +32,7 @@
       }
     },
     "production": {
-      "distribution": "store",
+      "distribution": "internal",
       "credentialsSource": "remote",
       "env": {
         "APP_ENV": "production"
