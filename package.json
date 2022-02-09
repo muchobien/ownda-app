@@ -58,7 +58,7 @@
     "@arkweid/lefthook": "0.7.7",
     "@babel/core": "7.17.2",
     "@babel/plugin-transform-react-jsx": "7.16.7",
-    "@babel/runtime": "7.17.0",
+    "@babel/runtime": "7.17.2",
     "@commitlint/cli": "16.1.0",
     "@commitlint/config-conventional": "16.0.0",
     "@graphql-codegen/add": "3.1.1",
