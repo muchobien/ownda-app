@@ -12,14 +12,14 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		4906934827A461BA0056D776 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		4906934927A461BA0056D776 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		4906934E27A461BA0056D776 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		4906934F27A461BA0056D776 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		4906935C27A466920056D776 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		4906935D27A466920056D776 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		4906936227A466920056D776 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		4906936327A466920056D776 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		4967649327B44B57003BC914 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4967649227B44B57003BC914 /* LaunchScreen.storyboard */; };
+		4967649427B44B57003BC914 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4967649227B44B57003BC914 /* LaunchScreen.storyboard */; };
+		4967649527B44B57003BC914 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4967649227B44B57003BC914 /* LaunchScreen.storyboard */; };
 		4BC88D19AC33119B2AE0F276 /* libPods-common-ownda-dev.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 29B16D74101C39D9694C4EE4 /* libPods-common-ownda-dev.a */; };
-		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		9107E921D2D2E29E2E78C303 /* ExpoModulesProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2852DDC203E93FC72777A965 /* ExpoModulesProvider.swift */; };
 		B98C812FC6117E4C7609DCE1 /* libPods-common-ownda-preview.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2CEFFA6631144DB92524696C /* libPods-common-ownda-preview.a */; };
 		DA992BFB068D4FF00948FF07 /* libPods-common-ownda.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BE5E88C85A19123D2586A716 /* libPods-common-ownda.a */; };
@@ -40,9 +40,9 @@
 		2FC318D4C08A122C28577400 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-common-ownda-dev/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
 		4906935627A461BA0056D776 /* ownda-preview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ownda-preview.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4906936A27A466920056D776 /* ownda-dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ownda-dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4967649227B44B57003BC914 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		523683F8075C3041EAF6B262 /* Pods-common-ownda-preview.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-common-ownda-preview.release.xcconfig"; path = "Target Support Files/Pods-common-ownda-preview/Pods-common-ownda-preview.release.xcconfig"; sourceTree = "<group>"; };
 		59018DC9514E967CC8E24BD1 /* Pods-common-ownda.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-common-ownda.release.xcconfig"; path = "Target Support Files/Pods-common-ownda/Pods-common-ownda.release.xcconfig"; sourceTree = "<group>"; };
-		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ownda/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B17508E20B94260C8AD6DA8E /* Pods-common-ownda-preview.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-common-ownda-preview.debug.xcconfig"; path = "Target Support Files/Pods-common-ownda-preview/Pods-common-ownda-preview.debug.xcconfig"; sourceTree = "<group>"; };
 		B4D05C521C608D0E5BC782B6 /* ExpoModulesProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ExpoModulesProvider.swift; path = "Pods/Target Support Files/Pods-common-ownda-preview/ExpoModulesProvider.swift"; sourceTree = "<group>"; };
 		BE5E88C85A19123D2586A716 /* libPods-common-ownda.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-common-ownda.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -87,8 +87,8 @@
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
-				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
+				4967649227B44B57003BC914 /* LaunchScreen.storyboard */,
 			);
 			name = ownda;
 			sourceTree = "<group>";
@@ -263,8 +263,6 @@
 					13B07F861A680F5B00A75B9A = {
 						LastSwiftMigration = 1120;
 					};
-					4906934427A461BA0056D776 = {};
-                    4906935827A466920056D776 = {};
 				};
 			};
 			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "ownda" */;
@@ -292,7 +290,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
+				4967649327B44B57003BC914 /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -301,7 +299,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4906934E27A461BA0056D776 /* LaunchScreen.storyboard in Resources */,
+				4967649427B44B57003BC914 /* LaunchScreen.storyboard in Resources */,
 				4906934F27A461BA0056D776 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -310,7 +308,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4906936227A466920056D776 /* LaunchScreen.storyboard in Resources */,
+				4967649527B44B57003BC914 /* LaunchScreen.storyboard in Resources */,
 				4906936327A466920056D776 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -630,7 +628,7 @@
 				CODE_SIGN_ENTITLEMENTS = ownda/ownda.entitlements;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = "";
-				DISIPLAY_NAME = Ownda;
+				DISPLAY_NAME = Ownda;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = ownda/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -659,7 +657,7 @@
 				CODE_SIGN_ENTITLEMENTS = ownda/ownda.entitlements;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = "";
-				DISIPLAY_NAME = Ownda;
+				DISPLAY_NAME = Ownda;
 				INFOPLIST_FILE = ownda/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -686,7 +684,7 @@
 				CODE_SIGN_ENTITLEMENTS = ownda/ownda.entitlements;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = "";
-				DISIPLAY_NAME = Ownda;
+				DISPLAY_NAME = Ownda;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = ownda/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -715,7 +713,7 @@
 				CODE_SIGN_ENTITLEMENTS = ownda/ownda.entitlements;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = "";
-				DISIPLAY_NAME = Ownda;
+				DISPLAY_NAME = Ownda;
 				INFOPLIST_FILE = ownda/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -743,7 +741,7 @@
 				CODE_SIGN_ENTITLEMENTS = ownda/ownda.entitlements;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = "";
-				DISIPLAY_NAME = Ownda;
+				DISPLAY_NAME = Ownda;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = ownda/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -773,7 +771,7 @@
 				CODE_SIGN_ENTITLEMENTS = ownda/ownda.entitlements;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = "";
-				DISIPLAY_NAME = Ownda;
+				DISPLAY_NAME = Ownda;
 				INFOPLIST_FILE = ownda/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
