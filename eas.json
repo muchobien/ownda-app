@@ -38,7 +38,7 @@
         "APP_ENV": "production"
       },
       "android": {
-        "gradleCommand": ":app:bundleProductionRelease"
+        "gradleCommand": ":app:assembleProductionRelease"
       },
       "ios": {
         "scheme": "ownda",
