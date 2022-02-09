@@ -2416,10 +2416,10 @@
     sudo-prompt "^9.0.0"
     wcwidth "^1.0.1"
 
-"@react-native-community/netinfo@7.1.10":
-  version "7.1.10"
-  resolved "https://registry.yarnpkg.com/@react-native-community/netinfo/-/netinfo-7.1.10.tgz#00e7cd22a7c62915f3f01586428028998da018c6"
-  integrity sha512-kQ0ubly/3hZMad52dXXqREkCxB4NT8cKjy6OxcYApwMgmiaIwitYnD7KDeukPhw1KYQ8YctviKtE82W5we0Ahg==
+"@react-native-community/netinfo@7.1.11":
+  version "7.1.11"
+  resolved "https://registry.yarnpkg.com/@react-native-community/netinfo/-/netinfo-7.1.11.tgz#81d3effdcb9ec64b834e4e7a4d83fa7a34d8d947"
+  integrity sha512-V6DGey0A0R19pJgp1D1h1tz/58poNs0ifI4TWR9tPtbtiHqbOanD3sSKnBHzbEpv+cLnk+ih7X7rIuxbhpd4Ag==
 
 "@react-native/assets@1.0.0":
   version "1.0.0"
