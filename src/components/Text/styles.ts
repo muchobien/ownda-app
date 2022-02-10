@@ -21,6 +21,8 @@ const variants = {
   h4: (theme: Theme) =>
     css`
       color: ${theme.colors.white};
+      font-size: 14px;
+      font-family: Inter_600SemiBold;
     `,
   h5: (theme: Theme) =>
     css`
@@ -32,6 +34,7 @@ const variants = {
     `,
   body: (theme: Theme) => css`
     color: ${theme.colors.white};
+    font-family: Inter_400Regular;
   `,
   caption: (theme: Theme) =>
     css`

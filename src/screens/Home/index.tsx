@@ -35,8 +35,10 @@ export const Home: Screen<'Home'> = () => {
   const sectionRenderItem = useCallback<SectionListRenderItem<HomeTransaction>>(
     ({ item, index, section }) => (
       <TransactionCard.View
+        name={item.name}
         amount={item.amount}
         first={index === 0}
+        type={item.type}
         last={index === section.data.length - 1}
       />
     ),

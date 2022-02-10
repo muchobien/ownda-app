@@ -54,7 +54,7 @@ export const useConnect = () => {
         R.groupBy<HomeTransaction>(({ createdAt }) =>
           dayjs(createdAt).format('YYYY-MM-DD'),
         ),
-      )(accountTransactions),
+      )(accountTransactions).reverse(),
     [accountTransactions],
   );
 

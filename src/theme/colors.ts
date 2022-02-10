@@ -1,5 +1,6 @@
 export const colors = {
   white: '#f8f8f8',
+  white70: 'rgba(255, 255, 255, 0.7)',
   mediumWhite: '#EFEEF0',
   black: '#111114',
   surface: '#202020',
