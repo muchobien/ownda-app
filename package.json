@@ -25,7 +25,7 @@
     "@emotion/native": "11.0.0",
     "@emotion/react": "11.7.1",
     "@expo-google-fonts/inter": "0.2.2",
-    "@react-native-community/netinfo": "7.1.11",
+    "@react-native-community/netinfo": "7.1.12",
     "@react-navigation/bottom-tabs": "6.2.0",
     "@react-navigation/devtools": "6.0.5",
     "@react-navigation/native": "6.0.8",
