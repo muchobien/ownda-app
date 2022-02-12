@@ -31,9 +31,8 @@ extensions:
           - typescript
           - typescript-operations
           - typed-document-node
-          - typescript-urql-graphcache
-      src/generated/graphql/schema.json:
-        config:
-          includeScalars: true
+      src/generated/apollo/index.ts:
         plugins:
-          - urql-introspection
+        - add: *notModify
+        - add: *eslint
+        - typescript-apollo-client-helpers

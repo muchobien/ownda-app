@@ -1,6 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
 import RNBootSplash from 'react-native-bootsplash';
-import { client } from '@app/graphql';
 import { MeDocument } from '@app/generated/graphql';
 import { useNavigationContainerRef } from '@react-navigation/native';
 import { useFlipper } from '@react-navigation/devtools';
@@ -18,6 +17,9 @@ import {
   Inter_800ExtraBold,
   Inter_900Black,
 } from '@expo-google-fonts/inter';
+import { makeClient } from '@app/apollo';
+
+const client = makeClient();
 
 export const useApp = () => {
   const [ready, setReady] = useState(false);
@@ -40,9 +42,13 @@ export const useApp = () => {
         Inter_800ExtraBold,
         Inter_900Black,
       });
-      const { error } = await client.query(MeDocument).toPromise();
-      storage.set('@logged', !error);
+      await client.query({
+        query: MeDocument,
+        fetchPolicy: 'network-only',
+      });
+      storage.set('@logged', true);
     } catch {
+      storage.set('@logged', false);
       // noop
     } finally {
       setReady(true);

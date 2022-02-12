@@ -1,4 +1,4 @@
-import { Icon } from '@app/components';
+import { Icon } from '@app/components/Icon';
 import type { IconName } from '@app/components/Icon/constants';
 import type { TabScreenName } from '@app/types';
 import type { BottomTabBarProps } from '@react-navigation/bottom-tabs';

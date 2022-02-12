@@ -1,4 +1,4 @@
-import { Text } from '@app/components';
+import { Text } from '@app/components/Text';
 import styled from '@emotion/native';
 import { BorderlessButton } from 'react-native-gesture-handler';
 

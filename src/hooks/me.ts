@@ -6,24 +6,24 @@ import {
 } from '@app/generated/graphql';
 import { storage } from '@app/utils/storage';
 import { useCallback } from 'react';
-import { useMutation, useQuery } from 'urql';
+import { useMutation, useQuery } from '@apollo/client';
 
 export const useMe = () => {
-  const [{ data, fetching }] = useQuery({ query: MeDocument });
+  const { data, loading } = useQuery(MeDocument);
 
   return {
     me: data?.me,
-    fetching,
+    loading,
   };
 };
 
 export const useLogin = () => {
-  const [{ fetching }, mutate] = useMutation(LoginDocument);
+  const [mutate, { loading }] = useMutation(LoginDocument);
 
   const login = useCallback(
     async (input: AuthInput) => {
-      const { data, error } = await mutate({ input });
-      if (error) return { error };
+      const { data, errors } = await mutate({ variables: { input } });
+      if (errors) return { errors };
       if (data) {
         storage.set('@logged', true);
         storage.setObject('@auth', data.login.credentials);
@@ -33,18 +33,18 @@ export const useLogin = () => {
     [mutate],
   );
 
-  return { login, fetching };
+  return { login, loading };
 };
 
 export const useRegister = () => {
-  const [{ fetching }, mutate] = useMutation(RegisterDocument);
+  const [mutate, { loading }] = useMutation(RegisterDocument);
 
   const register = useCallback(
-    (input: AuthInput) => mutate({ input }),
+    (input: AuthInput) => mutate({ variables: { input } }),
     [mutate],
   );
 
-  return { register, fetching };
+  return { register, loading };
 };
 
 export const useLogout = () => {

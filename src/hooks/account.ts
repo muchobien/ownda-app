@@ -1,15 +1,12 @@
 import { AccountsDocument } from '@app/generated/graphql';
-import { useQuery } from 'urql';
+import { useQuery } from '@apollo/client';
 
 export const useAccounts = () => {
-  const [{ data, fetching, error }] = useQuery({
-    query: AccountsDocument,
-    requestPolicy: 'cache-and-network',
-  });
+  const { data, loading, error } = useQuery(AccountsDocument);
 
   return {
     data,
-    fetching,
+    loading,
     error,
   };
 };
