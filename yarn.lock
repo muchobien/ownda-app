@@ -1631,14 +1631,14 @@
     auto-bind "~4.0.0"
     tslib "~2.3.0"
 
-"@graphql-codegen/typescript@2.4.3", "@graphql-codegen/typescript@^2.4.3":
-  version "2.4.3"
-  resolved "https://registry.yarnpkg.com/@graphql-codegen/typescript/-/typescript-2.4.3.tgz#8e4e1d12b31e925231e034da9b378045ab206040"
-  integrity sha512-5b+4EVA01kiKId6IbBvuvSs0/aGeuSU+Cg2pBbe9VZol49iid982p28k9knEH4Jzgu4tUp4UMQTWNNwkPB4tEQ==
+"@graphql-codegen/typescript@2.4.4", "@graphql-codegen/typescript@^2.4.3":
+  version "2.4.4"
+  resolved "https://registry.yarnpkg.com/@graphql-codegen/typescript/-/typescript-2.4.4.tgz#d1c037fd0126205294e2535f4014239f2598dce3"
+  integrity sha512-xL6/WSJZVjDNY9QOkaDHQBKQzCawqU2w8R683uu1HpO4Z+cf5wHSwgHY/HQqurVhMkB0qPKOfSIQheJuWYF4Tw==
   dependencies:
     "@graphql-codegen/plugin-helpers" "^2.4.0"
     "@graphql-codegen/schema-ast" "^2.4.1"
-    "@graphql-codegen/visitor-plugin-common" "2.6.0"
+    "@graphql-codegen/visitor-plugin-common" "2.7.0"
     auto-bind "~4.0.0"
     tslib "~2.3.0"
 
