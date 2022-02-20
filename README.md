@@ -1,0 +1,2 @@
+# ownda-app
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/547f578a6d1545b29b036b438dfe313d)](https://app.codacy.com/gh/muchobien/ownda-app?utm_source=github.com&utm_medium=referral&utm_content=muchobien/ownda-app&utm_campaign=Badge_Grade_Settings)
