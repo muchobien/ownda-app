@@ -24,7 +24,7 @@
   "dependencies": {
     "@apollo/client": "3.5.9",
     "@emotion/native": "11.0.0",
-    "@emotion/react": "11.7.1",
+    "@emotion/react": "11.8.1",
     "@expo-google-fonts/inter": "0.2.2",
     "@react-navigation/bottom-tabs": "6.2.0",
     "@react-navigation/devtools": "6.0.5",
