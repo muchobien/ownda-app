@@ -18,14 +18,15 @@ function InnerInput<T extends FieldValues = FieldValues>(
   ref: ForwardedRef<TextInput>,
 ) {
   const {
+    handleIconPress,
+    keyboardType,
     onBlur,
     onChange,
-    value,
     onSubmitEditing,
     returnKeyType,
-    secureTextEntry,
     secure,
-    handleIconPress,
+    secureTextEntry,
+    value,
   } = useLogic(props);
 
   return (
@@ -41,6 +42,7 @@ function InnerInput<T extends FieldValues = FieldValues>(
           onSubmitEditing={onSubmitEditing}
           returnKeyType={returnKeyType}
           secureTextEntry={secure}
+          keyboardType={keyboardType}
           autoComplete={autoComplete}
           autoCapitalize="none"
         />

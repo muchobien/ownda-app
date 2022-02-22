@@ -11,6 +11,7 @@ import type {
   TextInputProps,
   TextInputSubmitEditingEventData,
   ViewStyle,
+  KeyboardTypeOptions,
 } from 'react-native';
 
 export interface InputProps<T extends FieldValues = FieldValues>
@@ -43,6 +44,14 @@ export const useLogic = <T extends FieldValues = FieldValues>({
     [nextInputRef],
   );
 
+  const keyboardType = useMemo<KeyboardTypeOptions | undefined>(() => {
+    if (secureTextEntry) {
+      return secure ? props.keyboardType : 'visible-password';
+    }
+
+    return props.keyboardType;
+  }, [secureTextEntry, props.keyboardType, secure]);
+
   const _focusNextInput = useCallback(
     (_: NativeSyntheticEvent<TextInputSubmitEditingEventData>) => {
       nextInputRef?.current?.focus();
@@ -57,13 +66,14 @@ export const useLogic = <T extends FieldValues = FieldValues>({
   }, []);
 
   return {
+    handleIconPress,
+    keyboardType,
     onBlur,
     onChange,
     onSubmitEditing,
     returnKeyType,
-    value,
     secure,
-    handleIconPress,
     secureTextEntry,
+    value,
   };
 };

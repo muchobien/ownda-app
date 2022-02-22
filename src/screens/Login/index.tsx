@@ -12,6 +12,7 @@ export const Login: Screen<'Login'> = props => {
         name="email"
         label="Email"
         autoComplete="email"
+        keyboardType="email-address"
         nextInputRef={refs.password}
       />
       <PasswordInput
