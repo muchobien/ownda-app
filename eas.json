@@ -5,7 +5,7 @@
   "build": {
     "development": {
       "distribution": "internal",
-      "credentialsSource": "local",
+      "credentialsSource": "remote",
       "env": {
         "APP_ENV": "development"
       },
