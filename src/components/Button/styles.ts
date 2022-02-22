@@ -2,6 +2,7 @@ import styled, { css } from '@emotion/native';
 import { Text } from '@app/components/Text';
 import type { Theme } from '@emotion/react';
 import { RectButton } from 'react-native-gesture-handler';
+import { colors } from '@app/theme/colors';
 
 export const variants = {
   primary: (theme: Theme) => css`
@@ -40,4 +41,10 @@ export const Pressable = styled(RectButton)`
 Pressable.defaultProps = {
   rippleColor: 'rgba(0, 0, 0, 0.22)',
   activeOpacity: 0.22,
+};
+
+export const Loader = styled.ActivityIndicator``;
+
+Loader.defaultProps = {
+  color: colors.white70,
 };

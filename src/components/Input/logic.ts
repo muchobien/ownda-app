@@ -13,6 +13,7 @@ import type {
   ViewStyle,
   KeyboardTypeOptions,
 } from 'react-native';
+import { Platform } from 'react-native';
 
 export interface InputProps<T extends FieldValues = FieldValues>
   extends Omit<TextInputProps, 'defaultValue'>,
@@ -46,7 +47,9 @@ export const useLogic = <T extends FieldValues = FieldValues>({
 
   const keyboardType = useMemo<KeyboardTypeOptions | undefined>(() => {
     if (secureTextEntry) {
-      return secure ? props.keyboardType : 'visible-password';
+      return secure
+        ? props.keyboardType
+        : Platform.select({ android: 'visible-password', default: undefined });
     }
 
     return props.keyboardType;
