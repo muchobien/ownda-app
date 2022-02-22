@@ -3,6 +3,7 @@ import { Text } from '@app/components/Text';
 import type { Theme } from '@emotion/react';
 import { RectButton } from 'react-native-gesture-handler';
 import { colors } from '@app/theme/colors';
+import { Platform } from 'react-native';
 
 export const variants = {
   primary: (theme: Theme) => css`
@@ -47,4 +48,5 @@ export const Loader = styled.ActivityIndicator``;
 
 Loader.defaultProps = {
   color: colors.white70,
+  size: Platform.select({ android: 'large', default: 'small' }),
 };
