@@ -1,9 +1,13 @@
 import { Text } from '@app/components/Text';
 import styled from '@emotion/native';
+import { Platform } from 'react-native';
 import { BorderlessButton } from 'react-native-gesture-handler';
 
 export const Presable = styled(BorderlessButton)(({ theme }) => ({
-  paddingBottom: theme.device.insets.bottom || 16,
+  paddingBottom: Platform.select({
+    ios: theme.device.insets.bottom,
+    android: theme.device.insets.bottom + 16,
+  }),
   marginTop: 16,
   flexGrow: 1,
   justifyContent: 'center',
