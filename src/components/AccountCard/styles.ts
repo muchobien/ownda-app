@@ -7,18 +7,18 @@ export const Container = styled.View(({ theme }) => ({
   height: 205,
 }));
 
-export const Card = styled.View({
+export const Card = styled.View<{ color: string }>(({ color }) => ({
   flex: 1,
   borderRadius: 16,
   overflow: 'hidden',
   marginHorizontal: 18,
-});
-
-export const Blur = styled(BlurView)<{ color: string }>(({ color }) => ({
-  flex: 1,
-  padding: 20,
   backgroundColor: color,
 }));
+
+export const Blur = styled(BlurView)({
+  flex: 1,
+  padding: 20,
+});
 
 Blur.defaultProps = {
   tint: 'dark',

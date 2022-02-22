@@ -10,8 +10,8 @@ export type AccountCardProps = {
 export const AccountCard = {
   View: memo<AccountCardProps>(({ name, color, balance }) => (
     <Container>
-      <Card>
-        <Blur color={color}>
+      <Card color={color}>
+        <Blur>
           <Name>{name}</Name>
           <Balance>{balance}€</Balance>
         </Blur>
