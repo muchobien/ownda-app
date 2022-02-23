@@ -12,6 +12,8 @@ PODS:
     - ExpoModulesCore
   - EXFont (10.0.5):
     - ExpoModulesCore
+  - EXLocalAuthentication (12.1.1):
+    - ExpoModulesCore
   - Expo (44.0.6):
     - ExpoModulesCore
   - ExpoLinearGradient (11.0.3):
@@ -433,6 +435,7 @@ DEPENDENCIES:
   - EXErrorRecovery (from `../node_modules/expo-error-recovery/ios`)
   - EXFileSystem (from `../node_modules/expo-file-system/ios`)
   - EXFont (from `../node_modules/expo-font/ios`)
+  - EXLocalAuthentication (from `../node_modules/expo-local-authentication/ios`)
   - Expo (from `../node_modules/expo/ios`)
   - ExpoLinearGradient (from `../node_modules/expo-linear-gradient/ios`)
   - ExpoModulesCore (from `../node_modules/expo-modules-core/ios`)
@@ -536,6 +539,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/expo-file-system/ios"
   EXFont:
     :path: "../node_modules/expo-font/ios"
+  EXLocalAuthentication:
+    :path: "../node_modules/expo-local-authentication/ios"
   Expo:
     :path: "../node_modules/expo/ios"
   ExpoLinearGradient:
@@ -626,6 +631,7 @@ SPEC CHECKSUMS:
   EXErrorRecovery: b0d7582714a2cc896e94a2308a356f94dbf14ef7
   EXFileSystem: bbfe3441f1f7f64942d8df2aa4264b6c7a27807c
   EXFont: 2597c10ac85a69d348d44d7873eccf5a7576ef5e
+  EXLocalAuthentication: 3c5f368ee954b79c3778158eb8000cbce4e2f8a2
   Expo: 534e51e607aba8229293297da5585f4b26f50fa1
   ExpoLinearGradient: fd591c223c81f6779036ed4cef4deb20ecb87c50
   ExpoModulesCore: 32c0ccb47f477d330ee93db72505380adf0de09a
