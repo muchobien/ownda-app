@@ -48,7 +48,7 @@
     "react-native-dotenv": "3.3.1",
     "react-native-gesture-handler": "2.2.0",
     "react-native-mmkv": "2.1.0",
-    "react-native-mmkv-flipper-plugin": "0.0.1",
+    "react-native-mmkv-flipper-plugin": "1.0.0",
     "react-native-reanimated": "2.4.1",
     "react-native-safe-area-context": "3.4.1",
     "react-native-screens": "3.12.0",

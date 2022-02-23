@@ -4,7 +4,7 @@ import { MeDocument } from '@app/generated/graphql';
 import { useNavigationContainerRef } from '@react-navigation/native';
 import { useFlipper } from '@react-navigation/devtools';
 import { storage } from '@app/utils/storage';
-import { useMMKVFlipper } from 'react-native-mmkv-flipper-plugin';
+import { initializeMMKVFlipper } from 'react-native-mmkv-flipper-plugin';
 import * as Font from 'expo-font';
 import {
   Inter_100Thin,
@@ -20,6 +20,10 @@ import {
 import { makeClient } from '@app/apollo';
 
 const client = makeClient();
+
+if (__DEV__) {
+  initializeMMKVFlipper({ default: storage });
+}
 
 export const useApp = () => {
   const [ready, setReady] = useState(false);
@@ -56,7 +60,6 @@ export const useApp = () => {
   }, []);
 
   useFlipper(navigationRef);
-  useMMKVFlipper(storage);
 
   useEffect(() => {
     setUp();
