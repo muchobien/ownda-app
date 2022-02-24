@@ -1,7 +1,7 @@
 commit-msg:
   commands:
     commitlint:
-      run: yarn commitlint -e
+      run: commitlint lint --message={1}
 
 pre-commit:
   parallel: true
