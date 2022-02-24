@@ -1,14 +1,14 @@
 query Accounts {
-    accounts {
+  accounts {
+    id
+    name
+    color
+    transactions {
       id
       name
-      color
-      transactions {
-         id
-         name
-         amount
-         type
-         createdAt
-      }
+      amount
+      type
+      createdAt
     }
+  }
 }
