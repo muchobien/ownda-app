@@ -1,7 +1,7 @@
 commit-msg:
   commands:
     commitlint:
-      run: commitlint lint --message={1}
+      run: commitlint lint --message .git/COMMIT_EDITMSG  
 
 pre-commit:
   parallel: true
@@ -9,8 +9,8 @@ pre-commit:
     tsc:
       glob: '*.{js,jsx,ts,tsx}'
       exclude: '*.config.js'
-      run: echo {staged_files} && yarn tsc --noEmit 
+      run: yarn typecheck {staged_files}
     eslint:
       glob: '*.{js,jsx,ts,tsx}'
       exclude: '*.config.js'
-      run: yarn eslint {staged_files}
+      run: yarn lint {staged_files}
