@@ -4,7 +4,11 @@
   "private": true,
   "scripts": {
     "android": "react-native run-android",
+    "android:dev": "yarn android --variant=developmentDebug --appIdSuffix=dev",
+    "android:preview": "yarn android --variant=previewRelease --appIdSuffix=preview",
     "ios": "react-native run-ios",
+    "ios:dev": "yarn ios --scheme ownda-dev",
+    "ios:preview": "yarn ios --scheme ownda-preview --configuration Release",
     "start": "react-native start",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "codegen": "graphql-codegen",
