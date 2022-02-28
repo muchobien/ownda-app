@@ -13,6 +13,7 @@ import type { MMKV } from 'react-native-mmkv';
 import type { JwtPayload } from 'jwt-decode';
 import jwtDecode from 'jwt-decode';
 import { setContext } from '@apollo/client/link/context';
+import { typePolicies } from './policies';
 
 const query = `#graphql
   mutation RefreshToken {
@@ -36,7 +37,7 @@ export const makeClient = () => {
     uri: ENDPOINT,
   });
 
-  const cache = new InMemoryCache();
+  const cache = new InMemoryCache({ typePolicies });
   const storage = new MMKVWrapper(mmkv as MMKV);
   persistCacheSync({ cache, storage });
 
