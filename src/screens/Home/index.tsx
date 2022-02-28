@@ -11,7 +11,7 @@ import { useConnect, isAccount } from './connect';
 import { SectionList } from 'react-native';
 import dayjs from 'dayjs';
 import { useCallback } from 'react';
-import type { HomeAccount, HomeTransaction } from '@app/formatters/account';
+import type { HomeAccount, HomeTransaction } from '@app/format/account';
 
 export const Home: Screen<'Home'> = () => {
   const { accounts, handleAccountChange, transactions, height } = useConnect();
@@ -38,7 +38,7 @@ export const Home: Screen<'Home'> = () => {
         name={item.name}
         amount={item.amount}
         first={index === 0}
-        type={item.type}
+        type={item.kind}
         last={index === section.data.length - 1}
       />
     ),

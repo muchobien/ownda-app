@@ -26,7 +26,7 @@ export const useLogin = () => {
       if (errors) return { errors };
       if (data) {
         storage.set('@logged', true);
-        storage.setObject('@auth', data.login.credentials);
+        storage.setObject('@auth', data.login.credential);
       }
       return {};
     },

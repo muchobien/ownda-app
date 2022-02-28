@@ -1,4 +1,5 @@
-import type { TransactionTypeEnum } from '@app/generated/graphql';
+import { toPrice } from '@app/format/toPrice';
+import type { TransactionKind } from '@app/generated/graphql';
 import { memo } from 'react';
 import {
   Blur,
@@ -16,11 +17,11 @@ type HeaderProps = {
 };
 
 type ViewProps = {
-  amount: string;
+  amount: number;
   name: string;
   first: boolean;
   last: boolean;
-  type: TransactionTypeEnum;
+  type: TransactionKind;
 };
 
 export const TransactionCard = {
@@ -29,7 +30,7 @@ export const TransactionCard = {
       <Box></Box>
       <Row>
         <Title>{name}</Title>
-        <Amount type={type}>{amount} €</Amount>
+        <Amount type={type}>{toPrice(amount)} €</Amount>
       </Row>
     </Blur>
   )),

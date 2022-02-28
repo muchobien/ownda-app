@@ -2,8 +2,8 @@ import type {
   HomeAccount,
   HomeTransaction,
   PlaceHolder,
-} from '@app/formatters/account';
-import { homeAccount } from '@app/formatters/account';
+} from '@app/format/account';
+import { homeAccount } from '@app/format/account';
 import { useAccounts } from '@app/hooks/account';
 import { width } from '@app/theme';
 import { useCallback, useMemo, useState } from 'react';
@@ -20,7 +20,7 @@ export const useConnect = () => {
   const accounts = useMemo(
     () => [
       { id: 'left-spacer' },
-      ...(data?.accounts.map(homeAccount) ?? []),
+      ...(data?.accounts.edges.map(homeAccount) ?? []),
       { id: 'right-spacer' },
     ],
     [data],
@@ -28,10 +28,10 @@ export const useConnect = () => {
 
   const transactionsMap = useMemo(
     () =>
-      (data?.accounts ?? []).reduce<Record<string, HomeTransaction[]>>(
+      (data?.accounts.edges ?? []).reduce<Record<string, HomeTransaction[]>>(
         (acc, account) => ({
           ...acc,
-          [account.id]: account.transactions,
+          [account.node.id]: account.node.transactions.edges.map(e => e.node),
         }),
         {},
       ),

@@ -19,92 +19,95 @@ export type Scalars = {
   Boolean: boolean;
   Int: number;
   Float: number;
-  /**
-   * Implement the DateTime<FixedOffset> scalar
-   *
-   * The input/output is a string in RFC3339 format.
-   */
+  /** A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format. */
   DateTime: string;
-  Decimal: string;
-  /**
-   * A UUID is a unique 128-bit number, stored as 16 octets. UUIDs are parsed as Strings
-   * within GraphQL. UUIDs are used to assign unique identifiers to entities without requiring a central
-   * allocating authority.
-   *
-   * # References
-   *
-   * * [Wikipedia: Universally Unique Identifier](http://en.wikipedia.org/wiki/Universally_unique_identifier)
-   * * [RFC4122: A Universally Unique IDentifier (UUID) URN Namespace](http://tools.ietf.org/html/rfc4122)
-   */
-  UUID: string;
 };
 
 export type Account = {
   __typename: 'Account';
   color: Scalars['String'];
   createdAt: Scalars['DateTime'];
-  id: Scalars['UUID'];
+  id: Scalars['ID'];
   name: Scalars['String'];
-  order: Scalars['Int'];
-  transactions: Array<Transaction>;
+  transactions: TransactionConnection;
   updatedAt: Scalars['DateTime'];
+};
+
+export type AccountTransactionsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Float']>;
+  last?: InputMaybe<Scalars['Float']>;
+};
+
+export type AccountConnection = {
+  __typename: 'AccountConnection';
+  edges: Array<AccountEdge>;
+  pageInfo: PageInfo;
+  totalCount: Scalars['Float'];
+};
+
+export type AccountEdge = {
+  __typename: 'AccountEdge';
+  cursor: Scalars['String'];
+  node: Account;
 };
 
 export type AccountInput = {
   color: Scalars['String'];
   name: Scalars['String'];
-  order: Scalars['Int'];
 };
 
 export type AuthInput = {
   email: Scalars['String'];
   hash: Scalars['String'];
-  provider: ProviderEnum;
+  provider: Provider;
 };
 
 export type Authenticated = {
   __typename: 'Authenticated';
-  credentials: Credential;
+  credential: Credential;
   user: User;
 };
 
 export type Category = {
   __typename: 'Category';
-  children: Array<Category>;
-  color: Scalars['String'];
   createdAt: Scalars['DateTime'];
-  id: Scalars['UUID'];
+  id: Scalars['ID'];
   name: Scalars['String'];
-  order: Scalars['Int'];
-  parent?: Maybe<Category>;
-  parentId?: Maybe<Scalars['UUID']>;
   updatedAt: Scalars['DateTime'];
 };
 
+export type CategoryConnection = {
+  __typename: 'CategoryConnection';
+  edges: Array<CategoryEdge>;
+  pageInfo: PageInfo;
+  totalCount: Scalars['Float'];
+};
+
+export type CategoryEdge = {
+  __typename: 'CategoryEdge';
+  cursor: Scalars['String'];
+  node: Category;
+};
+
 export type CategoryInput = {
-  color: Scalars['String'];
   name: Scalars['String'];
-  order: Scalars['Int'];
-  parentId?: InputMaybe<Scalars['UUID']>;
+  parentId?: InputMaybe<Scalars['String']>;
 };
 
 export type Credential = {
   __typename: 'Credential';
   accessToken: Scalars['String'];
   refreshToken: Scalars['String'];
-  tokenType: Scalars['String'];
-};
-
-export type DateFilter = {
-  begin: Scalars['DateTime'];
-  end: Scalars['DateTime'];
+  tokenKind: Scalars['String'];
 };
 
 export type Mutation = {
   __typename: 'Mutation';
-  createAccount: Scalars['Boolean'];
-  createCategory: Scalars['Boolean'];
-  createTransaction: Scalars['Boolean'];
+  createAccount: Account;
+  createCategory: Category;
+  createTransaction: Transaction;
   login: Authenticated;
   refreshToken: Credential;
   register: Authenticated;
@@ -126,15 +129,19 @@ export type MutationLoginArgs = {
   input: AuthInput;
 };
 
-export type MutationRefreshTokenArgs = {
-  token: Scalars['String'];
-};
-
 export type MutationRegisterArgs = {
   input: AuthInput;
 };
 
-export const enum ProviderEnum {
+export type PageInfo = {
+  __typename: 'PageInfo';
+  endCursor?: Maybe<Scalars['String']>;
+  hasNextPage: Scalars['Boolean'];
+  hasPreviousPage: Scalars['Boolean'];
+  startCursor?: Maybe<Scalars['String']>;
+};
+
+export const enum Provider {
   Apple = 'APPLE',
   Google = 'GOOGLE',
   Local = 'LOCAL',
@@ -143,56 +150,81 @@ export const enum ProviderEnum {
 export type Query = {
   __typename: 'Query';
   account: Account;
-  accounts: Array<Account>;
-  categories: Array<Category>;
+  accounts: AccountConnection;
+  categories: CategoryConnection;
   category: Category;
   me: User;
   transaction: Transaction;
-  transactions: Array<Transaction>;
+  transactions: TransactionConnection;
 };
 
 export type QueryAccountArgs = {
-  id: Scalars['UUID'];
+  id: Scalars['ID'];
+};
+
+export type QueryAccountsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Float']>;
+  last?: InputMaybe<Scalars['Float']>;
+};
+
+export type QueryCategoriesArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Float']>;
+  last?: InputMaybe<Scalars['Float']>;
 };
 
 export type QueryCategoryArgs = {
-  id: Scalars['UUID'];
+  id: Scalars['ID'];
 };
 
 export type QueryTransactionArgs = {
-  id: Scalars['UUID'];
+  id: Scalars['ID'];
 };
 
 export type QueryTransactionsArgs = {
-  filter: TransactionFilter;
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Float']>;
+  last?: InputMaybe<Scalars['Float']>;
 };
 
 export type Transaction = {
   __typename: 'Transaction';
-  amount: Scalars['Decimal'];
+  amount: Scalars['Float'];
   category: Category;
-  categoryId: Scalars['UUID'];
+  categoryId: Scalars['String'];
   createdAt: Scalars['DateTime'];
-  id: Scalars['UUID'];
+  id: Scalars['ID'];
+  kind: TransactionKind;
   name: Scalars['String'];
-  type: TransactionTypeEnum;
   updatedAt: Scalars['DateTime'];
 };
 
-export type TransactionFilter = {
-  accountId: Scalars['UUID'];
-  date?: InputMaybe<DateFilter>;
+export type TransactionConnection = {
+  __typename: 'TransactionConnection';
+  edges: Array<TransactionEdge>;
+  pageInfo: PageInfo;
+  totalCount: Scalars['Float'];
+};
+
+export type TransactionEdge = {
+  __typename: 'TransactionEdge';
+  cursor: Scalars['String'];
+  node: Transaction;
 };
 
 export type TransactionInput = {
-  accountId: Scalars['UUID'];
-  amount: Scalars['Decimal'];
-  categoryId: Scalars['UUID'];
+  accountId: Scalars['String'];
+  amount: Scalars['Float'];
+  categoryId: Scalars['String'];
+  kind: TransactionKind;
   name: Scalars['String'];
-  type: TransactionTypeEnum;
 };
 
-export const enum TransactionTypeEnum {
+export const enum TransactionKind {
   Expense = 'EXPENSE',
   Income = 'INCOME',
   Transfer = 'TRANSFER',
@@ -200,11 +232,46 @@ export const enum TransactionTypeEnum {
 
 export type User = {
   __typename: 'User';
-  accounts: Array<Account>;
+  accounts: AccountConnection;
   createdAt: Scalars['DateTime'];
   email: Scalars['String'];
-  id: Scalars['UUID'];
+  id: Scalars['ID'];
   updatedAt: Scalars['DateTime'];
+};
+
+export type UserAccountsArgs = {
+  after?: InputMaybe<Scalars['String']>;
+  before?: InputMaybe<Scalars['String']>;
+  first?: InputMaybe<Scalars['Float']>;
+  last?: InputMaybe<Scalars['Float']>;
+};
+
+export type AccountFragment = {
+  __typename: 'Account';
+  id: string;
+  name: string;
+  color: string;
+  createdAt: string;
+  updatedAt: string;
+};
+
+export type PageFragment = {
+  __typename: 'PageInfo';
+  startCursor?: string | undefined | null;
+  endCursor?: string | undefined | null;
+  hasPreviousPage: boolean;
+  hasNextPage: boolean;
+};
+
+export type TransactionFragment = {
+  __typename: 'Transaction';
+  id: string;
+  kind: TransactionKind;
+  name: string;
+  amount: number;
+  categoryId: string;
+  createdAt: string;
+  updatedAt: string;
 };
 
 export type AuthenticatedUserFragment = {
@@ -217,7 +284,7 @@ export type AuthenticatedUserFragment = {
 
 export type TokensFragment = {
   __typename: 'Credential';
-  tokenType: string;
+  tokenKind: string;
   accessToken: string;
   refreshToken: string;
 };
@@ -231,9 +298,9 @@ export type AuthFragment = {
     createdAt: string;
     updatedAt: string;
   };
-  credentials: {
+  credential: {
     __typename: 'Credential';
-    tokenType: string;
+    tokenKind: string;
     accessToken: string;
     refreshToken: string;
   };
@@ -254,9 +321,9 @@ export type LoginMutation = {
       createdAt: string;
       updatedAt: string;
     };
-    credentials: {
+    credential: {
       __typename: 'Credential';
-      tokenType: string;
+      tokenKind: string;
       accessToken: string;
       refreshToken: string;
     };
@@ -278,26 +345,12 @@ export type RegisterMutation = {
       createdAt: string;
       updatedAt: string;
     };
-    credentials: {
+    credential: {
       __typename: 'Credential';
-      tokenType: string;
+      tokenKind: string;
       accessToken: string;
       refreshToken: string;
     };
-  };
-};
-
-export type RefreshTokenMutationVariables = Exact<{
-  token: Scalars['String'];
-}>;
-
-export type RefreshTokenMutation = {
-  __typename: 'Mutation';
-  refreshToken: {
-    __typename: 'Credential';
-    tokenType: string;
-    accessToken: string;
-    refreshToken: string;
   };
 };
 
@@ -305,20 +358,38 @@ export type AccountsQueryVariables = Exact<{ [key: string]: never }>;
 
 export type AccountsQuery = {
   __typename: 'Query';
-  accounts: Array<{
-    __typename: 'Account';
-    id: string;
-    name: string;
-    color: string;
-    transactions: Array<{
-      __typename: 'Transaction';
-      id: string;
-      name: string;
-      amount: string;
-      type: TransactionTypeEnum;
-      createdAt: string;
+  accounts: {
+    __typename: 'AccountConnection';
+    edges: Array<{
+      __typename: 'AccountEdge';
+      cursor: string;
+      node: {
+        __typename: 'Account';
+        id: string;
+        name: string;
+        color: string;
+        createdAt: string;
+        updatedAt: string;
+        transactions: {
+          __typename: 'TransactionConnection';
+          edges: Array<{
+            __typename: 'TransactionEdge';
+            cursor: string;
+            node: {
+              __typename: 'Transaction';
+              id: string;
+              kind: TransactionKind;
+              name: string;
+              amount: number;
+              categoryId: string;
+              createdAt: string;
+              updatedAt: string;
+            };
+          }>;
+        };
+      };
     }>;
-  }>;
+  };
 };
 
 export type MeQueryVariables = Exact<{ [key: string]: never }>;
@@ -334,6 +405,76 @@ export type MeQuery = {
   };
 };
 
+export const AccountFragmentDoc = {
+  kind: 'Document',
+  definitions: [
+    {
+      kind: 'FragmentDefinition',
+      name: { kind: 'Name', value: 'Account' },
+      typeCondition: {
+        kind: 'NamedType',
+        name: { kind: 'Name', value: 'Account' },
+      },
+      selectionSet: {
+        kind: 'SelectionSet',
+        selections: [
+          { kind: 'Field', name: { kind: 'Name', value: 'id' } },
+          { kind: 'Field', name: { kind: 'Name', value: 'name' } },
+          { kind: 'Field', name: { kind: 'Name', value: 'color' } },
+          { kind: 'Field', name: { kind: 'Name', value: 'createdAt' } },
+          { kind: 'Field', name: { kind: 'Name', value: 'updatedAt' } },
+        ],
+      },
+    },
+  ],
+} as unknown as DocumentNode<AccountFragment, unknown>;
+export const PageFragmentDoc = {
+  kind: 'Document',
+  definitions: [
+    {
+      kind: 'FragmentDefinition',
+      name: { kind: 'Name', value: 'Page' },
+      typeCondition: {
+        kind: 'NamedType',
+        name: { kind: 'Name', value: 'PageInfo' },
+      },
+      selectionSet: {
+        kind: 'SelectionSet',
+        selections: [
+          { kind: 'Field', name: { kind: 'Name', value: 'startCursor' } },
+          { kind: 'Field', name: { kind: 'Name', value: 'endCursor' } },
+          { kind: 'Field', name: { kind: 'Name', value: 'hasPreviousPage' } },
+          { kind: 'Field', name: { kind: 'Name', value: 'hasNextPage' } },
+        ],
+      },
+    },
+  ],
+} as unknown as DocumentNode<PageFragment, unknown>;
+export const TransactionFragmentDoc = {
+  kind: 'Document',
+  definitions: [
+    {
+      kind: 'FragmentDefinition',
+      name: { kind: 'Name', value: 'Transaction' },
+      typeCondition: {
+        kind: 'NamedType',
+        name: { kind: 'Name', value: 'Transaction' },
+      },
+      selectionSet: {
+        kind: 'SelectionSet',
+        selections: [
+          { kind: 'Field', name: { kind: 'Name', value: 'id' } },
+          { kind: 'Field', name: { kind: 'Name', value: 'kind' } },
+          { kind: 'Field', name: { kind: 'Name', value: 'name' } },
+          { kind: 'Field', name: { kind: 'Name', value: 'amount' } },
+          { kind: 'Field', name: { kind: 'Name', value: 'categoryId' } },
+          { kind: 'Field', name: { kind: 'Name', value: 'createdAt' } },
+          { kind: 'Field', name: { kind: 'Name', value: 'updatedAt' } },
+        ],
+      },
+    },
+  ],
+} as unknown as DocumentNode<TransactionFragment, unknown>;
 export const AuthenticatedUserFragmentDoc = {
   kind: 'Document',
   definitions: [
@@ -369,7 +510,7 @@ export const TokensFragmentDoc = {
       selectionSet: {
         kind: 'SelectionSet',
         selections: [
-          { kind: 'Field', name: { kind: 'Name', value: 'tokenType' } },
+          { kind: 'Field', name: { kind: 'Name', value: 'tokenKind' } },
           { kind: 'Field', name: { kind: 'Name', value: 'accessToken' } },
           { kind: 'Field', name: { kind: 'Name', value: 'refreshToken' } },
         ],
@@ -405,7 +546,7 @@ export const AuthFragmentDoc = {
           },
           {
             kind: 'Field',
-            name: { kind: 'Name', value: 'credentials' },
+            name: { kind: 'Name', value: 'credential' },
             selectionSet: {
               kind: 'SelectionSet',
               selections: [
@@ -533,64 +674,6 @@ export const RegisterDocument = {
     ...AuthFragmentDoc.definitions,
   ],
 } as unknown as DocumentNode<RegisterMutation, RegisterMutationVariables>;
-export const RefreshTokenDocument = {
-  kind: 'Document',
-  definitions: [
-    {
-      kind: 'OperationDefinition',
-      operation: 'mutation',
-      name: { kind: 'Name', value: 'RefreshToken' },
-      variableDefinitions: [
-        {
-          kind: 'VariableDefinition',
-          variable: {
-            kind: 'Variable',
-            name: { kind: 'Name', value: 'token' },
-          },
-          type: {
-            kind: 'NonNullType',
-            type: {
-              kind: 'NamedType',
-              name: { kind: 'Name', value: 'String' },
-            },
-          },
-        },
-      ],
-      selectionSet: {
-        kind: 'SelectionSet',
-        selections: [
-          {
-            kind: 'Field',
-            name: { kind: 'Name', value: 'refreshToken' },
-            arguments: [
-              {
-                kind: 'Argument',
-                name: { kind: 'Name', value: 'token' },
-                value: {
-                  kind: 'Variable',
-                  name: { kind: 'Name', value: 'token' },
-                },
-              },
-            ],
-            selectionSet: {
-              kind: 'SelectionSet',
-              selections: [
-                {
-                  kind: 'FragmentSpread',
-                  name: { kind: 'Name', value: 'Tokens' },
-                },
-              ],
-            },
-          },
-        ],
-      },
-    },
-    ...TokensFragmentDoc.definitions,
-  ],
-} as unknown as DocumentNode<
-  RefreshTokenMutation,
-  RefreshTokenMutationVariables
->;
 export const AccountsDocument = {
   kind: 'Document',
   definitions: [
@@ -607,25 +690,69 @@ export const AccountsDocument = {
             selectionSet: {
               kind: 'SelectionSet',
               selections: [
-                { kind: 'Field', name: { kind: 'Name', value: 'id' } },
-                { kind: 'Field', name: { kind: 'Name', value: 'name' } },
-                { kind: 'Field', name: { kind: 'Name', value: 'color' } },
                 {
                   kind: 'Field',
-                  name: { kind: 'Name', value: 'transactions' },
+                  name: { kind: 'Name', value: 'edges' },
                   selectionSet: {
                     kind: 'SelectionSet',
                     selections: [
-                      { kind: 'Field', name: { kind: 'Name', value: 'id' } },
-                      { kind: 'Field', name: { kind: 'Name', value: 'name' } },
                       {
                         kind: 'Field',
-                        name: { kind: 'Name', value: 'amount' },
+                        name: { kind: 'Name', value: 'cursor' },
                       },
-                      { kind: 'Field', name: { kind: 'Name', value: 'type' } },
                       {
                         kind: 'Field',
-                        name: { kind: 'Name', value: 'createdAt' },
+                        name: { kind: 'Name', value: 'node' },
+                        selectionSet: {
+                          kind: 'SelectionSet',
+                          selections: [
+                            {
+                              kind: 'FragmentSpread',
+                              name: { kind: 'Name', value: 'Account' },
+                            },
+                            {
+                              kind: 'Field',
+                              name: { kind: 'Name', value: 'transactions' },
+                              selectionSet: {
+                                kind: 'SelectionSet',
+                                selections: [
+                                  {
+                                    kind: 'Field',
+                                    name: { kind: 'Name', value: 'edges' },
+                                    selectionSet: {
+                                      kind: 'SelectionSet',
+                                      selections: [
+                                        {
+                                          kind: 'Field',
+                                          name: {
+                                            kind: 'Name',
+                                            value: 'cursor',
+                                          },
+                                        },
+                                        {
+                                          kind: 'Field',
+                                          name: { kind: 'Name', value: 'node' },
+                                          selectionSet: {
+                                            kind: 'SelectionSet',
+                                            selections: [
+                                              {
+                                                kind: 'FragmentSpread',
+                                                name: {
+                                                  kind: 'Name',
+                                                  value: 'Transaction',
+                                                },
+                                              },
+                                            ],
+                                          },
+                                        },
+                                      ],
+                                    },
+                                  },
+                                ],
+                              },
+                            },
+                          ],
+                        },
                       },
                     ],
                   },
@@ -636,6 +763,8 @@ export const AccountsDocument = {
         ],
       },
     },
+    ...AccountFragmentDoc.definitions,
+    ...TransactionFragmentDoc.definitions,
   ],
 } as unknown as DocumentNode<AccountsQuery, AccountsQueryVariables>;
 export const MeDocument = {

@@ -9,9 +9,3 @@ mutation Register($input: AuthInput!) {
     ...Auth
   }
 }
-
-mutation RefreshToken($token: String!) {
-  refreshToken(token: $token) {
-    ...Tokens
-  }
-}

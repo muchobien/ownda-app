@@ -9,8 +9,8 @@ pre-commit:
     tsc:
       glob: '*.{js,jsx,ts,tsx}'
       exclude: '*.config.js'
-      run: yarn typecheck {staged_files}
+      run: scripts/typecheck {staged_files}
     eslint:
       glob: '*.{js,jsx,ts,tsx}'
       exclude: '*.config.js'
-      run: yarn lint {staged_files}
+      run: scripts/lint {staged_files}

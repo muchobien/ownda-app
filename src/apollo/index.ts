@@ -15,9 +15,9 @@ import jwtDecode from 'jwt-decode';
 import { setContext } from '@apollo/client/link/context';
 
 const query = `#graphql
-  mutation RefreshToken($token: String!) {
-    refreshToken(token: $token) {
-      tokenType
+  mutation RefreshToken {
+    refreshToken {
+      tokenKind
       accessToken
       refreshToken
     }
@@ -47,9 +47,11 @@ export const makeClient = () => {
       const credentials = mmkv.getObject<Credential>('@auth');
       return fetch(ENDPOINT, {
         method: 'POST',
+        headers: {
+          'x-refresh-token': credentials!.refreshToken,
+        },
         body: JSON.stringify({
           query,
-          variables: { token: credentials?.refreshToken },
         }),
       });
     },
@@ -68,7 +70,7 @@ export const makeClient = () => {
     return {
       headers: {
         ...headers,
-        authorization: `${credentials.tokenType} ${credentials.accessToken}`,
+        authorization: `${credentials.tokenKind} ${credentials.accessToken}`,
       },
     };
   });

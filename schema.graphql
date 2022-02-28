@@ -1,140 +1,170 @@
 type Account {
   color: String!
   createdAt: DateTime!
-  id: UUID!
+  id: ID!
   name: String!
-  order: Int!
-  transactions: [Transaction!]!
+  transactions(
+    after: String
+    before: String
+    first: Float
+    last: Float
+  ): TransactionConnection!
   updatedAt: DateTime!
+}
+
+type AccountConnection {
+  edges: [AccountEdge!]!
+  pageInfo: PageInfo!
+  totalCount: Float!
+}
+
+type AccountEdge {
+  cursor: String!
+  node: Account!
 }
 
 input AccountInput {
   color: String!
   name: String!
-  order: Int!
 }
 
 input AuthInput {
   email: String!
   hash: String!
-  provider: ProviderEnum!
+  provider: Provider!
 }
 
 type Authenticated {
-  credentials: Credential!
+  credential: Credential!
   user: User!
 }
 
 type Category {
-  children: [Category!]!
-  color: String!
   createdAt: DateTime!
-  id: UUID!
+  id: ID!
   name: String!
-  order: Int!
-  parent: Category
-  parentId: UUID
   updatedAt: DateTime!
 }
 
+type CategoryConnection {
+  edges: [CategoryEdge!]!
+  pageInfo: PageInfo!
+  totalCount: Float!
+}
+
+type CategoryEdge {
+  cursor: String!
+  node: Category!
+}
+
 input CategoryInput {
-  color: String!
   name: String!
-  order: Int!
-  parentId: UUID
+  parentId: String
 }
 
 type Credential {
   accessToken: String!
   refreshToken: String!
-  tokenType: String!
-}
-
-input DateFilter {
-  begin: DateTime!
-  end: DateTime!
+  tokenKind: String!
 }
 
 """
-Implement the DateTime<FixedOffset> scalar
-
-The input/output is a string in RFC3339 format.
+A date-time string at UTC, such as 2019-12-03T09:54:33Z, compliant with the date-time format.
 """
 scalar DateTime
 
-scalar Decimal
-
 type Mutation {
-  createAccount(input: AccountInput!): Boolean!
-  createCategory(input: CategoryInput!): Boolean!
-  createTransaction(input: TransactionInput!): Boolean!
+  createAccount(input: AccountInput!): Account!
+  createCategory(input: CategoryInput!): Category!
+  createTransaction(input: TransactionInput!): Transaction!
   login(input: AuthInput!): Authenticated!
-  refreshToken(token: String!): Credential!
+  refreshToken: Credential!
   register(input: AuthInput!): Authenticated!
 }
 
-enum ProviderEnum {
+type PageInfo {
+  endCursor: String
+  hasNextPage: Boolean!
+  hasPreviousPage: Boolean!
+  startCursor: String
+}
+
+enum Provider {
   APPLE
   GOOGLE
   LOCAL
 }
 
 type Query {
-  account(id: UUID!): Account!
-  accounts: [Account!]!
-  categories: [Category!]!
-  category(id: UUID!): Category!
+  account(id: ID!): Account!
+  accounts(
+    after: String
+    before: String
+    first: Float
+    last: Float
+  ): AccountConnection!
+  categories(
+    after: String
+    before: String
+    first: Float
+    last: Float
+  ): CategoryConnection!
+  category(id: ID!): Category!
   me: User!
-  transaction(id: UUID!): Transaction!
-  transactions(filter: TransactionFilter!): [Transaction!]!
+  transaction(id: ID!): Transaction!
+  transactions(
+    after: String
+    before: String
+    first: Float
+    last: Float
+  ): TransactionConnection!
 }
 
 type Transaction {
-  amount: Decimal!
+  amount: Float!
   category: Category!
-  categoryId: UUID!
+  categoryId: String!
   createdAt: DateTime!
-  id: UUID!
+  id: ID!
+  kind: TransactionKind!
   name: String!
-  type: TransactionTypeEnum!
   updatedAt: DateTime!
 }
 
-input TransactionFilter {
-  accountId: UUID!
-  date: DateFilter
+type TransactionConnection {
+  edges: [TransactionEdge!]!
+  pageInfo: PageInfo!
+  totalCount: Float!
+}
+
+type TransactionEdge {
+  cursor: String!
+  node: Transaction!
 }
 
 input TransactionInput {
-  accountId: UUID!
-  amount: Decimal!
-  categoryId: UUID!
+  accountId: String!
+  amount: Float!
+  categoryId: String!
+  kind: TransactionKind!
   name: String!
-  type: TransactionTypeEnum!
 }
 
-enum TransactionTypeEnum {
+enum TransactionKind {
   EXPENSE
   INCOME
   TRANSFER
 }
 
-"""
-A UUID is a unique 128-bit number, stored as 16 octets. UUIDs are parsed as Strings
-within GraphQL. UUIDs are used to assign unique identifiers to entities without requiring a central
-allocating authority.
-
-# References
-
-* [Wikipedia: Universally Unique Identifier](http://en.wikipedia.org/wiki/Universally_unique_identifier)
-* [RFC4122: A Universally Unique IDentifier (UUID) URN Namespace](http://tools.ietf.org/html/rfc4122)
-"""
-scalar UUID
-
 type User {
-  accounts: [Account!]!
+  accounts(
+    after: String
+    before: String
+    first: Float
+    last: Float
+  ): AccountConnection!
   createdAt: DateTime!
   email: String!
-  id: UUID!
+  id: ID!
   updatedAt: DateTime!
 }

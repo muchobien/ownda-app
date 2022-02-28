@@ -11,7 +11,6 @@ export type AccountKeySpecifier = (
   | 'createdAt'
   | 'id'
   | 'name'
-  | 'order'
   | 'transactions'
   | 'updatedAt'
   | AccountKeySpecifier
@@ -21,52 +20,81 @@ export type AccountFieldPolicy = {
   createdAt?: FieldPolicy<any> | FieldReadFunction<any>;
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   name?: FieldPolicy<any> | FieldReadFunction<any>;
-  order?: FieldPolicy<any> | FieldReadFunction<any>;
   transactions?: FieldPolicy<any> | FieldReadFunction<any>;
   updatedAt?: FieldPolicy<any> | FieldReadFunction<any>;
 };
+export type AccountConnectionKeySpecifier = (
+  | 'edges'
+  | 'pageInfo'
+  | 'totalCount'
+  | AccountConnectionKeySpecifier
+)[];
+export type AccountConnectionFieldPolicy = {
+  edges?: FieldPolicy<any> | FieldReadFunction<any>;
+  pageInfo?: FieldPolicy<any> | FieldReadFunction<any>;
+  totalCount?: FieldPolicy<any> | FieldReadFunction<any>;
+};
+export type AccountEdgeKeySpecifier = (
+  | 'cursor'
+  | 'node'
+  | AccountEdgeKeySpecifier
+)[];
+export type AccountEdgeFieldPolicy = {
+  cursor?: FieldPolicy<any> | FieldReadFunction<any>;
+  node?: FieldPolicy<any> | FieldReadFunction<any>;
+};
 export type AuthenticatedKeySpecifier = (
-  | 'credentials'
+  | 'credential'
   | 'user'
   | AuthenticatedKeySpecifier
 )[];
 export type AuthenticatedFieldPolicy = {
-  credentials?: FieldPolicy<any> | FieldReadFunction<any>;
+  credential?: FieldPolicy<any> | FieldReadFunction<any>;
   user?: FieldPolicy<any> | FieldReadFunction<any>;
 };
 export type CategoryKeySpecifier = (
-  | 'children'
-  | 'color'
   | 'createdAt'
   | 'id'
   | 'name'
-  | 'order'
-  | 'parent'
-  | 'parentId'
   | 'updatedAt'
   | CategoryKeySpecifier
 )[];
 export type CategoryFieldPolicy = {
-  children?: FieldPolicy<any> | FieldReadFunction<any>;
-  color?: FieldPolicy<any> | FieldReadFunction<any>;
   createdAt?: FieldPolicy<any> | FieldReadFunction<any>;
   id?: FieldPolicy<any> | FieldReadFunction<any>;
   name?: FieldPolicy<any> | FieldReadFunction<any>;
-  order?: FieldPolicy<any> | FieldReadFunction<any>;
-  parent?: FieldPolicy<any> | FieldReadFunction<any>;
-  parentId?: FieldPolicy<any> | FieldReadFunction<any>;
   updatedAt?: FieldPolicy<any> | FieldReadFunction<any>;
+};
+export type CategoryConnectionKeySpecifier = (
+  | 'edges'
+  | 'pageInfo'
+  | 'totalCount'
+  | CategoryConnectionKeySpecifier
+)[];
+export type CategoryConnectionFieldPolicy = {
+  edges?: FieldPolicy<any> | FieldReadFunction<any>;
+  pageInfo?: FieldPolicy<any> | FieldReadFunction<any>;
+  totalCount?: FieldPolicy<any> | FieldReadFunction<any>;
+};
+export type CategoryEdgeKeySpecifier = (
+  | 'cursor'
+  | 'node'
+  | CategoryEdgeKeySpecifier
+)[];
+export type CategoryEdgeFieldPolicy = {
+  cursor?: FieldPolicy<any> | FieldReadFunction<any>;
+  node?: FieldPolicy<any> | FieldReadFunction<any>;
 };
 export type CredentialKeySpecifier = (
   | 'accessToken'
   | 'refreshToken'
-  | 'tokenType'
+  | 'tokenKind'
   | CredentialKeySpecifier
 )[];
 export type CredentialFieldPolicy = {
   accessToken?: FieldPolicy<any> | FieldReadFunction<any>;
   refreshToken?: FieldPolicy<any> | FieldReadFunction<any>;
-  tokenType?: FieldPolicy<any> | FieldReadFunction<any>;
+  tokenKind?: FieldPolicy<any> | FieldReadFunction<any>;
 };
 export type MutationKeySpecifier = (
   | 'createAccount'
@@ -84,6 +112,19 @@ export type MutationFieldPolicy = {
   login?: FieldPolicy<any> | FieldReadFunction<any>;
   refreshToken?: FieldPolicy<any> | FieldReadFunction<any>;
   register?: FieldPolicy<any> | FieldReadFunction<any>;
+};
+export type PageInfoKeySpecifier = (
+  | 'endCursor'
+  | 'hasNextPage'
+  | 'hasPreviousPage'
+  | 'startCursor'
+  | PageInfoKeySpecifier
+)[];
+export type PageInfoFieldPolicy = {
+  endCursor?: FieldPolicy<any> | FieldReadFunction<any>;
+  hasNextPage?: FieldPolicy<any> | FieldReadFunction<any>;
+  hasPreviousPage?: FieldPolicy<any> | FieldReadFunction<any>;
+  startCursor?: FieldPolicy<any> | FieldReadFunction<any>;
 };
 export type QueryKeySpecifier = (
   | 'account'
@@ -110,8 +151,8 @@ export type TransactionKeySpecifier = (
   | 'categoryId'
   | 'createdAt'
   | 'id'
+  | 'kind'
   | 'name'
-  | 'type'
   | 'updatedAt'
   | TransactionKeySpecifier
 )[];
@@ -121,9 +162,29 @@ export type TransactionFieldPolicy = {
   categoryId?: FieldPolicy<any> | FieldReadFunction<any>;
   createdAt?: FieldPolicy<any> | FieldReadFunction<any>;
   id?: FieldPolicy<any> | FieldReadFunction<any>;
+  kind?: FieldPolicy<any> | FieldReadFunction<any>;
   name?: FieldPolicy<any> | FieldReadFunction<any>;
-  type?: FieldPolicy<any> | FieldReadFunction<any>;
   updatedAt?: FieldPolicy<any> | FieldReadFunction<any>;
+};
+export type TransactionConnectionKeySpecifier = (
+  | 'edges'
+  | 'pageInfo'
+  | 'totalCount'
+  | TransactionConnectionKeySpecifier
+)[];
+export type TransactionConnectionFieldPolicy = {
+  edges?: FieldPolicy<any> | FieldReadFunction<any>;
+  pageInfo?: FieldPolicy<any> | FieldReadFunction<any>;
+  totalCount?: FieldPolicy<any> | FieldReadFunction<any>;
+};
+export type TransactionEdgeKeySpecifier = (
+  | 'cursor'
+  | 'node'
+  | TransactionEdgeKeySpecifier
+)[];
+export type TransactionEdgeFieldPolicy = {
+  cursor?: FieldPolicy<any> | FieldReadFunction<any>;
+  node?: FieldPolicy<any> | FieldReadFunction<any>;
 };
 export type UserKeySpecifier = (
   | 'accounts'
@@ -148,6 +209,20 @@ export type StrictTypedTypePolicies = {
       | (() => undefined | AccountKeySpecifier);
     fields?: AccountFieldPolicy;
   };
+  AccountConnection?: Omit<TypePolicy, 'fields' | 'keyFields'> & {
+    keyFields?:
+      | false
+      | AccountConnectionKeySpecifier
+      | (() => undefined | AccountConnectionKeySpecifier);
+    fields?: AccountConnectionFieldPolicy;
+  };
+  AccountEdge?: Omit<TypePolicy, 'fields' | 'keyFields'> & {
+    keyFields?:
+      | false
+      | AccountEdgeKeySpecifier
+      | (() => undefined | AccountEdgeKeySpecifier);
+    fields?: AccountEdgeFieldPolicy;
+  };
   Authenticated?: Omit<TypePolicy, 'fields' | 'keyFields'> & {
     keyFields?:
       | false
@@ -161,6 +236,20 @@ export type StrictTypedTypePolicies = {
       | CategoryKeySpecifier
       | (() => undefined | CategoryKeySpecifier);
     fields?: CategoryFieldPolicy;
+  };
+  CategoryConnection?: Omit<TypePolicy, 'fields' | 'keyFields'> & {
+    keyFields?:
+      | false
+      | CategoryConnectionKeySpecifier
+      | (() => undefined | CategoryConnectionKeySpecifier);
+    fields?: CategoryConnectionFieldPolicy;
+  };
+  CategoryEdge?: Omit<TypePolicy, 'fields' | 'keyFields'> & {
+    keyFields?:
+      | false
+      | CategoryEdgeKeySpecifier
+      | (() => undefined | CategoryEdgeKeySpecifier);
+    fields?: CategoryEdgeFieldPolicy;
   };
   Credential?: Omit<TypePolicy, 'fields' | 'keyFields'> & {
     keyFields?:
@@ -176,6 +265,13 @@ export type StrictTypedTypePolicies = {
       | (() => undefined | MutationKeySpecifier);
     fields?: MutationFieldPolicy;
   };
+  PageInfo?: Omit<TypePolicy, 'fields' | 'keyFields'> & {
+    keyFields?:
+      | false
+      | PageInfoKeySpecifier
+      | (() => undefined | PageInfoKeySpecifier);
+    fields?: PageInfoFieldPolicy;
+  };
   Query?: Omit<TypePolicy, 'fields' | 'keyFields'> & {
     keyFields?:
       | false
@@ -189,6 +285,20 @@ export type StrictTypedTypePolicies = {
       | TransactionKeySpecifier
       | (() => undefined | TransactionKeySpecifier);
     fields?: TransactionFieldPolicy;
+  };
+  TransactionConnection?: Omit<TypePolicy, 'fields' | 'keyFields'> & {
+    keyFields?:
+      | false
+      | TransactionConnectionKeySpecifier
+      | (() => undefined | TransactionConnectionKeySpecifier);
+    fields?: TransactionConnectionFieldPolicy;
+  };
+  TransactionEdge?: Omit<TypePolicy, 'fields' | 'keyFields'> & {
+    keyFields?:
+      | false
+      | TransactionEdgeKeySpecifier
+      | (() => undefined | TransactionEdgeKeySpecifier);
+    fields?: TransactionEdgeFieldPolicy;
   };
   User?: Omit<TypePolicy, 'fields' | 'keyFields'> & {
     keyFields?: false | UserKeySpecifier | (() => undefined | UserKeySpecifier);

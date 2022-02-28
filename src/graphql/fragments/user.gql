@@ -4,8 +4,9 @@ fragment AuthenticatedUser on User {
   createdAt
   updatedAt
 }
+
 fragment Tokens on Credential {
-  tokenType
+  tokenKind
   accessToken
   refreshToken
 }
@@ -14,7 +15,7 @@ fragment Auth on Authenticated {
   user {
     ...AuthenticatedUser
   }
-  credentials {
+  credential {
     ...Tokens
   }
 }

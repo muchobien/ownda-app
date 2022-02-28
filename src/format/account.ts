@@ -1,10 +1,8 @@
 import type { AccountsQuery } from '@app/generated/graphql';
 
 export const homeAccount = ({
-  id,
-  name,
-  color,
-}: AccountsQuery['accounts'][number]) => ({
+  node: { id, name, color },
+}: AccountsQuery['accounts']['edges'][number]) => ({
   id,
   name,
   color,
@@ -18,4 +16,4 @@ export type PlaceHolder = {
 };
 
 export type HomeTransaction =
-  AccountsQuery['accounts'][number]['transactions'][number];
+  AccountsQuery['accounts']['edges'][number]['node']['transactions']['edges'][number]['node'];

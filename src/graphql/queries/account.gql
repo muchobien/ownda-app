@@ -1,14 +1,18 @@
 query Accounts {
   accounts {
-    id
-    name
-    color
-    transactions {
-      id
-      name
-      amount
-      type
-      createdAt
+    edges {
+      cursor
+      node {
+        ...Account
+        transactions {
+          edges {
+            cursor
+            node {
+              ...Transaction
+            }
+          }
+        }
+      }
     }
   }
 }

@@ -1,4 +1,4 @@
-import { ProviderEnum } from '@app/generated/graphql';
+import { Provider } from '@app/generated/graphql';
 import { useLogin } from '@app/hooks/me';
 import { useInputRefs } from '@app/hooks';
 import type { ConnectProps } from '@app/types';
@@ -28,7 +28,7 @@ export const useConnect = (_: ConnectProps<'Login'>) => {
 
   const submitHandler = useCallback<SubmitHandler<Form>>(
     async ({ email, password: hash }) => {
-      await login({ email, hash, provider: ProviderEnum.Local });
+      await login({ email, hash, provider: Provider.Local });
     },
     [login],
   );
