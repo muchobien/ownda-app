@@ -73,7 +73,7 @@
     "@graphql-codegen/typescript-apollo-client-helpers": "2.1.12",
     "@graphql-codegen/typescript-operations": "2.3.2",
     "@muchobien/eslint-config-react-native": "0.0.5",
-    "@types/ramda": "0.27.65",
+    "@types/ramda": "0.28.0",
     "@types/react-native": "0.67.0",
     "babel-plugin-module-resolver": "4.1.0",
     "eslint": "8.9.0",
