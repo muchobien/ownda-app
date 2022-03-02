@@ -5,6 +5,10 @@ on:
       - develop
   pull_request:
     types: [opened, synchronize, reopened]
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
+  cancel-in-progress: true
+
 jobs:
   sonarcloud:
     name: SonarCloud
