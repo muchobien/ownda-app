@@ -7904,10 +7904,10 @@ react-native-dotenv@3.3.1:
   dependencies:
     dotenv "^10.0.0"
 
-react-native-flipper@0.136.0:
-  version "0.136.0"
-  resolved "https://registry.yarnpkg.com/react-native-flipper/-/react-native-flipper-0.136.0.tgz#1325c5ba32038d5e1e37c4e4a1456037cfb06ee1"
-  integrity sha512-t74YZg345Fpq5EeCsNLLzuCc/xOBZsjM/mK2hWahtAvuoPGcf+HVYh4eLy8zz4tLD/XWUKb1qm9MNorag/B6sw==
+react-native-flipper@0.137.0:
+  version "0.137.0"
+  resolved "https://registry.yarnpkg.com/react-native-flipper/-/react-native-flipper-0.137.0.tgz#ce34d0b396e495553755cd256c98ab4cdab4b302"
+  integrity sha512-Ls3Do5nfR24ghCpGzk6/Wc3jZ202je0qNYWGRGO+KaOaK2O/la9bl7XwI7kg50jfChSxqolWp1v+Jwm2/qi7EA==
 
 react-native-gesture-handler@2.3.0:
   version "2.3.0"
