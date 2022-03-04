@@ -80,7 +80,7 @@
     "metro-react-native-babel-preset": "0.69.0",
     "postinstall": "0.7.4",
     "prettier": "2.5.1",
-    "react-native-flipper": "0.136.0",
+    "react-native-flipper": "0.137.0",
     "typescript": "4.6.2"
   },
   "resolutions": {
