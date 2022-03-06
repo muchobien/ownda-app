@@ -101,6 +101,7 @@ export type MutationKeySpecifier = (
   | 'createCategory'
   | 'createTransaction'
   | 'login'
+  | 'plaidLink'
   | 'refreshToken'
   | 'register'
   | MutationKeySpecifier
@@ -110,6 +111,7 @@ export type MutationFieldPolicy = {
   createCategory?: FieldPolicy<any> | FieldReadFunction<any>;
   createTransaction?: FieldPolicy<any> | FieldReadFunction<any>;
   login?: FieldPolicy<any> | FieldReadFunction<any>;
+  plaidLink?: FieldPolicy<any> | FieldReadFunction<any>;
   refreshToken?: FieldPolicy<any> | FieldReadFunction<any>;
   register?: FieldPolicy<any> | FieldReadFunction<any>;
 };

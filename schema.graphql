@@ -78,6 +78,11 @@ type Mutation {
   createCategory(input: CategoryInput!): Category!
   createTransaction(input: TransactionInput!): Transaction!
   login(input: AuthInput!): Authenticated!
+
+  """
+  Exchange a public_token from [Plaid Link](https://plaid.com/docs/api/#creating-items-with-plaid-link) for a Plaid access_token
+  """
+  plaidLink(publicToken: String!): Boolean!
   refreshToken: Credential!
   register(input: AuthInput!): Authenticated!
 }
@@ -93,6 +98,7 @@ enum Provider {
   APPLE
   GOOGLE
   LOCAL
+  PLAID
 }
 
 type Query {

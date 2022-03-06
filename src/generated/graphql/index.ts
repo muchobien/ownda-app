@@ -109,6 +109,8 @@ export type Mutation = {
   createCategory: Category;
   createTransaction: Transaction;
   login: Authenticated;
+  /** Exchange a public_token from [Plaid Link](https://plaid.com/docs/api/#creating-items-with-plaid-link) for a Plaid access_token */
+  plaidLink: Scalars['Boolean'];
   refreshToken: Credential;
   register: Authenticated;
 };
@@ -129,6 +131,10 @@ export type MutationLoginArgs = {
   input: AuthInput;
 };
 
+export type MutationPlaidLinkArgs = {
+  publicToken: Scalars['String'];
+};
+
 export type MutationRegisterArgs = {
   input: AuthInput;
 };
@@ -145,6 +151,7 @@ export const enum Provider {
   Apple = 'APPLE',
   Google = 'GOOGLE',
   Local = 'LOCAL',
+  Plaid = 'PLAID',
 }
 
 export type Query = {
