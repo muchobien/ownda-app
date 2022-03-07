@@ -9,6 +9,9 @@ on:
       - ".github/workflows/build-ios.yml"
       - "ios/**"
       - "yarn.lock"
+      
+permissions:
+  pull-requests: write
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
