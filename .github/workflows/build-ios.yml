@@ -10,9 +10,6 @@ on:
       - "ios/**"
       - "yarn.lock"
       
-permissions:
-  pull-requests: write
-
 concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
   cancel-in-progress: true
@@ -44,11 +41,3 @@ jobs:
 
       - name: Build app
         run: yarn ios --scheme ownda-dev
-
-      - name: Commit automatic changes
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: "ci(podfile): apply automatic changes"
-          file_pattern: ios/Podfile**
-          commit_options: '--no-verify'
-
