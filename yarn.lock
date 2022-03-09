@@ -7926,10 +7926,10 @@ react-native-mmkv-flipper-plugin@1.0.0:
   resolved "https://registry.yarnpkg.com/react-native-mmkv-flipper-plugin/-/react-native-mmkv-flipper-plugin-1.0.0.tgz#f87f747d8cea51d2b12a1e711287feff5f212788"
   integrity sha512-e3owMIBzXez45Wz8Ac84Vf1FmfwMXFVUpf/gCDWDLq19w7iCipVezQjlZo8ISVza8aQf1G4ggaK/r+qqtGmRlg==
 
-react-native-mmkv@2.1.0:
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/react-native-mmkv/-/react-native-mmkv-2.1.0.tgz#07fba18e6220a39bccfcff9b478d67801a17650b"
-  integrity sha512-dgX6RguKmipDmpmr11Zoz5CbuZVzInME2yAjOHw8jPnsGJNy33ZUEqHVxS6IZI5hpg2kmA5Gq91OSLQ8y7bnqw==
+react-native-mmkv@2.1.1:
+  version "2.1.1"
+  resolved "https://registry.yarnpkg.com/react-native-mmkv/-/react-native-mmkv-2.1.1.tgz#08648548d4d4c6c621970ea53822bc6d94568207"
+  integrity sha512-Fdh/DJqvyEsasKRsIqUNFWDgypjIWESohX6iNK0zMzQ/o1QE3w4C76cU8ZT4+MpzoDovquPwKtk0Q04VzLOAGQ==
 
 react-native-reanimated@2.4.1:
   version "2.4.1"
