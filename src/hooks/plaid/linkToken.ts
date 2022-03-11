@@ -11,6 +11,8 @@ const packageName =
 
 export const useLinkToken = () => {
   const { data, loading } = useQuery(LinkTokenDocument, {
+    fetchPolicy: 'network-only',
+    nextFetchPolicy: 'network-only',
     variables: {
       packageName,
     },

@@ -1,0 +1,3 @@
+mutation PlaidLink($publicToken: String!) {
+  plaidLink(publicToken: $publicToken)
+}

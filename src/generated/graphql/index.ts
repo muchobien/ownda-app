@@ -318,6 +318,12 @@ export type AuthFragment = {
   };
 };
 
+export type PlaidLinkMutationVariables = Exact<{
+  publicToken: Scalars['String'];
+}>;
+
+export type PlaidLinkMutation = { __typename: 'Mutation'; plaidLink: boolean };
+
 export type LoginMutationVariables = Exact<{
   input: AuthInput;
 }>;
@@ -582,6 +588,51 @@ export const AuthFragmentDoc = {
     ...TokensFragmentDoc.definitions,
   ],
 } as unknown as DocumentNode<AuthFragment, unknown>;
+export const PlaidLinkDocument = {
+  kind: 'Document',
+  definitions: [
+    {
+      kind: 'OperationDefinition',
+      operation: 'mutation',
+      name: { kind: 'Name', value: 'PlaidLink' },
+      variableDefinitions: [
+        {
+          kind: 'VariableDefinition',
+          variable: {
+            kind: 'Variable',
+            name: { kind: 'Name', value: 'publicToken' },
+          },
+          type: {
+            kind: 'NonNullType',
+            type: {
+              kind: 'NamedType',
+              name: { kind: 'Name', value: 'String' },
+            },
+          },
+        },
+      ],
+      selectionSet: {
+        kind: 'SelectionSet',
+        selections: [
+          {
+            kind: 'Field',
+            name: { kind: 'Name', value: 'plaidLink' },
+            arguments: [
+              {
+                kind: 'Argument',
+                name: { kind: 'Name', value: 'publicToken' },
+                value: {
+                  kind: 'Variable',
+                  name: { kind: 'Name', value: 'publicToken' },
+                },
+              },
+            ],
+          },
+        ],
+      },
+    },
+  ],
+} as unknown as DocumentNode<PlaidLinkMutation, PlaidLinkMutationVariables>;
 export const LoginDocument = {
   kind: 'Document',
   definitions: [

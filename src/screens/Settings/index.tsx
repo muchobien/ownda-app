@@ -1,15 +1,17 @@
 import type { Screen } from '@app/types';
 import { Button, SafeView, Text } from '@app/components';
 import { useLogout } from '@app/hooks/me';
-import { useLinkToken } from '@app/hooks/plaid';
-import type { LinkSuccess, LinkExit } from 'react-native-plaid-link-sdk';
+import { useLinkToken, usePlaidLink } from '@app/hooks/plaid';
 import { PlaidLink } from 'react-native-plaid-link-sdk';
 
 export const Settings: Screen<'Settings'> = () => {
   const { logout } = useLogout();
   const { loading, linkToken } = useLinkToken();
+  const { registerLinkToken } = usePlaidLink();
 
-  console.log('linkToken', linkToken);
+  if (loading) {
+    return <Text>Loading...</Text>;
+  }
 
   return (
     <SafeView>
@@ -18,12 +20,7 @@ export const Settings: Screen<'Settings'> = () => {
           token: linkToken!,
           noLoadingState: loading,
         }}
-        onSuccess={(success: LinkSuccess) => {
-          console.log(success);
-        }}
-        onExit={(exit: LinkExit) => {
-          console.log(exit);
-        }}
+        onSuccess={registerLinkToken}
       >
         <Text>Add Account</Text>
       </PlaidLink>

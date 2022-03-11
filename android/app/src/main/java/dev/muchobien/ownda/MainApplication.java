@@ -15,7 +15,6 @@ import expo.modules.ApplicationLifecycleDispatcher;
 import expo.modules.ReactNativeHostWrapper;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
-import com.plaid.PlaidPackage;
 
 public class MainApplication extends Application implements ReactApplication {
 
@@ -28,10 +27,7 @@ public class MainApplication extends Application implements ReactApplication {
 
         @Override
         protected List<ReactPackage> getPackages() {
-          List<ReactPackage> packages = new PackageList(this).getPackages();
-          packages.add(new PlaidPackage());
-
-          return packages;
+          return new PackageList(this).getPackages();
         }
 
         @Override
