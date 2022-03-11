@@ -4497,7 +4497,7 @@ expand-brackets@^2.1.4:
     snapdragon "^0.8.1"
     to-regex "^3.0.1"
 
-expo-application@~4.0.2:
+expo-application@4.0.2, expo-application@~4.0.2:
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/expo-application/-/expo-application-4.0.2.tgz#860dbd12132a56de7cf75fe7b5146b6cd97ed30e"
   integrity sha512-ngTaFplTkWn0X45gMC+VNXGyJfGxX4wOwKmtr17rNMVWOQUhhLlyMkTj9bAamzsuwZh35l3S/eD/N1aMWWUwMw==
@@ -7930,6 +7930,11 @@ react-native-mmkv@2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/react-native-mmkv/-/react-native-mmkv-2.1.0.tgz#07fba18e6220a39bccfcff9b478d67801a17650b"
   integrity sha512-dgX6RguKmipDmpmr11Zoz5CbuZVzInME2yAjOHw8jPnsGJNy33ZUEqHVxS6IZI5hpg2kmA5Gq91OSLQ8y7bnqw==
+
+react-native-plaid-link-sdk@7.3.0:
+  version "7.3.0"
+  resolved "https://registry.yarnpkg.com/react-native-plaid-link-sdk/-/react-native-plaid-link-sdk-7.3.0.tgz#d5af0b9425a0af53f90f445233ee0b8ae44dc53d"
+  integrity sha512-4yhT9x+wFWS8M9vXFjZYlohJyhUt/Mf0LZyVOKbeU6zGfkIoMosW6j7O9MQWkOw/H6eQBlUGcYjgvMJv4PrSlQ==
 
 react-native-reanimated@2.4.1:
   version "2.4.1"

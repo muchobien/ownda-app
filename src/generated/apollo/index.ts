@@ -133,6 +133,7 @@ export type QueryKeySpecifier = (
   | 'accounts'
   | 'categories'
   | 'category'
+  | 'linkToken'
   | 'me'
   | 'transaction'
   | 'transactions'
@@ -143,6 +144,7 @@ export type QueryFieldPolicy = {
   accounts?: FieldPolicy<any> | FieldReadFunction<any>;
   categories?: FieldPolicy<any> | FieldReadFunction<any>;
   category?: FieldPolicy<any> | FieldReadFunction<any>;
+  linkToken?: FieldPolicy<any> | FieldReadFunction<any>;
   me?: FieldPolicy<any> | FieldReadFunction<any>;
   transaction?: FieldPolicy<any> | FieldReadFunction<any>;
   transactions?: FieldPolicy<any> | FieldReadFunction<any>;

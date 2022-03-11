@@ -116,6 +116,7 @@ type Query {
     last: Float
   ): CategoryConnection!
   category(id: ID!): Category!
+  linkToken(packageName: String): String!
   me: User!
   transaction(id: ID!): Transaction!
   transactions(

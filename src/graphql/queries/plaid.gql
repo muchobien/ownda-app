@@ -1,0 +1,3 @@
+query LinkToken($packageName: String) {
+    linkToken(packageName: $packageName)
+}

@@ -160,6 +160,7 @@ export type Query = {
   accounts: AccountConnection;
   categories: CategoryConnection;
   category: Category;
+  linkToken: Scalars['String'];
   me: User;
   transaction: Transaction;
   transactions: TransactionConnection;
@@ -185,6 +186,10 @@ export type QueryCategoriesArgs = {
 
 export type QueryCategoryArgs = {
   id: Scalars['ID'];
+};
+
+export type QueryLinkTokenArgs = {
+  packageName?: InputMaybe<Scalars['String']>;
 };
 
 export type QueryTransactionArgs = {
@@ -398,6 +403,12 @@ export type AccountsQuery = {
     }>;
   };
 };
+
+export type LinkTokenQueryVariables = Exact<{
+  packageName?: InputMaybe<Scalars['String']>;
+}>;
+
+export type LinkTokenQuery = { __typename: 'Query'; linkToken: string };
 
 export type MeQueryVariables = Exact<{ [key: string]: never }>;
 
@@ -774,6 +785,45 @@ export const AccountsDocument = {
     ...TransactionFragmentDoc.definitions,
   ],
 } as unknown as DocumentNode<AccountsQuery, AccountsQueryVariables>;
+export const LinkTokenDocument = {
+  kind: 'Document',
+  definitions: [
+    {
+      kind: 'OperationDefinition',
+      operation: 'query',
+      name: { kind: 'Name', value: 'LinkToken' },
+      variableDefinitions: [
+        {
+          kind: 'VariableDefinition',
+          variable: {
+            kind: 'Variable',
+            name: { kind: 'Name', value: 'packageName' },
+          },
+          type: { kind: 'NamedType', name: { kind: 'Name', value: 'String' } },
+        },
+      ],
+      selectionSet: {
+        kind: 'SelectionSet',
+        selections: [
+          {
+            kind: 'Field',
+            name: { kind: 'Name', value: 'linkToken' },
+            arguments: [
+              {
+                kind: 'Argument',
+                name: { kind: 'Name', value: 'packageName' },
+                value: {
+                  kind: 'Variable',
+                  name: { kind: 'Name', value: 'packageName' },
+                },
+              },
+            ],
+          },
+        ],
+      },
+    },
+  ],
+} as unknown as DocumentNode<LinkTokenQuery, LinkTokenQueryVariables>;
 export const MeDocument = {
   kind: 'Document',
   definitions: [
