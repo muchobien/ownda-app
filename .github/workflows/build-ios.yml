@@ -9,7 +9,7 @@ on:
       - ".github/workflows/build-ios.yml"
       - "ios/**"
       - "yarn.lock"
-
+      
 concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
   cancel-in-progress: true
@@ -23,6 +23,13 @@ jobs:
         uses: actions/checkout@v2
         with:
           ref: ${{ github.head_ref }}
+      
+      - uses: actions/cache@v2
+        with:
+          path: ios/Pods
+          key: ${{ runner.os }}-pods-${{ hashFiles('**/Podfile.lock') }}
+          restore-keys: |
+            ${{ runner.os }}-pods-
 
       - name: Use Node.js 16
         uses: actions/setup-node@v2
@@ -36,14 +43,8 @@ jobs:
       - name: Install pods
         working-directory: ios
         run: pod install
+        env:
+          APP_ENV: development
 
       - name: Build app
         run: yarn ios --scheme ownda-dev
-
-      - name: Commit automatic changes
-        uses: stefanzweifel/git-auto-commit-action@v4
-        with:
-          commit_message: "ci(podfile): apply automatic changes"
-          file_pattern: ios/Podfile**
-          commit_options: '--no-verify'
-
