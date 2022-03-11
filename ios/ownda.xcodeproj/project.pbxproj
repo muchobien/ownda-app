@@ -41,6 +41,9 @@
 		4906935627A461BA0056D776 /* ownda-preview.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ownda-preview.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4906936A27A466920056D776 /* ownda-dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ownda-dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4967649227B44B57003BC914 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		49FC1EBD27DBB5A9008A926B /* ownda-devDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "ownda-devDebug.entitlements"; sourceTree = "<group>"; };
+		49FC1EBE27DBB5B1008A926B /* ownda-previewDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "ownda-previewDebug.entitlements"; sourceTree = "<group>"; };
+		49FC1EBF27DBB5BF008A926B /* owndaDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = owndaDebug.entitlements; path = ownda/owndaDebug.entitlements; sourceTree = "<group>"; };
 		523683F8075C3041EAF6B262 /* Pods-common-ownda-preview.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-common-ownda-preview.release.xcconfig"; path = "Target Support Files/Pods-common-ownda-preview/Pods-common-ownda-preview.release.xcconfig"; sourceTree = "<group>"; };
 		59018DC9514E967CC8E24BD1 /* Pods-common-ownda.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-common-ownda.release.xcconfig"; path = "Target Support Files/Pods-common-ownda/Pods-common-ownda.release.xcconfig"; sourceTree = "<group>"; };
 		B17508E20B94260C8AD6DA8E /* Pods-common-ownda-preview.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-common-ownda-preview.debug.xcconfig"; path = "Target Support Files/Pods-common-ownda-preview/Pods-common-ownda-preview.debug.xcconfig"; sourceTree = "<group>"; };
@@ -83,6 +86,7 @@
 		13B07FAE1A68108700A75B9A /* ownda */ = {
 			isa = PBXGroup;
 			children = (
+				49FC1EBF27DBB5BF008A926B /* owndaDebug.entitlements */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -124,6 +128,8 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				49FC1EBE27DBB5B1008A926B /* ownda-previewDebug.entitlements */,
+				49FC1EBD27DBB5A9008A926B /* ownda-devDebug.entitlements */,
 				13B07FAE1A68108700A75B9A /* ownda */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				83CBBA001A601CBA00E9B192 /* Products */,
@@ -631,7 +637,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = Dolar;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = ownda/ownda.entitlements;
+				CODE_SIGN_ENTITLEMENTS = ownda/owndaDebug.entitlements;
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = "";
 				DISPLAY_NAME = Ownda;
@@ -687,7 +693,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = DolarView;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = ownda/ownda.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "ownda-previewDebug.entitlements";
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = "";
 				DISPLAY_NAME = Ownda;
@@ -744,7 +750,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = DolarDev;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = ownda/ownda.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "ownda-devDebug.entitlements";
 				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = "";
 				DISPLAY_NAME = Ownda;
