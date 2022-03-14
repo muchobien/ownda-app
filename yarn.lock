@@ -7925,10 +7925,10 @@ react-native-mmkv-flipper-plugin@1.0.0:
   resolved "https://registry.yarnpkg.com/react-native-mmkv-flipper-plugin/-/react-native-mmkv-flipper-plugin-1.0.0.tgz#f87f747d8cea51d2b12a1e711287feff5f212788"
   integrity sha512-e3owMIBzXez45Wz8Ac84Vf1FmfwMXFVUpf/gCDWDLq19w7iCipVezQjlZo8ISVza8aQf1G4ggaK/r+qqtGmRlg==
 
-react-native-mmkv@2.1.2:
-  version "2.1.2"
-  resolved "https://registry.yarnpkg.com/react-native-mmkv/-/react-native-mmkv-2.1.2.tgz#c282fd757d24c06f66e819d0cbcdcf00243ebbbc"
-  integrity sha512-l/ovSEIh7hxbYrwbWUULsiljfOm5LYQDe+0QB5/C8xiyzmlAlpy3JUt8qxNJNYJvo/HR03SM9EZunLql1VveAg==
+react-native-mmkv@2.2.0:
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/react-native-mmkv/-/react-native-mmkv-2.2.0.tgz#5cd7203a9a535328872ab10254d6368d78cabc03"
+  integrity sha512-hzg+sUXdteLI8HXAZ3DF2IHkMz+AlXytA+uG7i+C3aOq+80j6zuS4e47bmQOLdA157zLDFwRa3Dg5o0S5awpLA==
 
 react-native-plaid-link-sdk@7.3.0:
   version "7.3.0"
