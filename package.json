@@ -65,7 +65,7 @@
     "@arkweid/lefthook": "0.7.7",
     "@babel/core": "7.17.5",
     "@babel/plugin-transform-react-jsx": "7.17.3",
-    "@babel/runtime": "7.17.2",
+    "@babel/runtime": "7.17.7",
     "@graphql-codegen/add": "3.1.1",
     "@graphql-codegen/cli": "2.6.2",
     "@graphql-codegen/schema-ast": "2.4.1",
