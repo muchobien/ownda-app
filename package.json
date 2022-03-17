@@ -72,7 +72,7 @@
     "@graphql-codegen/typed-document-node": "2.2.7",
     "@graphql-codegen/typescript": "2.4.7",
     "@graphql-codegen/typescript-apollo-client-helpers": "2.1.14",
-    "@graphql-codegen/typescript-operations": "2.3.4",
+    "@graphql-codegen/typescript-operations": "2.3.5",
     "@muchobien/eslint-config-react-native": "0.0.8",
     "@types/ramda": "0.28.1",
     "@types/react-native": "0.67.3",
