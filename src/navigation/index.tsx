@@ -5,8 +5,7 @@ import { RootNavigator } from './root';
 import { navigationTheme, buildTheme } from '@app/theme';
 import { forwardRef, useMemo } from 'react';
 import { ThemeProvider } from '@emotion/react';
-import { useMMKVBoolean } from 'react-native-mmkv';
-import { storage } from '@app/utils/storage';
+import { useStoreBoolean } from '@app/utils/store';
 import { StatusBar } from '@app/components';
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
 import '@app/utils/date';
@@ -15,7 +14,7 @@ export const Navigation = forwardRef<
   NavigationContainerRef<RootStackParamList>,
   { onReady: () => void }
 >(({ onReady }, ref) => {
-  const [logged] = useMMKVBoolean('@logged', storage);
+  const [logged] = useStoreBoolean('@logged');
   const insets = useSafeAreaInsets();
 
   const theme = useMemo(() => buildTheme(insets), [insets]);

@@ -3,7 +3,7 @@ import RNBootSplash from 'react-native-bootsplash';
 import { MeDocument } from '@app/generated/graphql';
 import { useNavigationContainerRef } from '@react-navigation/native';
 import { useFlipper } from '@react-navigation/devtools';
-import { storage } from '@app/utils/storage';
+import { store } from '@app/utils/store';
 import { initializeMMKVFlipper } from 'react-native-mmkv-flipper-plugin';
 import * as Font from 'expo-font';
 import {
@@ -22,7 +22,7 @@ import { makeClient } from '@app/apollo';
 const client = makeClient();
 
 if (__DEV__) {
-  initializeMMKVFlipper({ default: storage });
+  initializeMMKVFlipper({ default: store });
 }
 
 export const useApp = () => {
@@ -50,9 +50,9 @@ export const useApp = () => {
         query: MeDocument,
         fetchPolicy: 'network-only',
       });
-      storage.set('@logged', true);
+      store.set('@logged', true);
     } catch {
-      storage.set('@logged', false);
+      store.set('@logged', false);
       // noop
     } finally {
       setReady(true);

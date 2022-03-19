@@ -4,7 +4,7 @@ import {
   MeDocument,
   LoginDocument,
 } from '@app/generated/graphql';
-import { storage } from '@app/utils/storage';
+import { store } from '@app/utils/store';
 import { useCallback } from 'react';
 import { useMutation, useQuery } from '@apollo/client';
 
@@ -25,8 +25,8 @@ export const useLogin = () => {
       const { data, errors } = await mutate({ variables: { input } });
       if (errors) return { errors };
       if (data) {
-        storage.set('@logged', true);
-        storage.setObject('@auth', data.login.credential);
+        store.set('@logged', true);
+        store.setObject('@auth', data.login.credential);
       }
       return {};
     },
@@ -49,8 +49,8 @@ export const useRegister = () => {
 
 export const useLogout = () => {
   const logout = useCallback(() => {
-    storage.delete('@auth');
-    storage.delete('@logged');
+    store.delete('@auth');
+    store.delete('@logged');
   }, []);
 
   return { logout };

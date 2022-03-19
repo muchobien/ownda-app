@@ -24,3 +24,7 @@ export type KeyExtractor<T extends { id: string } = { id: string }> = (
 export type SectionRenderHeader<T, U> = NonNullable<
   SectionListProps<T, U>['renderSectionHeader']
 >;
+
+export type KeysOfType<O, T> = {
+  [K in keyof O]: O[K] extends T ? K : never;
+}[keyof O];
