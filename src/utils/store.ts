@@ -1,5 +1,4 @@
 import type { KeysOfType } from '@app/types';
-import type { MMKVConfiguration } from 'react-native-mmkv';
 import {
   useMMKVObject,
   useMMKVNumber,
@@ -19,10 +18,6 @@ export type NumberKey = KeysOfType<KeyType, number>;
 export type StorageKey = BooleanKey | StringKey | NumberKey;
 
 class Storage extends MMKV {
-  constructor(config?: MMKVConfiguration) {
-    super(config);
-  }
-
   getObject<T extends Record<string, unknown>>(key: StringKey): T | undefined {
     const value = this.getString(key);
     if (!value) return;
