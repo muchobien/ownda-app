@@ -63,7 +63,7 @@
   },
   "devDependencies": {
     "@arkweid/lefthook": "0.7.7",
-    "@babel/core": "7.17.7",
+    "@babel/core": "7.17.8",
     "@babel/plugin-transform-react-jsx": "7.17.3",
     "@babel/runtime": "7.17.8",
     "@graphql-codegen/add": "3.1.1",
