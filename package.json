@@ -21,7 +21,8 @@
   "expo": {
     "autolinking": {
       "exclude": [
-        "expo-keep-awake"
+        "expo-keep-awake",
+        "react-native-reanimated"
       ]
     }
   },
