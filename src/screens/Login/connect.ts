@@ -1,8 +1,6 @@
-import { Provider } from '@app/generated/graphql';
-import { useLogin } from '@app/hooks/me';
 import { useInputRefs } from '@app/hooks';
 import type { ConnectProps } from '@app/types';
-import { PlainObject } from '@app/utils/object';
+import { PlainObject, store } from '@app/utils';
 import { useCallback, useMemo } from 'react';
 import type { SubmitHandler } from 'react-hook-form';
 import { useForm } from 'react-hook-form';
@@ -24,14 +22,9 @@ export const useConnect = (_: ConnectProps<'Login'>) => {
     defaultValues,
   });
 
-  const { login } = useLogin();
-
-  const submitHandler = useCallback<SubmitHandler<Form>>(
-    async ({ email, password: hash }) => {
-      await login({ email, hash, provider: Provider.Local });
-    },
-    [login],
-  );
+  const submitHandler = useCallback<SubmitHandler<Form>>(async () => {
+    store.set('@logged', true);
+  }, []);
 
   const onSubmit = useMemo(
     () => handleSubmit(submitHandler),

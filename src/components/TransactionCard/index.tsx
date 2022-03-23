@@ -1,5 +1,4 @@
 import { toPrice } from '@app/format/toPrice';
-import type { TransactionKind } from '@app/generated/graphql';
 import { memo } from 'react';
 import {
   Blur,
@@ -21,7 +20,7 @@ type ViewProps = {
   name: string;
   first: boolean;
   last: boolean;
-  type: TransactionKind;
+  type: string;
 };
 
 export const TransactionCard = {

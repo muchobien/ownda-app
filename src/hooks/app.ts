@@ -1,6 +1,5 @@
 import { useCallback, useEffect, useState } from 'react';
 import RNBootSplash from 'react-native-bootsplash';
-import { MeDocument } from '@app/generated/graphql';
 import { useNavigationContainerRef } from '@react-navigation/native';
 import { useFlipper } from '@react-navigation/devtools';
 import { store } from '@app/utils/store';
@@ -17,9 +16,6 @@ import {
   Inter_800ExtraBold,
   Inter_900Black,
 } from '@expo-google-fonts/inter';
-import { makeClient } from '@app/apollo';
-
-const client = makeClient();
 
 if (__DEV__) {
   initializeMMKVFlipper({ default: store });
@@ -46,10 +42,6 @@ export const useApp = () => {
         Inter_800ExtraBold,
         Inter_900Black,
       });
-      await client.query({
-        query: MeDocument,
-        fetchPolicy: 'network-only',
-      });
       store.set('@logged', true);
     } catch {
       store.set('@logged', false);
@@ -66,7 +58,6 @@ export const useApp = () => {
   }, [setUp]);
 
   return {
-    client,
     handleReady,
     navigationRef,
     ready,
