@@ -323,7 +323,7 @@ PODS:
   - react-native-plaid-link-sdk (7.3.0):
     - Plaid (~> 2.4.0)
     - React-Core
-  - react-native-safe-area-context (4.2.1):
+  - react-native-safe-area-context (4.2.2):
     - RCT-Folly
     - RCTRequired
     - RCTTypeSafety
@@ -687,7 +687,7 @@ SPEC CHECKSUMS:
   react-native-flipper: 51a1b8f34ce185e028f8158382c3882d6ea3cccf
   react-native-mmkv: 2a15aadabf649c364cab7975eef52848611eea25
   react-native-plaid-link-sdk: b489bab9f201c077002524cdb0235858a72e2c7d
-  react-native-safe-area-context: 806f8370bf9fc9db90a3413aaa1aab0d2e22fdf3
+  react-native-safe-area-context: da2d11bd7df9bf7779e9bdc85081c141cfa544f4
   React-perflogger: 0afaf2f01a47fd0fc368a93bfbb5bd3b26db6e7f
   React-RCTActionSheet: 59f35c4029e0b532fc42114241a06e170b7431a2
   React-RCTAnimation: aae4f4bed122e78bdab72f7118d291d70a932ce2
