@@ -1,6 +1,8 @@
 {
   "extends": "@muchobien/eslint-config-react-native/tsconfig.base",
   "compilerOptions": {
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
     "baseUrl": ".",
     "paths": {
       "@app": ["./src"],

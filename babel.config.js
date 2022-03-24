@@ -5,9 +5,9 @@ module.exports = {
       { useTransformReactJSXExperimental: true },
     ],
   ],
-  ignore: [/node_modules\/@urq/],
   plugins: [
     'react-native-reanimated/plugin',
+    ["@babel/plugin-proposal-decorators", { "legacy": true }],
     [
       'module-resolver',
       {

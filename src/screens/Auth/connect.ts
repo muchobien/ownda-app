@@ -12,7 +12,7 @@ const defaultValues = {
 
 type Form = typeof defaultValues;
 
-export const useConnect = (_: ConnectProps<'Login'>) => {
+export const useConnect = (_: ConnectProps<'Auth'>) => {
   const refs = useInputRefs(PlainObject.keys(defaultValues));
   const {
     control,

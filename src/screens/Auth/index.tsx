@@ -2,7 +2,7 @@ import type { Screen } from '@app/types';
 import { useConnect } from './connect';
 import { EmailInput, PasswordInput, Title, Submit, Container } from './styles';
 
-export const Login: Screen<'Login'> = props => {
+export const Auth: Screen<'Auth'> = props => {
   const { control, refs, onSubmit, isSubmitting } = useConnect(props);
   return (
     <Container>
