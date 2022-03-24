@@ -1,7 +1,0 @@
-fragment Account on Account {
-  id
-  name
-  color
-  createdAt
-  updatedAt
-}

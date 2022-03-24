@@ -2,8 +2,8 @@ import type { Screen } from '@app/types';
 import { Text } from '@app/components';
 import { Container } from './styles';
 
-export const Home: Screen<'Home'> = () => (
+export const Onboarding: Screen<'Onboarding'> = () => (
   <Container>
-    <Text>Home</Text>
+    <Text>Onboarding</Text>
   </Container>
 );

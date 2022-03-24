@@ -1,4 +1,5 @@
-import { Login } from '@app/screens';
+import { DatabaseProvider } from '@app/db';
+import { Auth, Onboarding } from '@app/screens';
 import type { PFC, RootStackParamList } from '@app/types';
 import type { NativeStackNavigationOptions } from '@react-navigation/native-stack';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -15,15 +16,21 @@ type Props = {
 };
 
 export const RootNavigator: PFC<Props> = ({ authenticated }) => (
-  <Stack.Navigator initialRouteName="Root" screenOptions={defaultScreenOptions}>
-    {authenticated ? (
-      <Stack.Group>
-        <Stack.Screen name="Root" component={BottomTabNavigator} />
-      </Stack.Group>
-    ) : (
-      <Stack.Group>
-        <Stack.Screen name="Login" component={Login} />
-      </Stack.Group>
-    )}
-  </Stack.Navigator>
+  <DatabaseProvider>
+    <Stack.Navigator
+      initialRouteName="Root"
+      screenOptions={defaultScreenOptions}
+    >
+      {authenticated ? (
+        <Stack.Group>
+          <Stack.Screen name="Root" component={BottomTabNavigator} />
+        </Stack.Group>
+      ) : (
+        <Stack.Group>
+          <Stack.Screen name="Auth" component={Auth} />
+          <Stack.Screen name="Onboarding" component={Onboarding} />
+        </Stack.Group>
+      )}
+    </Stack.Navigator>
+  </DatabaseProvider>
 );

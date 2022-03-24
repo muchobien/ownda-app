@@ -1,3 +1,4 @@
+export { Auth } from './Auth';
 export { Home } from './Home';
-export { Login } from './Login';
+export { Onboarding } from './Onboarding';
 export { Settings } from './Settings';

@@ -1,7 +1,6 @@
 import styled from '@emotion/native';
 import { BlurView } from 'expo-blur';
 import { Text } from '@app/components/Text';
-import type { TransactionKind } from '@app/generated/graphql';
 
 export const Blur = styled(BlurView)<{ first: boolean; last: boolean }>(
   ({ first, last }) => ({
@@ -36,13 +35,11 @@ export const HeaderContainer = styled.View({
   paddingVertical: 24,
 });
 
-export const Amount = styled(Text)<{ type: TransactionKind }>(
-  ({ type, theme }) => ({
-    marginLeft: 'auto',
-    fontSize: 14,
-    color: type === 'INCOME' ? theme.colors.green : theme.colors.red,
-  }),
-);
+export const Amount = styled(Text)<{ type: string }>(({ type, theme }) => ({
+  marginLeft: 'auto',
+  fontSize: 14,
+  color: type === 'INCOME' ? theme.colors.green : theme.colors.red,
+}));
 
 Amount.defaultProps = {
   variant: 'number',

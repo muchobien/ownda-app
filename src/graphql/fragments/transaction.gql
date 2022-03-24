@@ -1,9 +1,0 @@
-fragment Transaction on Transaction {
-  id
-  kind
-  name
-  amount
-  categoryId
-  createdAt
-  updatedAt
-}
