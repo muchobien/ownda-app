@@ -7932,10 +7932,10 @@ react-native-mmkv@2.2.0:
   resolved "https://registry.yarnpkg.com/react-native-mmkv/-/react-native-mmkv-2.2.0.tgz#5cd7203a9a535328872ab10254d6368d78cabc03"
   integrity sha512-hzg+sUXdteLI8HXAZ3DF2IHkMz+AlXytA+uG7i+C3aOq+80j6zuS4e47bmQOLdA157zLDFwRa3Dg5o0S5awpLA==
 
-react-native-plaid-link-sdk@7.3.0:
-  version "7.3.0"
-  resolved "https://registry.yarnpkg.com/react-native-plaid-link-sdk/-/react-native-plaid-link-sdk-7.3.0.tgz#d5af0b9425a0af53f90f445233ee0b8ae44dc53d"
-  integrity sha512-4yhT9x+wFWS8M9vXFjZYlohJyhUt/Mf0LZyVOKbeU6zGfkIoMosW6j7O9MQWkOw/H6eQBlUGcYjgvMJv4PrSlQ==
+react-native-plaid-link-sdk@7.4.0:
+  version "7.4.0"
+  resolved "https://registry.yarnpkg.com/react-native-plaid-link-sdk/-/react-native-plaid-link-sdk-7.4.0.tgz#71629c728b618ab5e6824e1271f18fd1e7b7450a"
+  integrity sha512-JF2K3r6h+Hd8008spc6dAYr9Zcr1IHMuUQ8dDnBPP7k4HvdmZ3Uw9hrBjCcyxDbIU1V6KbOVHsPx0MrkTZe63w==
 
 react-native-reanimated@2.5.0:
   version "2.5.0"
