@@ -27,8 +27,8 @@ export const RootNavigator: PFC<Props> = ({ authenticated }) => (
         </Stack.Group>
       ) : (
         <Stack.Group>
-          <Stack.Screen name="Auth" component={Auth} />
           <Stack.Screen name="Onboarding" component={Onboarding} />
+          <Stack.Screen name="Auth" component={Auth} />
         </Stack.Group>
       )}
     </Stack.Navigator>

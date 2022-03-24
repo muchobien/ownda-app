@@ -1,8 +1,9 @@
 import type { Screen } from '@app/types';
-import { SafeView, Text } from '@app/components';
+import { Text } from '@app/components';
+import { Container } from '../styles';
 
 export const Account: Screen<'Onboarding'> = () => (
-  <SafeView>
+  <Container>
     <Text>Account</Text>
-  </SafeView>
+  </Container>
 );

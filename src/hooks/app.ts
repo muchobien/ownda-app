@@ -42,7 +42,7 @@ export const useApp = () => {
         Inter_800ExtraBold,
         Inter_900Black,
       });
-      store.set('@logged', true);
+      store.set('@logged', false);
     } catch {
       store.set('@logged', false);
       // noop

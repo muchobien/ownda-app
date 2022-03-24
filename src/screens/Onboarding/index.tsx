@@ -1,9 +1,12 @@
 import type { Screen } from '@app/types';
-import { Text } from '@app/components';
 import { Container } from './styles';
+import { Import, Currency, Account, Category } from './Views';
 
-export const Onboarding: Screen<'Onboarding'> = () => (
+export const Onboarding: Screen<'Onboarding'> = props => (
   <Container>
-    <Text>Onboarding</Text>
+    <Import key="import" {...props} />
+    <Currency key="currency" {...props} />
+    <Account key="account" {...props} />
+    <Category key="category" {...props} />
   </Container>
 );
