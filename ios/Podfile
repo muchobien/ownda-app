@@ -21,6 +21,10 @@ abstract_target 'common' do
     :hermes_enabled => true
   )
 
+  # WatermelonDB
+  pod 'React-jsi', :path => '../node_modules/react-native/ReactCommon/jsi', :modular_headers => true
+  pod 'simdjson', path: '../node_modules/@nozbe/simdjson'
+
   # Enables Flipper.
   #
   # Note that if you have use_frameworks! enabled, Flipper will not work and

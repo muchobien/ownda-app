@@ -130,6 +130,10 @@ android {
 
     compileSdkVersion rootProject.ext.compileSdkVersion
 
+    packagingOptions {
+        pickFirst '**/libc++_shared.so' // WatermelonDB
+    }
+
     flavorDimensions "env"
     productFlavors {
         production {
@@ -212,6 +216,8 @@ dependencies {
     implementation "androidx.swiperefreshlayout:swiperefreshlayout:1.1.0"
 
     implementation "androidx.core:core-splashscreen:1.0.0-beta01"
+
+    implementation project(':watermelondb-jsi')
 
     debugImplementation("com.facebook.flipper:flipper:${FLIPPER_VERSION}") {
         exclude group:'com.facebook.fbjni'
