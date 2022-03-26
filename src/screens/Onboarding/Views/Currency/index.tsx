@@ -7,8 +7,15 @@ import { List, SelectedCurrency, Bottom } from './styles';
 import type { KeyExtractor, ListRenderItem } from '@app/types';
 
 export const Currency: View = ({ onPressNext }) => {
-  const { control, selected, keyboardWillShow, handlePress, values } =
-    useConnect();
+  const {
+    contentContainerStyle,
+    control,
+    handleLayoutBottom,
+    handlePress,
+    keyboardWillShow,
+    selected,
+    values,
+  } = useConnect();
 
   const renderItem = useCallback<ListRenderItem<string>>(
     ({ item }) => (
@@ -37,8 +44,13 @@ export const Currency: View = ({ onPressNext }) => {
         placeholder="Search (e.g. USD, EUR, GBP)"
         control={control}
       />
-      <List data={values} renderItem={renderItem} keyExtractor={keyExtractor} />
-      <Bottom>
+      <List
+        data={values}
+        renderItem={renderItem}
+        keyExtractor={keyExtractor}
+        contentContainerStyle={contentContainerStyle}
+      />
+      <Bottom onLayout={handleLayoutBottom}>
         <NextButton title="Set" onPress={onPressNext} />
       </Bottom>
     </Container>

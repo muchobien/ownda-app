@@ -4,8 +4,9 @@ import { PlainObject } from '@app/utils/object';
 import { useCallback, useEffect, useMemo, useState } from 'react';
 import type { SubmitHandler } from 'react-hook-form';
 import { useForm } from 'react-hook-form';
-import type { KeyboardEventListener } from 'react-native';
-import { Keyboard } from 'react-native';
+import type { KeyboardEventListener, StyleProp, ViewStyle } from 'react-native';
+import { LayoutAnimation, Keyboard } from 'react-native';
+import { useLayout, useKeyboard } from '@react-native-community/hooks';
 
 const defaultValues = {
   search: '',
@@ -26,7 +27,10 @@ export const useConnect = () => {
     defaultValues,
   });
 
+  const { onLayout: handleLayoutBottom, height: heightBottom } = useLayout();
+
   const [keyboardWillShow, setKeyboardWillShow] = useState(false);
+  const { keyboardHeight, keyboardShown } = useKeyboard();
 
   const selected = watch('selected');
   const search = watch('search');
@@ -55,12 +59,23 @@ export const useConnect = () => {
     [setValue],
   );
 
+  const contentContainerStyle = useMemo<StyleProp<ViewStyle>>(() => {
+    if (keyboardShown) {
+      return {
+        paddingBottom: keyboardHeight + 8,
+      };
+    }
+    return { paddingBottom: heightBottom + 8 };
+  }, [heightBottom, keyboardHeight, keyboardShown]);
+
   const handleKeyboardWillShow: KeyboardEventListener = () => {
     setKeyboardWillShow(true);
+    LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut);
   };
 
   const handleKeyboardWillHide: KeyboardEventListener = () => {
     setKeyboardWillShow(false);
+    LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut);
   };
 
   useEffect(() => {
@@ -75,7 +90,9 @@ export const useConnect = () => {
   }, []);
 
   return {
+    contentContainerStyle,
     control,
+    handleLayoutBottom,
     handlePress,
     isSubmitting,
     keyboardWillShow,
