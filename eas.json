@@ -28,11 +28,11 @@
       }
     },
     "production": {
-      "distribution": "internal",
+      "distribution": "store",
       "credentialsSource": "remote",
       "android": {
         "image": "latest",
-        "gradleCommand": ":app:assembleProductionRelease"
+        "gradleCommand": ":app:bundleProductionRelease"
       },
       "ios": {
         "scheme": "ownda",
