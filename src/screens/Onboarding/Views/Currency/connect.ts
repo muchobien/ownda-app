@@ -5,7 +5,7 @@ import { useCallback, useEffect, useMemo, useState } from 'react';
 import type { SubmitHandler } from 'react-hook-form';
 import { useForm } from 'react-hook-form';
 import type { KeyboardEventListener, StyleProp, ViewStyle } from 'react-native';
-import { LayoutAnimation, Keyboard } from 'react-native';
+import { Keyboard } from 'react-native';
 import { useLayout, useKeyboard } from '@react-native-community/hooks';
 
 const defaultValues = {
@@ -70,12 +70,10 @@ export const useConnect = () => {
 
   const handleKeyboardWillShow: KeyboardEventListener = () => {
     setKeyboardWillShow(true);
-    LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut);
   };
 
   const handleKeyboardWillHide: KeyboardEventListener = () => {
     setKeyboardWillShow(false);
-    LayoutAnimation.configureNext(LayoutAnimation.Presets.easeInEaseOut);
   };
 
   useEffect(() => {

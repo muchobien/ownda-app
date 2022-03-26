@@ -5,6 +5,7 @@ import { CurrencyCard } from '@app/components';
 import type { LinearGradientProps } from 'expo-linear-gradient';
 import { LinearGradient } from 'expo-linear-gradient';
 import { colors } from '@app/theme/colors';
+import Animated from 'react-native-reanimated';
 
 export const Separator = styled.View({
   height: 8,
@@ -40,3 +41,5 @@ Bottom.defaultProps = {
   colors: [colors.background0, colors.background50, colors.background100],
   locations: [0, 0.4, 0.8],
 };
+
+export const AnimatedItem = styled(Animated.View)({});

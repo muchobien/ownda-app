@@ -1,10 +1,16 @@
 import styled from '@emotion/native';
 import { Button, Text } from '@app/components';
 import FastImage from 'react-native-fast-image';
+import Animated from 'react-native-reanimated';
 
 export const Container = styled.View({
   paddingHorizontal: 16,
   flex: 1,
+});
+
+export const AnimatedContainer = styled(Animated.View)({
+  flex: 1,
+  paddingHorizontal: 16,
 });
 
 export const Title = styled(Text)({
