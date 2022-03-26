@@ -7,6 +7,7 @@ import { File } from './File';
 import { Gear } from './Gear';
 import { Google } from './Google';
 import { Home } from './Home';
+import { Search } from './Search';
 import { Shield } from './Shield';
 
 export const icon = {
@@ -19,6 +20,7 @@ export const icon = {
   gear: Gear,
   google: Google,
   home: Home,
+  search: Search,
   shield: Shield,
 };
 

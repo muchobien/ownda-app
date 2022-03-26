@@ -18,10 +18,11 @@ import { Platform } from 'react-native';
 export interface InputProps<T extends FieldValues = FieldValues>
   extends Omit<TextInputProps, 'defaultValue'>,
     UseControllerProps<T> {
-  label: string;
+  label?: string;
   inputStyle?: StyleProp<ViewStyle>;
   nextInputRef?: RefObject<TextInput>;
-  type?: 'text' | 'number' | 'email' | 'password';
+  type?: 'text' | 'number' | 'email' | 'password' | 'search';
+  onPressIcon?: () => void;
 }
 
 type LogicProps<T extends FieldValues = FieldValues> = Omit<
@@ -77,6 +78,7 @@ export const useLogic = <T extends FieldValues = FieldValues>({
     returnKeyType,
     secure,
     secureTextEntry,
+    type,
     value,
   };
 };

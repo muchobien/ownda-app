@@ -1,7 +1,6 @@
 import styled from '@emotion/native';
 import { Text } from '@app/components/Text';
-import { RectButton } from 'react-native-gesture-handler';
-import { colors } from '@app/theme/colors';
+import { BorderlessButton } from 'react-native-gesture-handler';
 
 export const Container = styled.View({
   flexDirection: 'row',
@@ -25,12 +24,4 @@ Title.defaultProps = {
   variant: 'h3',
 };
 
-export const Pressable = styled(RectButton)({
-  borderRadius: 8,
-});
-
-Pressable.defaultProps = {
-  rippleColor: colors.ivy40,
-  underlayColor: colors.ivy,
-  activeOpacity: 0.4,
-};
+export const Pressable = styled(BorderlessButton)();

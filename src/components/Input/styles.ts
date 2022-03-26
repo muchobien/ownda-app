@@ -2,10 +2,13 @@ import styled from '@emotion/native';
 import { Text } from '@app/components/Text';
 import { BorderlessButton } from 'react-native-gesture-handler';
 import { Icon as IconComponent } from '../Icon';
+import { colors } from '@app/theme/colors';
 
 export const Container = styled.View`
   background-color: ${({ theme }) => theme.colors.surface};
   border-radius: 8px;
+  height: 56px;
+  justify-content: center;
 `;
 
 export const InnerContainer = styled.View`
@@ -21,6 +24,10 @@ export const TextInputNative = styled.TextInput`
   font-family: Inter_400Regular;
   flex: 1;
 `;
+
+TextInputNative.defaultProps = {
+  placeholderTextColor: colors.white70,
+};
 
 export const Label = styled(Text)`
   margin-left: 16px;

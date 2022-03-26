@@ -1,5 +1,6 @@
 export { AccountCard } from './AccountCard';
 export { Button } from './Button';
+export { CurrencyCard } from './CurrencyCard';
 export { Header } from './Header';
 export { Icon } from './Icon';
 export { Input } from './Input';

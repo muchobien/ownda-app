@@ -1,6 +1,6 @@
 import type { Screen } from '@app/types';
 import { useConnect } from './connect';
-import { Pager, Container, Header, PageView } from './styles';
+import { Pager, Container, Header, PageView, UnsafePageView } from './styles';
 import { Import, Currency, Account, Category } from './Views';
 
 export const Onboarding: Screen<'Onboarding'> = props => {
@@ -14,9 +14,9 @@ export const Onboarding: Screen<'Onboarding'> = props => {
         <PageView key="import">
           <Import onPressNext={handleNext} />
         </PageView>
-        <PageView key="currency">
+        <UnsafePageView key="currency">
           <Currency onPressNext={handleNext} />
-        </PageView>
+        </UnsafePageView>
         <PageView key="account">
           <Account onPressNext={handleNext} />
         </PageView>

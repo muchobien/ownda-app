@@ -1,5 +1,5 @@
 import type { Theme as NavigationTheme } from '@react-navigation/native';
-import { Dimensions } from 'react-native';
+import { Dimensions, Platform } from 'react-native';
 import type { EdgeInsets } from 'react-native-safe-area-context';
 import { colors } from './colors';
 
@@ -32,7 +32,10 @@ const { width, height } = Dimensions.get('window');
 export const buildTheme = (insets: EdgeInsets): AppTheme => ({
   colors,
   device: {
-    insets,
+    insets: {
+      ...insets,
+      bottom: insets.bottom + Platform.select({ ios: 0, default: 20 }),
+    },
     width,
     height,
   },

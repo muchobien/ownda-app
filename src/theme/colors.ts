@@ -11,6 +11,7 @@ export const colors = {
   mediumGray: '#3C4253',
   transparent: 'rgba(0, 0, 0, 0)',
   ivy40: 'rgba(107, 77, 255, 0.4)',
+  ivy80: 'rgba(107, 77, 255, 0.8)',
   ivy: '#6B4DFF',
   purple1: '#c34cff',
   purple2: '#ff4cff',
