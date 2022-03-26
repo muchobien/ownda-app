@@ -5,7 +5,7 @@ import { useCallback, useEffect, useMemo, useState } from 'react';
 import type { SubmitHandler } from 'react-hook-form';
 import { useForm } from 'react-hook-form';
 import type { KeyboardEventListener, StyleProp, ViewStyle } from 'react-native';
-import { Keyboard } from 'react-native';
+import { Platform, Keyboard } from 'react-native';
 import { useLayout, useKeyboard } from '@react-native-community/hooks';
 
 const defaultValues = {
@@ -69,6 +69,7 @@ export const useConnect = () => {
   }, [heightBottom, keyboardHeight, keyboardShown]);
 
   const handleKeyboardWillShow: KeyboardEventListener = () => {
+    console.log('keyboardWillShow');
     setKeyboardWillShow(true);
   };
 
@@ -77,11 +78,16 @@ export const useConnect = () => {
   };
 
   useEffect(() => {
-    const subscriptions = [
-      Keyboard.addListener('keyboardWillShow', handleKeyboardWillShow),
-      Keyboard.addListener('keyboardWillHide', handleKeyboardWillHide),
-    ];
-
+    const subscriptions = Platform.select({
+      ios: [
+        Keyboard.addListener('keyboardWillShow', handleKeyboardWillShow),
+        Keyboard.addListener('keyboardWillHide', handleKeyboardWillHide),
+      ],
+      default: [
+        Keyboard.addListener('keyboardDidShow', handleKeyboardWillShow),
+        Keyboard.addListener('keyboardDidHide', handleKeyboardWillHide),
+      ],
+    });
     return () => {
       subscriptions.forEach(subscription => subscription.remove());
     };
