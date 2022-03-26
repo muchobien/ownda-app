@@ -6,9 +6,6 @@
     "development": {
       "distribution": "internal",
       "credentialsSource": "remote",
-      "env": {
-        "APP_ENV": "development"
-      },
       "android": {
         "gradleCommand": ":app:assembleDevelopmentDebug"
       },
@@ -20,9 +17,6 @@
     "preview": {
       "distribution": "internal",
       "credentialsSource": "remote",
-      "env": {
-        "APP_ENV": "preview"
-      },
       "android": {
         "gradleCommand": ":app:assemblePreviewRelease"
       },
@@ -34,9 +28,6 @@
     "production": {
       "distribution": "internal",
       "credentialsSource": "remote",
-      "env": {
-        "APP_ENV": "production"
-      },
       "android": {
         "gradleCommand": ":app:assembleProductionRelease"
       },

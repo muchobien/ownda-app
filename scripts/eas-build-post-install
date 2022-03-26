@@ -1,9 +1,0 @@
-#!/usr/bin/env bash
-
-if  [ "$APP_ENV" = "production" ]; then
-    echo $PRODUCTION_ENV | tr ";" "\n" > .env
-elif [ "$APP_ENV" = "development" ]; then
-    echo $DEVELOPMENT_ENV | tr ";" "\n" > .env
-elif [ "$APP_ENV" = "preview" ]; then
-    echo $PREVIEW_ENV | tr ";" "\n" > .env
-fi
