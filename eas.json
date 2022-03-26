@@ -7,9 +7,11 @@
       "distribution": "internal",
       "credentialsSource": "remote",
       "android": {
+        "image": "latest",
         "gradleCommand": ":app:assembleDevelopmentDebug"
       },
       "ios": {
+        "image": "latest",
         "scheme": "ownda-dev",
         "buildConfiguration": "Debug"
       }
@@ -18,9 +20,11 @@
       "distribution": "internal",
       "credentialsSource": "remote",
       "android": {
+        "image": "latest",
         "gradleCommand": ":app:assemblePreviewRelease"
       },
       "ios": {
+        "image": "latest",
         "scheme": "ownda-preview",
         "buildConfiguration": "Release"
       }
@@ -29,9 +33,11 @@
       "distribution": "internal",
       "credentialsSource": "remote",
       "android": {
+        "image": "latest",
         "gradleCommand": ":app:assembleProductionRelease"
       },
       "ios": {
+        "image": "latest",
         "scheme": "ownda",
         "buildConfiguration": "Release"
       }
