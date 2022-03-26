@@ -1,9 +1,19 @@
-import type { Screen } from '@app/types';
-import { Text } from '@app/components';
-import { Container } from '../styles';
+/* eslint-disable @typescript-eslint/no-var-requires */
 
-export const Import: Screen<'Onboarding'> = () => (
+import { Text } from '@app/components';
+import { ImportButton } from './styles';
+import { Container, Image, NextButton, Title, ImageContainer } from '../styles';
+import download from '@app/assets/images/download.png';
+import type { View } from '../types';
+
+export const Import: View = ({ onPressNext }) => (
   <Container>
-    <Text>Import</Text>
+    <Title variant="h1">Import CSV file</Title>
+    <Text variant="h5">from Ownda or another app</Text>
+    <ImageContainer>
+      <Image source={download} />
+    </ImageContainer>
+    <ImportButton title="Import backup file" />
+    <NextButton title="Start fresh" onPress={onPressNext} />
   </Container>
 );

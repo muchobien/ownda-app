@@ -1,9 +1,12 @@
+/* eslint-disable no-unused-vars */
 import type { ReactElement } from 'react';
 
 import type {
   ListRenderItem as LRI,
   SectionListProps,
   SectionListRenderItem as SRI,
+  StyleProp,
+  ViewStyle,
 } from 'react-native';
 
 export type PFC<P = void> = {
@@ -28,3 +31,12 @@ export type SectionRenderHeader<T, U> = NonNullable<
 export type KeysOfType<O, T> = {
   [K in keyof O]: O[K] extends T ? K : never;
 }[keyof O];
+
+type Key = `${string}Style` | 'style';
+
+export type WithStyle<
+  T extends Record<string, unknown>,
+  K extends Key = 'style',
+> = T & {
+  [key in K]?: StyleProp<ViewStyle>;
+};

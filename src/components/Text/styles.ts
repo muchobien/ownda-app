@@ -26,7 +26,9 @@ const variants = {
     `,
   h5: (theme: Theme) =>
     css`
-      color: ${theme.colors.white};
+      font-size: 16px;
+      color: ${theme.colors.white70};
+      font-family: Inter_600SemiBold;
     `,
   h6: (theme: Theme) =>
     css`

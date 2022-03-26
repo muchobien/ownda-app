@@ -5,6 +5,7 @@ import { useFlipper } from '@react-navigation/devtools';
 import { store } from '@app/utils/store';
 import { initializeMMKVFlipper } from 'react-native-mmkv-flipper-plugin';
 import * as Font from 'expo-font';
+
 import {
   Inter_100Thin,
   Inter_200ExtraLight,
@@ -42,9 +43,7 @@ export const useApp = () => {
         Inter_800ExtraBold,
         Inter_900Black,
       });
-      store.set('@logged', false);
     } catch {
-      store.set('@logged', false);
       // noop
     } finally {
       setReady(true);

@@ -1,8 +1,8 @@
-import type { Screen } from '@app/types';
 import { Text } from '@app/components';
 import { Container } from '../styles';
+import type { View } from '../types';
 
-export const Account: Screen<'Onboarding'> = () => (
+export const Account: View = () => (
   <Container>
     <Text>Account</Text>
   </Container>
