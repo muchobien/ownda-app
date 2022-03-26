@@ -11,7 +11,6 @@
         "gradleCommand": ":app:assembleDevelopmentDebug"
       },
       "ios": {
-        "image": "latest",
         "scheme": "ownda-dev",
         "buildConfiguration": "Debug"
       }
@@ -24,7 +23,6 @@
         "gradleCommand": ":app:assemblePreviewRelease"
       },
       "ios": {
-        "image": "latest",
         "scheme": "ownda-preview",
         "buildConfiguration": "Release"
       }
@@ -37,7 +35,6 @@
         "gradleCommand": ":app:assembleProductionRelease"
       },
       "ios": {
-        "image": "latest",
         "scheme": "ownda",
         "buildConfiguration": "Release"
       }
