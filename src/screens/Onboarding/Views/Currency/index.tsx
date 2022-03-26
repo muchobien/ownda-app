@@ -40,20 +40,18 @@ export const Currency: View = ({ onPressNext }) => {
           <SelectedCurrency countryCode={selected} selected />
         </AnimatedItem>
       ) : null}
-      <AnimatedItem>
-        <Input
-          name="search"
-          type="search"
-          placeholder="Search (e.g. USD, EUR, GBP)"
-          control={control}
-        />
-        <List
-          data={values}
-          renderItem={renderItem}
-          keyExtractor={keyExtractor}
-          contentContainerStyle={contentContainerStyle}
-        />
-      </AnimatedItem>
+      <Input
+        name="search"
+        type="search"
+        placeholder="Search (e.g. USD, EUR, GBP)"
+        control={control}
+      />
+      <List
+        data={values}
+        renderItem={renderItem}
+        keyExtractor={keyExtractor}
+        contentContainerStyle={contentContainerStyle}
+      />
       <Bottom onLayout={handleLayoutBottom}>
         <NextButton title="Set" onPress={onPressNext} />
       </Bottom>
