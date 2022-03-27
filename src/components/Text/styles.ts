@@ -33,11 +33,19 @@ const variants = {
   h6: (theme: Theme) =>
     css`
       color: ${theme.colors.white};
+      font-size: 16px;
+      font-family: Inter_700Bold;
     `,
   body: (theme: Theme) => css`
     color: ${theme.colors.white};
     font-family: Inter_400Regular;
   `,
+  chip: (theme: Theme) =>
+    css`
+      font-size: 16px;
+      color: ${theme.colors.white};
+      font-family: Inter_600SemiBold;
+    `,
   caption: (theme: Theme) =>
     css`
       color: ${theme.colors.white};

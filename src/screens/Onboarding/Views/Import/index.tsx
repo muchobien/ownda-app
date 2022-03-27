@@ -1,5 +1,3 @@
-/* eslint-disable @typescript-eslint/no-var-requires */
-
 import { Text } from '@app/components';
 import { ImportButton } from './styles';
 import { Container, Image, NextButton, Title, ImageContainer } from '../styles';

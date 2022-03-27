@@ -21,6 +21,13 @@ Title.defaultProps = {
   variant: 'h3',
 };
 
+export const Subtitle = styled(Text)({
+  marginBottom: 16,
+});
+Subtitle.defaultProps = {
+  variant: 'h6',
+};
+
 export const ImageContainer = styled.View({
   flex: 1,
   alignItems: 'center',
