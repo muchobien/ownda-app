@@ -7,7 +7,4 @@ export const ImportButton = styled(Button)({
 ImportButton.defaultProps = {
   variant: 'outline',
   leftIcon: 'file',
-  innerStyle: {
-    alignItems: 'center',
-  },
 };

@@ -16,6 +16,9 @@ export const Chip = styled(ChipBase)({
 });
 
 export const Container = styled.ScrollView({});
+Container.defaultProps = {
+  showsVerticalScrollIndicator: false,
+};
 
 export const InnerContainer = styled.View({
   marginHorizontal: 16,
@@ -37,8 +40,3 @@ Bottom.defaultProps = {
 };
 
 export const NextButton = styled(Button)();
-NextButton.defaultProps = {
-  innerStyle: {
-    alignItems: 'center',
-  },
-};

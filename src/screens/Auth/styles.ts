@@ -18,6 +18,9 @@ export const Google = styled(Button)({
 });
 Google.defaultProps = {
   leftIcon: 'google',
+  innerStyle: {
+    alignItems: 'flex-start',
+  },
 };
 
 export const Apple = styled(Button)({
@@ -25,9 +28,15 @@ export const Apple = styled(Button)({
 });
 Apple.defaultProps = {
   leftIcon: 'apple',
+  innerStyle: {
+    alignItems: 'flex-start',
+  },
 };
 
 export const Offline = styled(Button)({});
 Offline.defaultProps = {
   leftIcon: 'shield',
+  innerStyle: {
+    alignItems: 'flex-start',
+  },
 };

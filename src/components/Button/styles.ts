@@ -69,7 +69,7 @@ Loader.defaultProps = {
 
 export const Decorator = styled.View({ paddingHorizontal: 16, width: 56 });
 
-export const Center = styled.View({ flex: 1 });
+export const Center = styled.View({ flex: 1, alignItems: 'center' });
 
 export const Icon = styled(BaseIcon)();
 Icon.defaultProps = {

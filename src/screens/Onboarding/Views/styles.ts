@@ -46,9 +46,6 @@ Image.defaultProps = {
 export const NextButton = styled(Button)();
 NextButton.defaultProps = {
   rightIcon: 'chevronRight',
-  innerStyle: {
-    alignItems: 'center',
-  },
 };
 
 export const Bottom = styled.View({
