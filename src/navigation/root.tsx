@@ -12,7 +12,7 @@ const defaultScreenOptions: NativeStackNavigationOptions = {
 };
 
 type Props = {
-  authenticated: boolean;
+  authenticated?: boolean;
 };
 
 export const RootNavigator: PFC<Props> = ({ authenticated }) => (

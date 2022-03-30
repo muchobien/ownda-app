@@ -20,6 +20,7 @@ export const Account: View = () => {
       <Row>
         {suggestions.map(({ name, selected }) => (
           <Chip
+            key={name}
             icon="plus"
             title={name}
             selected={selected}

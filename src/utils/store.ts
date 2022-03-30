@@ -33,11 +33,11 @@ class Storage extends MMKV {
     return super.getString(key);
   }
 
-  getNumber(key: NumberKey): number {
+  getNumber(key: NumberKey): number | undefined {
     return super.getNumber(key);
   }
 
-  getBoolean(key: BooleanKey): boolean {
+  getBoolean(key: BooleanKey): boolean | undefined {
     return super.getBoolean(key);
   }
 
