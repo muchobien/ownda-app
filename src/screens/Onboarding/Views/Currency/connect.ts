@@ -1,11 +1,11 @@
 import { useInputRefs } from '@app/hooks';
 import { currency, isoCurrencyCodes } from '@app/utils/localization';
 import { PlainObject } from '@app/utils/object';
-import { useCallback, useEffect, useMemo, useState } from 'react';
+import { useCallback, useMemo } from 'react';
 import type { SubmitHandler } from 'react-hook-form';
 import { useForm } from 'react-hook-form';
-import type { KeyboardEventListener, StyleProp, ViewStyle } from 'react-native';
-import { Platform, Keyboard } from 'react-native';
+import type { StyleProp, ViewStyle } from 'react-native';
+import { Keyboard } from 'react-native';
 import { useLayout, useKeyboard } from '@react-native-community/hooks';
 
 const defaultValues = {
@@ -28,8 +28,6 @@ export const useConnect = () => {
   });
 
   const { onLayout: handleLayoutBottom, height: heightBottom } = useLayout();
-
-  const [keyboardWillShow, setKeyboardWillShow] = useState(false);
   const { keyboardHeight, keyboardShown } = useKeyboard();
 
   const selected = watch('selected');
@@ -68,38 +66,13 @@ export const useConnect = () => {
     return { paddingBottom: heightBottom + 8 };
   }, [heightBottom, keyboardHeight, keyboardShown]);
 
-  const handleKeyboardWillShow: KeyboardEventListener = () => {
-    console.log('keyboardWillShow');
-    setKeyboardWillShow(true);
-  };
-
-  const handleKeyboardWillHide: KeyboardEventListener = () => {
-    setKeyboardWillShow(false);
-  };
-
-  useEffect(() => {
-    const subscriptions = Platform.select({
-      ios: [
-        Keyboard.addListener('keyboardWillShow', handleKeyboardWillShow),
-        Keyboard.addListener('keyboardWillHide', handleKeyboardWillHide),
-      ],
-      default: [
-        Keyboard.addListener('keyboardDidShow', handleKeyboardWillShow),
-        Keyboard.addListener('keyboardDidHide', handleKeyboardWillHide),
-      ],
-    });
-    return () => {
-      subscriptions.forEach(subscription => subscription.remove());
-    };
-  }, []);
-
   return {
     contentContainerStyle,
     control,
     handleLayoutBottom,
     handlePress,
     isSubmitting,
-    keyboardWillShow,
+    keyboardShown,
     onSubmit,
     refs,
     selected,

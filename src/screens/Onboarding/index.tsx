@@ -20,9 +20,9 @@ export const Onboarding: Screen<'Onboarding'> = props => {
         <PageView key="account">
           <Account onPressNext={handleNext} />
         </PageView>
-        <PageView key="category">
+        <UnsafePageView key="category">
           <Category onPressNext={handleNext} />
-        </PageView>
+        </UnsafePageView>
       </Pager>
     </Container>
   );

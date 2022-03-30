@@ -14,7 +14,7 @@ export const Currency: View = ({ onPressNext }) => {
     control,
     handleLayoutBottom,
     handlePress,
-    keyboardWillShow,
+    keyboardShown,
     selected,
     values,
   } = useConnect();
@@ -34,7 +34,7 @@ export const Currency: View = ({ onPressNext }) => {
 
   return (
     <AnimatedContainer layout={FadeUpTransition}>
-      {!keyboardWillShow ? (
+      {!keyboardShown ? (
         <AnimatedItem entering={FadeInUp} exiting={FadeOutUp}>
           <Title variant="h1">Set Currency</Title>
           <SelectedCurrency countryCode={selected} selected />

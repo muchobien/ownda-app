@@ -5,8 +5,8 @@ import { Title, Subtitle, ImageContainer, Image } from '../styles';
 import wallet from '@app/assets/images/wallet.png';
 import { suggestions, useConnect } from './connect';
 
-export const Account: View = () => {
-  const { handlePressSuggestion, handlePressCreate } = useConnect();
+export const Account: View = props => {
+  const { handlePressSuggestion, handlePressCreate } = useConnect(props);
 
   return (
     <Container>
