@@ -41,8 +41,7 @@ export const Button = memo<ButtonProps>(
       <Pressable
         onPress={onPress}
         enabled={enabled}
-        {...pressableDefaultProps[variant]}
-      >
+        {...pressableDefaultProps[variant]}>
         <Inner accessible accessibilityRole="button">
           {loading ? (
             <Center style={innerStyle}>

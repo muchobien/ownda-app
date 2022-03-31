@@ -1,5 +1,4 @@
-import type { Relation } from '@nozbe/watermelondb';
-import { Model } from '@nozbe/watermelondb';
+import { Relation, Model } from '@nozbe/watermelondb';
 import {
   date,
   field,

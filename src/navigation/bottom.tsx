@@ -26,8 +26,7 @@ export const BottomTabNavigator = () => {
       <BottomTab.Navigator
         initialRouteName="Home"
         screenOptions={defaultScreenOptions}
-        tabBar={tabBar}
-      >
+        tabBar={tabBar}>
         <BottomTab.Screen name="Home" component={Home} />
         <BottomTab.Screen name="Settings" component={Settings} />
       </BottomTab.Navigator>
