@@ -19,8 +19,7 @@ export const RootNavigator: PFC<Props> = ({ authenticated }) => (
   <DatabaseProvider>
     <Stack.Navigator
       initialRouteName="Root"
-      screenOptions={defaultScreenOptions}
-    >
+      screenOptions={defaultScreenOptions}>
       {authenticated ? (
         <Stack.Group>
           <Stack.Screen name="Root" component={BottomTabNavigator} />
