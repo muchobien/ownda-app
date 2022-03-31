@@ -1745,10 +1745,10 @@
     "@jridgewell/resolve-uri" "^3.0.3"
     "@jridgewell/sourcemap-codec" "^1.4.10"
 
-"@muchobien/eslint-config-react-native@0.0.10":
-  version "0.0.10"
-  resolved "https://registry.yarnpkg.com/@muchobien/eslint-config-react-native/-/eslint-config-react-native-0.0.10.tgz#afd57d447cf739c69a42a57e4c032d72d0000f37"
-  integrity sha512-hjqMKD/zMtcAkRTJeO02J6Q+TUWpLWGArjH9C1tPbxOUWJH+thsTSEOFZdxZHfJqYcnF1vtLkjIabgMrp1mBNw==
+"@muchobien/eslint-config-react-native@0.1.0":
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/@muchobien/eslint-config-react-native/-/eslint-config-react-native-0.1.0.tgz#f1821912c3c7dbb12989b22d8276403a31278730"
+  integrity sha512-rD8tEXIPhjPHCgkUd3N9csf8pmnPy5iLKGtcux+/XCv53z49tDdio80s5oQ9nBeDMJ2FvxGNRCEv73x5t4ITbw==
   dependencies:
     "@babel/plugin-transform-react-jsx" "7.17.3"
     "@typescript-eslint/eslint-plugin" "5.17.0"
