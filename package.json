@@ -67,7 +67,7 @@
     "@babel/plugin-transform-react-jsx": "7.17.3",
     "@babel/runtime": "7.17.8",
     "@muchobien/eslint-config-react-native": "0.1.0",
-    "@types/ramda": "0.28.5",
+    "@types/ramda": "0.28.7",
     "@types/react-native": "0.67.3",
     "babel-plugin-module-resolver": "4.1.0",
     "eslint": "8.12.0",
