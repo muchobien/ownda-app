@@ -32,7 +32,7 @@
     "@nozbe/watermelondb": "0.24.0",
     "@react-native-community/hooks": "2.8.1",
     "@react-navigation/bottom-tabs": "6.2.0",
-    "@react-navigation/devtools": "6.0.5",
+    "@react-navigation/devtools": "6.0.7",
     "@react-navigation/native": "6.0.8",
     "@react-navigation/native-stack": "6.5.2",
     "dayjs": "1.11.0",
