@@ -4,6 +4,7 @@ import { useNavigationContainerRef } from '@react-navigation/native';
 import { useFlipper } from '@react-navigation/devtools';
 import { store } from '@app/utils/store';
 import { initializeMMKVFlipper } from 'react-native-mmkv-flipper-plugin';
+import { connectDatabases, WatermelonDB } from 'react-native-flipper-databases';
 import * as Font from 'expo-font';
 
 import {
@@ -17,9 +18,11 @@ import {
   Inter_800ExtraBold,
   Inter_900Black,
 } from '@expo-google-fonts/inter';
+import { database } from '@app/db';
 
 if (__DEV__) {
   initializeMMKVFlipper({ default: store });
+  connectDatabases([new WatermelonDB(database)]);
 }
 
 export const useApp = () => {
