@@ -17,6 +17,7 @@ export class Category extends Model {
   };
 
   @field('name') name!: string;
+  @field('color') color!: string;
   @children(TableName.TRANSACTIONS) transactions!: Query<Transaction>;
   @readonly @date('created_at') createdAt!: Date;
   @readonly @date('updated_at') updatedAt!: Date;
