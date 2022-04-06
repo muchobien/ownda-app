@@ -7122,10 +7122,10 @@ react-native-fast-image@8.5.11:
   resolved "https://registry.yarnpkg.com/react-native-fast-image/-/react-native-fast-image-8.5.11.tgz#e3dc969d0e4e8df026646bf18194465aa55cbc2b"
   integrity sha512-cNW4bIJg3nvKaheG8vGMfqCt5LMWX9MS5+wMudgKIHbGO51spRr4sgnlhVgwHLcZ5aeNOVJ8CPRxDIWKRq/0QA==
 
-react-native-flipper-databases@2.3.1:
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/react-native-flipper-databases/-/react-native-flipper-databases-2.3.1.tgz#ec08210fa2038070ff2e5313003cc9004de9a6e3"
-  integrity sha512-BRocWfvLagZaiVe8B0AcAOfy+mIcu9LnxTVBzePa1P4zd0qJQUo4qDTbodQeWXChBjzTyjfsjUNyULNsZVE68g==
+react-native-flipper-databases@2.3.2:
+  version "2.3.2"
+  resolved "https://registry.yarnpkg.com/react-native-flipper-databases/-/react-native-flipper-databases-2.3.2.tgz#b7028993f06f45f542866ae6993c6de31bd48e9d"
+  integrity sha512-ymimQJZCEHpAD2YtATcMngctiFKmsHXde954TQ91d3nYRFQvMIpYRwPrNoUlEeAnUGF3B73kZFuMknOwLXrv7A==
   optionalDependencies:
     "@nozbe/watermelondb" ">=0.24"
     realm "^10.9.1"
