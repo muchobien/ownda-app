@@ -27,7 +27,7 @@
   },
   "dependencies": {
     "@emotion/native": "11.0.0",
-    "@emotion/react": "11.8.2",
+    "@emotion/react": "11.9.0",
     "@expo-google-fonts/inter": "0.2.2",
     "@nozbe/watermelondb": "0.24.0",
     "@react-native-community/hooks": "2.8.1",
