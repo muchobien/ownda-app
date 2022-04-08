@@ -154,8 +154,8 @@ android {
         applicationId "dev.muchobien.ownda"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 4
-        versionName "0.0.1"
+        versionCode 3
+        versionName "0.0.3"
     }
     splits {
         abi {
