@@ -7152,10 +7152,10 @@ react-native-mmkv-flipper-plugin@1.0.0:
   resolved "https://registry.yarnpkg.com/react-native-mmkv-flipper-plugin/-/react-native-mmkv-flipper-plugin-1.0.0.tgz#f87f747d8cea51d2b12a1e711287feff5f212788"
   integrity sha512-e3owMIBzXez45Wz8Ac84Vf1FmfwMXFVUpf/gCDWDLq19w7iCipVezQjlZo8ISVza8aQf1G4ggaK/r+qqtGmRlg==
 
-react-native-mmkv@2.3.0:
-  version "2.3.0"
-  resolved "https://registry.yarnpkg.com/react-native-mmkv/-/react-native-mmkv-2.3.0.tgz#ec46a35fa467fbb762cf6fe8212f5984789b6116"
-  integrity sha512-c1gqljiDkDHYAV+9CEZEwp2uQQVi4lGgHJB8dn7Nj/RbvGFaJk6/sJdfVvj7VKE6AdW7Jqf4Hc0XjSFDttkl+Q==
+react-native-mmkv@2.3.1:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/react-native-mmkv/-/react-native-mmkv-2.3.1.tgz#96165962cc5cab2dd8f09356ce9e898a59a937fe"
+  integrity sha512-Fyk5Y25QYD97/HnUMRrFWQrEJd8n9gflNvct5Idy4GrvWl01xrRslpOr3vc3BDDE/CRD3MEB3S+HabUcBWzgSw==
 
 react-native-pager-view@6.0.0-rc.1:
   version "6.0.0-rc.1"
