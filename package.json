@@ -71,7 +71,7 @@
     "@muchobien/eslint-config-react-native": "0.1.1",
     "@muchobien/react-native-version": "git+https://github.com/muchobien/react-native-version.git",
     "@types/ramda": "0.28.7",
-    "@types/react-native": "0.67.3",
+    "@types/react-native": "0.67.4",
     "babel-plugin-module-resolver": "4.1.0",
     "eslint": "8.13.0",
     "metro-react-native-babel-preset": "0.70.1",
