@@ -16,7 +16,6 @@ export const Navigation = forwardRef<
 >(({ onReady }, ref) => {
   const [logged] = useStoreBoolean('@logged');
   const insets = useSafeAreaInsets();
-
   const theme = useMemo(() => buildTheme(insets), [insets]);
 
   return (
