@@ -327,7 +327,7 @@ PODS:
     - glog
   - react-native-flipper (0.142.0):
     - React-Core
-  - react-native-mmkv (2.3.0):
+  - react-native-mmkv (2.3.1):
     - MMKV (>= 1.2.13)
     - React-Core
   - react-native-pager-view (6.0.0-rc.1):
@@ -409,9 +409,9 @@ PODS:
     - React-Core
     - SDWebImage (~> 5.11.1)
     - SDWebImageWebPCoder (~> 0.8.4)
-  - RNGestureHandler (2.3.2):
+  - RNGestureHandler (2.4.0):
     - React-Core
-  - RNReanimated (2.6.0):
+  - RNReanimated (2.7.0):
     - DoubleConversion
     - FBLazyVector
     - FBReactNativeSpec
@@ -722,7 +722,7 @@ SPEC CHECKSUMS:
   React-jsinspector: f4775ea9118cbe1f72b834f0f842baa7a99508d8
   React-logger: a1f028f6d8639a3f364ef80419e5e862e1115250
   react-native-flipper: 6504d02aadad2cce9083b6437fc1927f8e2083bb
-  react-native-mmkv: 377776f0256241c335f8dc20bd2c8a17d6fb4da9
+  react-native-mmkv: 83eca4662722da83bf5eb7155f9cb3a28213a7d2
   react-native-pager-view: 06738ffe86f82c53d59a2387f889679fe210acf1
   react-native-safe-area-context: f98b0b16d1546d208fc293b4661e3f81a895afd9
   React-perflogger: 0afaf2f01a47fd0fc368a93bfbb5bd3b26db6e7f
@@ -739,8 +739,8 @@ SPEC CHECKSUMS:
   ReactCommon: 07d0c460b9ba9af3eaf1b8f5abe7daaad28c9c4e
   RNBootSplash: de2c568373a9c79a66e9918b8929eb6c9a35246f
   RNFastImage: 1f2cab428712a4baaf78d6169eaec7f622556dd7
-  RNGestureHandler: 6e757e487a4834e7280e98e9bac66d2d9c575e9c
-  RNReanimated: 2cdfe6a706d512bfa721da47b769410e8fdf516b
+  RNGestureHandler: 50e6ffee79932d14ea747d4ea4cc99aac0f24e86
+  RNReanimated: 96ab42cfb0e5517293499e0f3f810420eb459f75
   RNScreens: 40a2cb40a02a609938137a1e0acfbf8fc9eebf19
   RNSVG: 302bfc9905bd8122f08966dc2ce2d07b7b52b9f8
   SDWebImage: a7f831e1a65eb5e285e3fb046a23fcfbf08e696d
