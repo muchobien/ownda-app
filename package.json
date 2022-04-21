@@ -79,7 +79,7 @@
     "postinstall": "0.7.4",
     "postinstall-postinstall": "2.1.0",
     "prettier": "2.6.2",
-    "react-native-flipper": "0.142.0",
+    "react-native-flipper": "0.143.0",
     "typescript": "4.6.3"
   },
   "resolutions": {
