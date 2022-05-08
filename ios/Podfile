@@ -30,7 +30,7 @@ abstract_target 'common' do
   # Note that if you have use_frameworks! enabled, Flipper will not work and
   # you should disable the next line.
   if !ENV['CI'] || ENV['APP_ENV'] == "development"
-    use_flipper!({ 'Flipper' => '0.142.0' })
+    use_flipper!({ 'Flipper' => '0.145.0' })
   end
 
   post_install do |installer|
