@@ -1,5 +1,4 @@
-import type { Query } from '@nozbe/watermelondb';
-import { Model } from '@nozbe/watermelondb';
+import { Query, Model } from '@nozbe/watermelondb';
 import {
   children,
   date,

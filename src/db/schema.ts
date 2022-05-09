@@ -17,6 +17,7 @@ export const schema = appSchema({
       name: TableName.CATEGORIES,
       columns: [
         { name: 'name', type: 'string' },
+        { name: 'color', type: 'string' },
         { name: 'created_at', type: 'number' },
         { name: 'updated_at', type: 'number' },
       ],
