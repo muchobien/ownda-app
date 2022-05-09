@@ -7315,10 +7315,10 @@ react-native-mmkv@2.3.3:
   resolved "https://registry.npmjs.org/react-native-mmkv/-/react-native-mmkv-2.3.3.tgz#ca0916e3dfb3e420fa27de526e53d9e391e3c9a1"
   integrity sha512-bfBsIivEnr+OAxS2tWRqzyaDLlw9ZBGrbiuifO7wRtq1J5rNwkiKfSwTYBNLe23dzpl8pvSIUYgDrvmRnXTAhA==
 
-react-native-pager-view@6.0.0-rc.1:
-  version "6.0.0-rc.1"
-  resolved "https://registry.npmjs.org/react-native-pager-view/-/react-native-pager-view-6.0.0-rc.1.tgz#d36cf5cbbc5d3305099e5bb57bcf7e5680d01f4f"
-  integrity sha512-6YF/d2Q5LAgwv33ab7sEgyt06sl5a66C+aO59/eCfXOyRs1FKbBDK76x1TJJpRnuBax2YKDekd23UgSSQ6pUmw==
+react-native-pager-view@6.0.0-rc.2:
+  version "6.0.0-rc.2"
+  resolved "https://registry.yarnpkg.com/react-native-pager-view/-/react-native-pager-view-6.0.0-rc.2.tgz#8a10b5fb57fbdab82a7684238ea349a2410304b2"
+  integrity sha512-osWnYxGaTaKbH9+wxGULt8Q9c5h3AVo+njTEqf2jmxqaVpWzlaIsxU1MWF7Tbk1BN8RiC11szMtOQ0Jlx8Hcag==
 
 react-native-reanimated@2.8.0:
   version "2.8.0"
