@@ -4593,10 +4593,10 @@ expo-localization@13.0.0:
   dependencies:
     rtl-detect "^1.0.2"
 
-expo-modules-autolinking@0.8.0:
-  version "0.8.0"
-  resolved "https://registry.npmjs.org/expo-modules-autolinking/-/expo-modules-autolinking-0.8.0.tgz#d380e0de6848f71d7c99d46100608f6030eb66c8"
-  integrity sha512-dFypBI1bnT62mNRI6B1KxnHqvbvr+vzqqAjZZ7Tud8VUIHGl4MpeNHNAoeGdmjX+rJsGjC1y70OvtwYjUWiMLw==
+expo-modules-autolinking@0.8.1:
+  version "0.8.1"
+  resolved "https://registry.npmjs.org/expo-modules-autolinking/-/expo-modules-autolinking-0.8.1.tgz#533c38192847d2272e9af986f8f4c58aae6dfff3"
+  integrity sha512-S8qfaXCv//7tQWV9M+JKx3CF7ypYhDdSUbkUQdaVO/r8D76/aRTArY/aRw1yEfaAOzyK8C8diDToV1itl51DfQ==
   dependencies:
     chalk "^4.1.0"
     commander "^7.2.0"
@@ -4623,10 +4623,10 @@ expo-modules-core@0.9.2:
     compare-versions "^3.4.0"
     invariant "^2.2.4"
 
-expo@45.0.2:
-  version "45.0.2"
-  resolved "https://registry.npmjs.org/expo/-/expo-45.0.2.tgz#d773d1b6f427bcdbfcb3da26274b35b2749c632c"
-  integrity sha512-WRVNTEc2ZqstGwVIxCAfJUTsmhFVAWR4vNaF4kTDEQa2J5GHbFuSQbENYrTeLldLc5Q/60HX3xfxUu8pqqdjGA==
+expo@45.0.4:
+  version "45.0.4"
+  resolved "https://registry.npmjs.org/expo/-/expo-45.0.4.tgz#a34d250605d5603e3cea4acf169aedd288df477b"
+  integrity sha512-S/6rwmgG+1cyHP1hCmylk9FLnavUWd/haWgVc8sUNiavaMBu/vCjeLUESFVJdYRKKN9i+avSzHdAVdKytNYo6A==
   dependencies:
     "@babel/runtime" "^7.14.0"
     "@expo/cli" "0.1.4"
@@ -4639,7 +4639,7 @@ expo@45.0.2:
     expo-file-system "~14.0.0"
     expo-font "~10.1.0"
     expo-keep-awake "~10.1.1"
-    expo-modules-autolinking "0.8.0"
+    expo-modules-autolinking "0.8.1"
     expo-modules-core "0.9.2"
     fbemitter "^3.0.0"
     getenv "^1.0.0"
