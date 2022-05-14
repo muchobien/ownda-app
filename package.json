@@ -76,7 +76,6 @@
     "eslint": "8.15.0",
     "metro-react-native-babel-preset": "0.70.3",
     "patch-package": "6.4.7",
-    "postinstall": "0.7.4",
     "postinstall-postinstall": "2.1.0",
     "prettier": "2.6.2",
     "react-native-flipper": "0.145.0",
