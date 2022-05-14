@@ -336,7 +336,7 @@ PODS:
     - glog
   - react-native-flipper (0.145.0):
     - React-Core
-  - react-native-mmkv (2.3.3):
+  - react-native-mmkv (2.4.1):
     - MMKV (>= 1.2.13)
     - React-Core
   - react-native-pager-view (6.0.0-rc.2):
@@ -735,7 +735,7 @@ SPEC CHECKSUMS:
   React-jsinspector: c5989c77cb89ae6a69561095a61cce56a44ae8e8
   React-logger: a0833912d93b36b791b7a521672d8ee89107aff1
   react-native-flipper: 1b78844db5b0de19bd64847c3b88cafc6cc119ba
-  react-native-mmkv: 30297e5e2a65341b36a727c1c79b0aff0132b396
+  react-native-mmkv: b5c7f9bc369eef2b8a2aa36e8a15949989fa823f
   react-native-pager-view: c9171e3b9f212fe6a4a529818745d8cd21fe82a0
   react-native-safe-area-context: ebf8c413eb8b5f7c392a036a315eb7b46b96845f
   React-perflogger: a18b4f0bd933b8b24ecf9f3c54f9bf65180f3fe6
