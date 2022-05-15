@@ -16,6 +16,7 @@ declare global {
 
 export type RootStackParamList = {
   Root: NavigatorScreenParams<RootTabParamList> | undefined;
+  Sheet: NavigatorScreenParams<SheetParamList> | undefined;
   Auth: undefined;
   Onboarding: undefined;
   Modal: undefined;
@@ -30,6 +31,10 @@ export type RootTabParamList = {
   Settings: undefined;
 };
 
+export type SheetParamList = {
+  Home: undefined;
+};
+
 export type TabScreenName = keyof RootTabParamList;
 
 export type RootTabScreenProps<Screen extends keyof RootTabParamList> =
@@ -38,19 +43,35 @@ export type RootTabScreenProps<Screen extends keyof RootTabParamList> =
     NativeStackScreenProps<RootStackParamList>
   >;
 
+export type SheetsScreenProps<Screen extends keyof SheetParamList> =
+  CompositeScreenProps<
+    NativeStackScreenProps<SheetParamList, Screen>,
+    NativeStackScreenProps<RootStackParamList>
+  >;
+
 export type Screen<
-  S extends keyof RootStackParamList | keyof RootTabParamList,
+  S extends
+    | keyof RootStackParamList
+    | keyof RootTabParamList
+    | keyof SheetParamList,
 > = S extends keyof RootStackParamList
   ? FunctionComponent<RootStackScreenProps<S>>
   : S extends keyof RootTabParamList
   ? FunctionComponent<RootTabScreenProps<S>>
+  : S extends keyof SheetParamList
+  ? FunctionComponent<SheetsScreenProps<S>>
   : never;
 
 export type ConnectProps<
-  S extends keyof RootStackParamList | keyof RootTabParamList,
+  S extends
+    | keyof RootStackParamList
+    | keyof RootTabParamList
+    | keyof SheetParamList,
   P extends Record<string, unknown> = Record<string, unknown>,
 > = S extends keyof RootStackParamList
   ? RootStackScreenProps<S> & P
   : S extends keyof RootTabParamList
   ? RootTabScreenProps<S> & P
+  : S extends keyof SheetParamList
+  ? SheetsScreenProps<S> & P
   : never;
