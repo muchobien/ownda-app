@@ -37,7 +37,7 @@
     "@react-navigation/devtools": "6.0.7",
     "@react-navigation/native": "6.0.10",
     "@react-navigation/native-stack": "6.6.2",
-    "@shopify/react-native-skia": "0.1.128",
+    "@shopify/react-native-skia": "0.1.130",
     "dayjs": "1.11.2",
     "expo": "45.0.4",
     "expo-application": "4.1.0",
