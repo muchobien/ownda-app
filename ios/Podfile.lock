@@ -16,7 +16,7 @@ PODS:
     - ExpoModulesCore
   - EXLocalAuthentication (12.2.0):
     - ExpoModulesCore
-  - Expo (45.0.4):
+  - Expo (45.0.5):
     - ExpoModulesCore
   - ExpoLinearGradient (11.3.0):
     - ExpoModulesCore
@@ -341,38 +341,38 @@ PODS:
     - React-Core
   - react-native-pager-view (6.0.0-rc.2):
     - React-Core
-  - react-native-safe-area-context (4.2.5):
+  - react-native-safe-area-context (4.3.1):
     - RCT-Folly
     - RCTRequired
     - RCTTypeSafety
     - React
     - ReactCommon/turbomodule/core
-  - react-native-skia (0.1.128):
+  - react-native-skia (0.1.130):
     - React
     - React-callinvoker
     - React-Core
-    - react-native-skia/Api (= 0.1.128)
-    - react-native-skia/Jsi (= 0.1.128)
-    - react-native-skia/RNSkia (= 0.1.128)
-    - react-native-skia/SkiaHeaders (= 0.1.128)
-    - react-native-skia/Utils (= 0.1.128)
-  - react-native-skia/Api (0.1.128):
+    - react-native-skia/Api (= 0.1.130)
+    - react-native-skia/Jsi (= 0.1.130)
+    - react-native-skia/RNSkia (= 0.1.130)
+    - react-native-skia/SkiaHeaders (= 0.1.130)
+    - react-native-skia/Utils (= 0.1.130)
+  - react-native-skia/Api (0.1.130):
     - React
     - React-callinvoker
     - React-Core
-  - react-native-skia/Jsi (0.1.128):
+  - react-native-skia/Jsi (0.1.130):
     - React
     - React-callinvoker
     - React-Core
-  - react-native-skia/RNSkia (0.1.128):
+  - react-native-skia/RNSkia (0.1.130):
     - React
     - React-callinvoker
     - React-Core
-  - react-native-skia/SkiaHeaders (0.1.128):
+  - react-native-skia/SkiaHeaders (0.1.130):
     - React
     - React-callinvoker
     - React-Core
-  - react-native-skia/Utils (0.1.128):
+  - react-native-skia/Utils (0.1.130):
     - React
     - React-callinvoker
     - React-Core
@@ -729,7 +729,7 @@ SPEC CHECKSUMS:
   EXFileSystem: 2aa2d9289f84bca9532b9ccbd81504fa31eb1ded
   EXFont: 04235cc22e6fef86028feb67db452978dc6f240f
   EXLocalAuthentication: 7f37b242eae73f9acf111d39bdee3f1379e68902
-  Expo: 64d52669fa3b9342919b5b44b2b4f15f19b0cf76
+  Expo: b9fff0a1eac0f424fc68ea49b4347fb308e52e17
   ExpoLinearGradient: 0debcf7d6cd7fea3050c218544f0db2de9a64f42
   ExpoLocalization: 8f619bb6eec64575cd5220bfabbd7b4e2d6f33f8
   ExpoModulesCore: e4278a668e8c13c0269ed8b8a4200989deea2973
@@ -769,8 +769,8 @@ SPEC CHECKSUMS:
   react-native-flipper: 4bfe0a324e663f1ae2f76ad0da75673de6895efe
   react-native-mmkv: b5c7f9bc369eef2b8a2aa36e8a15949989fa823f
   react-native-pager-view: c9171e3b9f212fe6a4a529818745d8cd21fe82a0
-  react-native-safe-area-context: ebf8c413eb8b5f7c392a036a315eb7b46b96845f
-  react-native-skia: 3e6884bd50af0d06fa2972366edba75e39094536
+  react-native-safe-area-context: 6c12e3859b6f27b25de4fee8201cfb858432d8de
+  react-native-skia: ded7ec890d19a75f17b3cbd5ebf0d6459701daa9
   React-perflogger: a18b4f0bd933b8b24ecf9f3c54f9bf65180f3fe6
   React-RCTActionSheet: 547fe42fdb4b6089598d79f8e1d855d7c23e2162
   React-RCTAnimation: bc9440a1c37b06ae9ebbb532d244f607805c6034
