@@ -7980,10 +7980,10 @@ react-native-fast-image@8.5.11:
   resolved "https://registry.npmjs.org/react-native-fast-image/-/react-native-fast-image-8.5.11.tgz#e3dc969d0e4e8df026646bf18194465aa55cbc2b"
   integrity sha512-cNW4bIJg3nvKaheG8vGMfqCt5LMWX9MS5+wMudgKIHbGO51spRr4sgnlhVgwHLcZ5aeNOVJ8CPRxDIWKRq/0QA==
 
-react-native-flipper-databases@2.4.0:
-  version "2.4.0"
-  resolved "https://registry.yarnpkg.com/react-native-flipper-databases/-/react-native-flipper-databases-2.4.0.tgz#40cd9506e5574622cb1d1e2eb0aaade9c61fb94d"
-  integrity sha512-s2m5O8zf7PPbiYz1LZ8EN2pOJA62buu462Y4CqQB6PRNtu0EiiNISrHrO049DCwvq2qr+EEohCWjn0ZbE0Dsfg==
+react-native-flipper-databases@2.4.1:
+  version "2.4.1"
+  resolved "https://registry.yarnpkg.com/react-native-flipper-databases/-/react-native-flipper-databases-2.4.1.tgz#18f9e3b57a6afe03488321d2e607d2e45b4df395"
+  integrity sha512-mgje7+Qw8zXwxa0Qeg4oPW/aco52ZXOb0wcAIW2XDlRkJQhYPi4v6+91jKdpNKt90YqE68kJzbG2U9oJ2miIQg==
   optionalDependencies:
     "@nozbe/watermelondb" ">=0.24"
     react-native-sqlite-storage "^6.0.1"
