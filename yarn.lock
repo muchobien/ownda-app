@@ -1103,10 +1103,10 @@
   resolved "https://registry.npmjs.org/@emotion/memoize/-/memoize-0.7.5.tgz#2c40f81449a4e554e9fc6396910ed4843ec2be50"
   integrity sha512-igX9a37DR2ZPGYtV6suZ6whr8pTFtyHL3K/oLUotxpSVO2ASaprmAe2Dkq7tBo7CRY7MMDrAa9nuQP9/YG8FxQ==
 
-"@emotion/native@11.0.0":
-  version "11.0.0"
-  resolved "https://registry.npmjs.org/@emotion/native/-/native-11.0.0.tgz#81dbac441b1359a82a3d942a4f3f49d92b51a374"
-  integrity sha512-IByi+OfagLtcQsXZMkS06ztcNMZePg6dqwzM4FIkXjN4PhoeJ/jTDRICT3pTIk3ChuurX2oF8fmE+0bfvYi/SA==
+"@emotion/native@11.9.3":
+  version "11.9.3"
+  resolved "https://registry.yarnpkg.com/@emotion/native/-/native-11.9.3.tgz#623e0625147f82feb2089ae0b58057a92579b4d9"
+  integrity sha512-hgtp6DJHYSGUzYc/3fTY8cKg4BXTCpegPgsy3URJhbJ+yIYycT4mSmgFuUiZIt5w4mENsX6H/plIo78O07VDfA==
   dependencies:
     "@emotion/primitives-core" "^11.0.0"
 
