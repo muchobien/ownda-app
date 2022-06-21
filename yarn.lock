@@ -7954,10 +7954,10 @@ react-is@^16.13.0, react-is@^16.13.1, react-is@^16.7.0:
   resolved "https://registry.npmjs.org/react-is/-/react-is-16.13.1.tgz#789729a4dc36de2999dc156dd6c1d9c18cea56a4"
   integrity sha512-24e6ynE2H+OKt4kqsOvNd8kBpV65zoxbA4BVsEOB3ARVWQki/DHzaUoC5KuON/BiccDaCCTZBuOcfZs70kR8bQ==
 
-react-native-bootsplash@4.1.5:
-  version "4.1.5"
-  resolved "https://registry.npmjs.org/react-native-bootsplash/-/react-native-bootsplash-4.1.5.tgz#c2911fd006bc3c555cc3803bc267d1aeafea6525"
-  integrity sha512-4daDemujTdfukHq1wIeEdRgdFALNAwGZDrGHkxkf9h4Rgjiiyckc5ulZMIYaZwp31z26uUjcGXVxU+H1WDNRvg==
+react-native-bootsplash@4.1.6:
+  version "4.1.6"
+  resolved "https://registry.yarnpkg.com/react-native-bootsplash/-/react-native-bootsplash-4.1.6.tgz#7d2ca5e40d7822089511685fdf6ec3b3c8b55c91"
+  integrity sha512-9zewdvoxGJiCFgqk2M4gxAP2gD+0vcjEhethVrh7rGfNzJYrzrZbyrM0FnlyFU9GhYmBFa0vmtlATBGdVB9PcQ==
   dependencies:
     chalk "^4.1.2"
     fs-extra "^10.1.0"
