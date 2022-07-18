@@ -77,7 +77,7 @@
     "@types/ramda": "0.28.14",
     "@types/react-native": "0.67.8",
     "babel-plugin-module-resolver": "4.1.0",
-    "eslint": "8.17.0",
+    "eslint": "8.20.0",
     "metro-react-native-babel-preset": "0.71.1",
     "patch-package": "6.4.7",
     "postinstall-postinstall": "2.1.0",
