@@ -7995,10 +7995,10 @@ react-native-flipper-databases@2.4.1:
     realm "^10.9.1"
     vasern "^0.3.68"
 
-react-native-flipper@0.146.1:
-  version "0.146.1"
-  resolved "https://registry.yarnpkg.com/react-native-flipper/-/react-native-flipper-0.146.1.tgz#b6bbb23edc347597788bdca4c89b58bad425e1a1"
-  integrity sha512-M3pjqDigOPRpPN9lkT3o0yKDViqciGe5aUjPrtuKdxmaCbH4ofpMEZGxrcKjnEwXJWKC24IDZKtz7WitaWgRig==
+react-native-flipper@0.155.0:
+  version "0.155.0"
+  resolved "https://registry.yarnpkg.com/react-native-flipper/-/react-native-flipper-0.155.0.tgz#aec09336b6e67a5661707e91d71c69aa85247840"
+  integrity sha512-W3PAfTr4MAcA+xm5rXzXvrrW+NahQcq1Fsyk7hrQo6PV4an9ogPowXF6i+0/b1MzpsmGJTb0kmcglUfsXi164Q==
 
 react-native-gesture-handler@2.4.2:
   version "2.4.2"
